@@ -1,7 +1,7 @@
 [discrete]
 === Control Information
 
-[cols="^1,^1,^1,2,^1,2"]
+[cols="^1,^2,^1,^2,^1,^2"]
 |===
 |Section | Version | Lead | Delivered | Reviewer | Approved 
 
@@ -10,6 +10,6 @@
 | **<<p3>>** | | | | |
 | **<<p4>>** | | | | |
 | **<<p5>>** | | | | |
-| **<<p6>>** | | | | |
-| **<<p7>>** | | | | |
+| **<<p6>>** | Milestone #1 | TC | | |
+| **<<p7>>** | Milestone #1 | SM | | |
 |===

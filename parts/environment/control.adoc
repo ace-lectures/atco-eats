@@ -2,14 +2,14 @@
 === Control Information
 
 .{project-title} -- Versionning Information -- Environment Book
-[cols="^1,^1,^2,^2,^2,^2"]
+[cols="^1,^2,^1,^2,^1,^2"]
 |===
 |Section | Version | Lead | Delivered | Reviewer | Approved 
 
-| **<<e1>>** |  |  |  |  |
+| **<<e1>>** | Milestone #1 | SM |  |  |
 | **<<e2>>** |  |  |  |  |
 | **<<e3>>** |  |  |  |  |
 | **<<e4>>** |  |  |  |  |
-| **<<e5>>** |  |  |  |  |
-| **<<e6>>** |  |  |  |  |
+| **<<e5>>** | Milestone #1 | TC |  |  |
+| **<<e6>>** | Milestone #1 | TC |  |  |
 |===

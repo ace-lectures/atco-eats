@@ -2,15 +2,15 @@
 === Control Information
 
 .{project-title} -- Versionning Information -- Goal Book
-[cols="^1,^1,^2,^2,^2,^2"]
+[cols="^1,^2,^1,^2,^1,^2"]
 |===
 |Section | Version | Lead | Delivered on| Reviewer | Approved on
 
-| **<<g1>>** |  |  |  |  |
-| **<<g2>>** |  |  |  |  |
-| **<<g3>>** |  |  |  |  |
-| **<<g4>>** |  |  |  |  |
+| **<<g1>>** | Milestone #1 | SM |  |  |
+| **<<g2>>** | Milestone #1 | SM |  |  |
+| **<<g3>>** | Milestone #1 | TC |  |  |
+| **<<g4>>** | Milestone #1 | TC |  |  |
 | **<<g5>>** |  |  |  |  |
 | **<<g6>>** |  |  |  |  |
-| **<<g7>>** |  |  |  |  |
+| **<<g7>>** | Milestone #1 | SM |  |  |
 |===
