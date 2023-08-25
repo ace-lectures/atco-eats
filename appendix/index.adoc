@@ -1,0 +1,2 @@
+
+include::./A_client.adoc[]

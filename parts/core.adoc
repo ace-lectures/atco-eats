@@ -1,7 +1,5 @@
 
-ifdef::backend-pdf[]
-//include::./integrity.adoc[]
-endif::[]
+include::./integrity.adoc[]
 
 include::control.adoc[]
 
