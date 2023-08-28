@@ -24,7 +24,7 @@ NOTE: In this document, we use _The Phoenix_ as an **imaginary client**. The obj
 
 [[tc,TC]]
 Thomas Chiang.::
-    Thomas is a Software Engineering PhD candidate at McMaster University, specialized in model driven engineering, language engineering, and safety engineering. His research interests are about improving safety engineering through model-driven engineering techniques, as wel as developing principles for graphical modeling language development. You can reach him at {email_1}, and find more information here: https://www.linkedin.com/in/thomas-chiang-908362a1.
+    Thomas is a Software Engineering PhD candidate at McMaster University, specialized in model driven engineering, language engineering, and safety engineering. His research interests are about improving safety engineering through model-driven engineering techniques, as well as developing principles for graphical modeling language development. You can reach him at {email_1}, and find more information here: https://www.linkedin.com/in/thomas-chiang-908362a1.
 
 [[sm,SM]]
 Sébastien Mosser, P.Eng., Ph.D.::
