@@ -1,5 +1,9 @@
 == (P) Project
 
+ifdef::env-draft[]
+NOTE: The Project book describes all the constraints and expectations not about the system itself, but about how to develop and produce it.
+endif::[]
+
 include::control.adoc[]
 
 include::P1.adoc[]

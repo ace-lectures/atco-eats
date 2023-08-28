@@ -6,7 +6,7 @@ TIP: _Clear and precise definitions of all the vocabulary specific to the applic
 endif::[]
 
 [[mosaic,Mosaic]] Mosaic (Information System)::
-    Mosaic is McMaster's internal portal. It acts as a unique entry point aggfregating each and every tool used to support McMaster's community. Students use it for course enrollment, staff for expense reports, faculty for accessing class rosters. Acting as a portal, it is designed to integrate with other systems, such as accounting (Oracle Business Intelligence) or Learning Management Systems (Avenue). 
+    Mosaic is McMaster's internal portal. It acts as a unique entry point aggfregating each and every tool used to support McMaster's community. Students use it for course enrollment, staff for expense reports, faculty for accessing class rosters. Acting as a portal, it covers Student Administration, Finance, HR, Research Administration, and Facilities Maintenance Management.
 
 [[staff,Staff]] Staff::
     When referring to _staff_, this document refers to persons employed by McMaster to support its operations, who, as such, might commit to expenses in food and hospitality. This generally includes administration staff and full-time faculty members. 
@@ -16,3 +16,9 @@ endif::[]
 
 [[catering,Catering]] Catering Services::
     McMaster operates its own internal catering system, in compliance of the by-laws controlling food operations on campus grounds. Extensive information of Catering operations can be found here: https://hospitality.mcmaster.ca/catering-gifts/catering-services/
+
+[[uts,UTS]] University Technology Service::
+    McMaster internal IT service, in charge of operating its technological infrastructure. It includes, among others, <<macid>>, <<Mosaic>>, Avenue to Learn (course management system).
+
+[[macid,MacID]] MacID::
+    Mac ID is the local _Single Sign On_ (SSO) deployed as McMaster as a unique and centralized way to support authentication among the different apps used by the university (_e.g._, <<mosaic>>, Avenue to Learn)

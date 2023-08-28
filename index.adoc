@@ -8,9 +8,9 @@ include::metadata.adoc[]
 :theme: _style/mcmaster.yml 
 :icons: font
 
-:emptysec: icon:clock-o[] Nothing available (yet).
+:emptysec: icon:clock[] Nothing available (yet).
 :unknown: icon:question-circle[]
-:clock: icon:clock-o[]
+:clock: icon:clock[]
 :ec: icon:square-o[]
 
 

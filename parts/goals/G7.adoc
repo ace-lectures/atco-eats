@@ -5,4 +5,69 @@ ifdef::env-draft[]
 TIP: _Groups of people who can affect the project or be affected by it, and other places to consider for information about the project and system. It lists stakeholders and other requirements sources. It should define stakeholders as categories of people, not individuals, even if such individuals are known at the time of writing. The main goal of chapter <<g7>> is to avoid forgetting any category of people whose input is relevant to the project. It also lists documents and other information that the project, aside from soliciting input from stakeholders, can consult for requirements information._  <<BM22>>
 endif::[]
 
-{emptysec}
+.Stakeholders for {project-title}
+[cols=".^1,2,1,1"]
+|===
+2+|Stakeholder | Persona | Category 
+
+.2+| Patrons| <<community>> member | <<cameron>> | Direct
+| Citizen of Hamilton | <<carter>> | Direct
+| Indirect Customer| Administrative Assistant | <<logan>> | Direct
+.2+| Restaurant staff | Restaurant Manager | <<drew>> | Direct
+| Line Cook | <<dylan>> | Direct 
+3+| <<mosaic>> Operational Maintainers | Indirect
+3+| Payment Gateway operators | Indirect
+3+| McMaster Senate | Indirect
+
+|===
+
+==== Direct Stakeholders
+
+===== Patrons
+
+Patrons directly interact with The FireBird, by booking tables and participating to events organized by the restaurant (_e.g._, Trivia night on Tuesdays). They can be refined into community members, already on McMaster campus (supporting the objective of better integrating with the community), and citizens of Hamilton (supporting the objective of extending the pool of patrons).
+
+[#cameron,reftext=Cameron]
+Cameron (Community member)::
+    Cameron is a grad student in Engineering, splitting their time betweeb working on campus as a teaching assistant and their research work on biomedical nano-robots. They are not living on campus, and coming to Mac is a 25 minutes commute. They are on a tight budget, and cannot afford eating out too often. They enjoy spending time with their friends (other grad students, or from outside McMaster).
+
+[#carter,reftext=Carter]
+Avery (Citizen of Hamilton)::
+    Avery lives in Stoney Creek, and work as assistant manager in a local grocery store. With their partner, they have two teenager children, and enjoy spending quality time together dining in nice restaurants. They are not necessarily looking for fancy food, but more for nice, fun and positive atmosphere for their monthly family dinner. 
+
+===== Indirect customer 
+
+Indirect customers are staff members who classicaly book catering or tables on behalf of other members. They usually do not participate to these events: they are handling the booking, then a faculty/staff member would pay the bill and submit an expense report. They have then to fill out and validate such report with Account Payable.
+
+[#logan,reftext=Logan]
+Logan (Administrative Assistant)::
+    Logan works as an administrative assistant at _McMaster Centre for Awesome Research on Everything_ (CARE) since 2016, helping out a group of 12 professors. When CARE organizes events or conferences, they are in charge of organizing the agenda, including ordering food for breaks. They are also in charge of organizing the itinerary when guests are hosted by CARE, including booking restaurants for dinners. They usually only work with providers able to submit invoices directly through <<mosaic>> to lighten their workload.
+
+===== Restaurant Staff
+
+Restaurant staff are directly impacted by *{project-title}*, from the front-house (_e.g._, welcoming patrons, taking orders) to the back-house (preparing food ordered through the app). 
+
+[#drew,reftext=Drew]
+Drew (Restaurant Manager)::
+    Drew started working at The FireBird in 2022, with the great re-opening as part of the _Back to Mac_ operation. With 10+ years of experience in restaurant management in the GTA, they were hired to help adapting The FireBird to its new post-covid operational context. They are known for their direct management style, favoring problem-solving over finger pointing.
+
+[#dylan,reftext=Dylan]
+Dylan (Line Cook)::
+    Dylan works as a line cook at The FireBird since 2019. Preparing tasty food that patrons will enjoy is really important for them, that's why they were a little bit skeptical when they heard top-management starting to talk about "lunch boxes". They fear that such approaches might jeopardize the quality of food they like to serve.
+
+==== Indirect Stakeholders
+
+- **<<mosaic>> Operational Maintainers**: As *{project-title}* will be integrated into <<mosaic>>, it needs tro comply to operational constraints required by <<mosaic>> for integration purposes.
+
+- **Payment Gateway operators**: *{project-title}* will support payment mechanisms, and as such will have to interact with payment service providers such as Stax, Stripe, ...
+
+- **McMaster Senate**: The Senate is in charge of voting by-laws that might influence the operations of *{project-title}*
+
+
+==== Requirements Sources
+
+* **Liquor Licence and Control Act, 2019**: This act regulates the sell of alcoholic products in the Province of Ontario. As The FireBird is located in Ontario, *{project-title}* must be compliant with this Act
+** https://www.ontario.ca/laws/statute/19l15b
+
+* **Campus Food & Beverage Policy**: This by-law regulates how food is served on campus. It makes a distinction between food services operated on exempted locations (The FireBird building is such an exempted location) and food services operated elsewhere in the university (_e.g._, catering). As operating on McMaster's grounds, *{project-title}* must be compliant with this policy.
+** https://vpof.mcmaster.ca/app/uploads/2023/05/Campus-Food-Beverage-Policy88.pdf
