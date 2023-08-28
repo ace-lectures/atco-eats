@@ -5,5 +5,14 @@ ifdef::env-draft[]
 TIP: _Clear and precise definitions of all the vocabulary specific to the application domain, including technical terms, words from ordinary language used in a special meaning, and acronyms. It introduces the terminology of the project; not just of the environment in the strict sense, but of all its parts._  <<BM22>>
 endif::[]
 
-[[mosaic,Mosaic]] Mosaic (Information System) ::
+[[mosaic,Mosaic]] Mosaic (Information System)::
     Mosaic is McMaster's internal portal. It acts as a unique entry point aggfregating each and every tool used to support McMaster's community. Students use it for course enrollment, staff for expense reports, faculty for accessing class rosters. Acting as a portal, it is designed to integrate with other systems, such as accounting (Oracle Business Intelligence) or Learning Management Systems (Avenue). 
+
+[[staff,Staff]] Staff::
+    When referring to _staff_, this document refers to persons employed by McMaster to support its operations, who, as such, might commit to expenses in food and hospitality. This generally includes administration staff and full-time faculty members. 
+
+[[community,Community]] McMaster community::
+    McMaster's community includes <<staff>>, as well as students (undergrad and graduate ones).
+
+[[catering,Catering]] Catering Services::
+    McMaster operates its own internal catering system, in compliance of the by-laws controlling food operations on campus grounds. Extensive information of Catering operations can be found here: https://hospitality.mcmaster.ca/catering-gifts/catering-services/
