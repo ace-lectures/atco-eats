@@ -5,5 +5,5 @@ ifdef::env-draft[]
 TIP: _Clear and precise definitions of all the vocabulary specific to the application domain, including technical terms, words from ordinary language used in a special meaning, and acronyms. It introduces the terminology of the project; not just of the environment in the strict sense, but of all its parts._  <<BM22>>
 endif::[]
 
-
-{emptysec}
+[[mosaic,Mosaic]] Mosaic (Information System) ::
+    Mosaic is McMaster's internal portal. It acts as a unique entry point aggfregating each and every tool used to support McMaster's community. Students use it for course enrollment, staff for expense reports, faculty for accessing class rosters. Acting as a portal, it is designed to integrate with other systems, such as accounting (Oracle Business Intelligence) or Learning Management Systems (Avenue). 

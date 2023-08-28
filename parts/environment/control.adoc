@@ -6,10 +6,10 @@
 |===
 |Section | Version | Lead | Delivered | Reviewer | Approved 
 
-| **<<e1>>** | Milestone #1 | SM |  |  |
+| **<<e1>>** | Milestone #1 | <<sm>> | 28-08-2023 | <<tc>> |
 | **<<e2>>** |  |  |  |  |
 | **<<e3>>** |  |  |  |  |
 | **<<e4>>** |  |  |  |  |
-| **<<e5>>** | Milestone #1 | TC |  |  |
-| **<<e6>>** | Milestone #1 | TC |  |  |
+| **<<e5>>** | Milestone #1 | <<tc>> | 25-08-2023 | <<sm>> |
+| **<<e6>>** | Milestone #1 | <<tc>> | 25-08-2023 | <<sm>> |
 |===

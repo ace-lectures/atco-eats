@@ -27,6 +27,3 @@ Some high level non-functional requirements for the application can be defined a
 
 These two non-functional requirements critical for legal reasons. As The Phoenix is on McMaster property, it must comply with the by-laws created and enforced by the university. As The Phoenix is also a bar with a liquor license it is also critical that they operate their business with respect to the by-laws and regulations of the Ontario Government.
 
-
-{emptysec}
-

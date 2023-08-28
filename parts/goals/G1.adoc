@@ -5,5 +5,5 @@ ifdef::env-draft[]
 TIP: _High-level view of the project: organizational context and reason for building a system. It explains why the project is needed, recalls the business context, and presents the general business objectives._  <<BM22>>
 endif::[]
 
-{emptysec}
+The COVID-19 crisis hit the food and hospitality industry really hard, and restaurants are still recovering from it. By investing in the deployment of a new app, _The Phoenix Pub & Grill_ aims to integrate their food offer into McMaster's community in a seamless way, by interactig with internal information systems for event caterings, as well as providing an ideal support for students' life on campus. Launching this new system will also targets the expanmsion of the patrons' pool, by focusing on McMaster as part of the Hamiltonian community,
 

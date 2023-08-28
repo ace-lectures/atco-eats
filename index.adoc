@@ -8,7 +8,7 @@ include::metadata.adoc[]
 :theme: _style/mcmaster.yml 
 :icons: font
 
-:emptysec: icon:refresh[] Nothing available at this point.
+:emptysec: icon:clock-o[] Nothing available (yet).
 :unknown: icon:question-circle[]
 :clock: icon:clock-o[]
 :ec: icon:square-o[]

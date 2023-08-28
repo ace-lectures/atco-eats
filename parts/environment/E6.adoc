@@ -13,5 +13,3 @@ endif::[]
  - The Phoenix can assume that there will always be patrons under the legal drinking age based on the legal drinking age set by the Ontario Government
 
 
-
-{emptysec}

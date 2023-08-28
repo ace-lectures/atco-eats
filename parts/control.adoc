@@ -9,3 +9,24 @@
 | **V2** | | | |
 | **V3** | | | |
 |===
+
+[discrete]
+=== Disclaimer
+
+This document is written as an example of a _reasonable_ requirements document, using the temnplate defined by Bertrand Meyer in his _Handbook of Requirements and Business Analysis_ <<BM22>> (2022). 
+It does not has the ambition of being a _perfect_ implementation of this template, as it mixes different sources and methods (e.g., <<RE97>>) to fit the objectives of COMPSCI/SFWRENG 3RA3 at McMaster. 
+In addition of the two authors, this document is built on top of the expertise and discussions with Mireille Blay-Fornarino (Université Côte d'Azur), Jean-Michel Bruel (Université de Toulouse), and Richard Paige (McMaster University).
+
+NOTE: In this document, we use _The Phoenix_ as an **imaginary client**. The objective is to root the document into a concrete example for McMaster's students, as it is an historical landmark at McMaster: founded in 1969 on campus, it has been owned and operated by the Graduate Students Association since then. It is important to note that **_The Phoenix_ was not involved** at any moment in the writing of this document.  
+
+[discrete]
+=== Authors
+
+[[tc,TC]]
+Thomas Chiang.::
+    Thomas is a Software Engineering PhD candidate at McMaster University, specialized in model driven engineering, language engineering, and safety engineering. His research interests are about improving safety engineering through model-driven engineering techniques, as wel as developing principles for graphical modeling language development. You can reach him at {email_1}, and find more information here: https://www.linkedin.com/in/thomas-chiang-908362a1.
+
+[[sm,SM]]
+Sébastien Mosser, P.Eng., Ph.D.::
+    Sébastien is Associate Professor of Software Engineering at McMaster University. His research interest are related to software engineering, more specifically language engineering and modelling in a DevOps context. He is teaching McMaster's Requirements Engineering (3RA3) course since Fall 2023, after having taught equivalent courses at _Université Côte d'Azur_ and _Université du Québec à Montréal_ since 2012. You can reach him at {email_2}, and find more information here: https://mosser.github.io
+
