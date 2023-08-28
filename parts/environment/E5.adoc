@@ -13,4 +13,3 @@ Some of the potential effects of the application can be defined as follows:
 
 - Increase in events on campus
 
-{emptysec}
