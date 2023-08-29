@@ -11,5 +11,3 @@ Some of the risks present during development are listed below:
 
 * *Competition with Heavenly catering.* Heavenly catering already has a monopoly for catering on campus. Thus they can present a hurdle to the completion of the application by attempting to stall it or get it shut down altogether. This can be mitigated by involving high level McMaster administration to ensure that we have the university support for developing the application, as well as getting support from various faculty to support more competition for catering services on campus.
 
-
-{emptysec}
