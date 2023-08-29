@@ -25,7 +25,7 @@ endif::[]
 
 ===== Patrons
 
-Patrons directly interact with The FireBird, by booking tables and participating to events organized by the restaurant (_e.g._, Trivia night on Tuesdays). They can be refined into community members, already on McMaster campus (supporting the objective of better integrating with the community), and citizens of Hamilton (supporting the objective of extending the pool of patrons).
+Patrons directly interact with The Firebird, by booking tables and participating to events organized by the restaurant (_e.g._, Trivia night on Tuesdays). They can be refined into community members, already on McMaster campus (supporting the objective of better integrating with the community), and citizens of Hamilton (supporting the objective of extending the pool of patrons).
 
 [#cameron,reftext=Cameron]
 Cameron (Community member)::
@@ -49,11 +49,11 @@ Restaurant staff are directly impacted by *{project-title}*, from the front-hous
 
 [#drew,reftext=Drew]
 Drew (Restaurant Manager)::
-    Drew started working at The FireBird in 2022, with the great re-opening as part of the _Back to Mac_ operation. With 10+ years of experience in restaurant management in the GTA, they were hired to help adapting The FireBird to its new post-covid operational context. They are known for their direct management style, favoring problem-solving over finger pointing.
+    Drew started working at The Firebird in 2022, with the great re-opening as part of the _Back to Mac_ operation. With 10+ years of experience in restaurant management in the GTA, they were hired to help adapting The FireBird to its new post-covid operational context. They are known for their direct management style, favoring problem-solving over finger pointing.
 
 [#dylan,reftext=Dylan]
 Dylan (Line Cook)::
-    Dylan works as a line cook at The FireBird since 2019. Preparing tasty food that patrons will enjoy is really important for them, that's why they were a little bit skeptical when they heard top-management starting to talk about "lunch boxes". They fear that such approaches might jeopardize the quality of food they like to serve.
+    Dylan works as a line cook at The Firebird since 2019. Preparing tasty food that patrons will enjoy is really important for them, that's why they were a little bit skeptical when they heard top-management starting to talk about "meal boxes". They fear that such approaches might jeopardize the quality of food they like to serve.
 
 ==== Indirect Stakeholders
 

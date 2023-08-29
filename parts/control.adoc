@@ -17,7 +17,7 @@ This document is written as an example of a _reasonable_ requirements document, 
 It does not has the ambition of being a _perfect_ implementation of this template, as it mixes different sources and methods (e.g., <<RE97>>) to fit the objectives of COMPSCI/SFWRENG 3RA3 at McMaster. 
 In addition of the two authors, this document is built on top of the expertise and discussions with Mireille Blay-Fornarino (Université Côte d'Azur), Jean-Michel Bruel (Université de Toulouse), and Richard Paige (McMaster University).
 
-NOTE: In this document, we use _The Phoenix_ as an **imaginary client**. The objective is to root the document into a concrete example for McMaster's students, as it is an historical landmark at McMaster: founded in 1969 on campus, it has been owned and operated by the Graduate Students Association since then. It is important to note that **_The Phoenix_ was not involved** at any moment in the writing of this document.  
+NOTE: In this document, we use _The Firebird as an **imaginary client**. The objective is to root the document into a concrete example for McMaster's students, which host since 1969 a restaurant with a _similar_ name. It is important to note that **this is a fictional case study**.  
 
 [discrete]
 === Authors
