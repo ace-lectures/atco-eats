@@ -6,10 +6,10 @@ TIP: _Properties of the environment that the system's operation must preserve, i
 endif::[]
  Some Invariants of this system can be defined as follows:
  
- - The Phoenix will operate specifically within the McMaster University Campus, on land owned by McMaster
+ - The Firebird will operate specifically within the McMaster University Campus, on land owned by McMaster
 
- - The Phoenix can assume that McMaster will be responsible for their own systems, outside of the application being developed for The Phoenix
+ - The Firebird can assume that McMaster will be responsible for their own systems, outside of the application being developed for The Firebird
 
- - The Phoenix can assume that there will always be patrons under the legal drinking age based on the legal drinking age set by the Ontario Government
+ - The Firebird can assume that there will always be patrons under the legal drinking age based on the legal drinking age set by the Ontario Government
 
 

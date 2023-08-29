@@ -7,7 +7,7 @@ endif::[]
 
 The high level functional requirements for the application based on client input can be defined as follows in no particular order:
 
-- *Integration with campus staff.* Client wants to be able to leverage the location of The Phoenix to allow McMaster's staff to order food for events directly through their internal information system and automatically support billing (instead of staff paying with their credit card and then submitting an expense report). This can be done primarily through Mosaic or something like Mosaic
+- *Integration with campus staff.* Client wants to be able to leverage the location of The Firebird to allow McMaster's staff to order food for events directly through their internal information system and automatically support billing (instead of staff paying with their credit card and then submitting an expense report). This can be done primarily through Mosaic or something like Mosaic
 
 - *Integration with campus life.* Client wants the app to facilitate student life ie. Enable students to easily access food in between classes and during busy periods like midterms and exams. This can be done by enabling food order in boxes and quick pickup in restaurant.
 
