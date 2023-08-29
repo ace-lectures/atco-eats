@@ -5,9 +5,9 @@
 .2+| *Version* 2+| *Delivery* 2+| *Feedback*
 | _Deadline_ | _Delivered_ | _Received_ | _Integrated_ 
 
-| **V1** | | | |
-| **V2** | | | |
-| **V3** | | | |
+| **V1** | 05-09-2023 | 29-08-2023 | |
+| **V2** | 05-09-2023 | | |
+| **V3** | 05-09-2023 | | |
 |===
 
 [discrete]
@@ -17,7 +17,7 @@ This document is written as an example of a _reasonable_ requirements document, 
 It does not has the ambition of being a _perfect_ implementation of this template, as it mixes different sources and methods (e.g., <<RE97>>) to fit the objectives of COMPSCI/SFWRENG 3RA3 at McMaster. 
 In addition of the two authors, this document is built on top of the expertise and discussions with Mireille Blay-Fornarino (Université Côte d'Azur), Jean-Michel Bruel (Université de Toulouse), and Richard Paige (McMaster University).
 
-NOTE: In this document, we use _The Firebird as an **imaginary client**. The objective is to root the document into a concrete example for McMaster's students, which host since 1969 a restaurant with a _similar_ name. It is important to note that **this is a fictional case study**.  
+NOTE: In this document, we use _The Firebird_ as an **imaginary client**. The objective is to root the document into a concrete example for McMaster's students, which host since 1969 a restaurant with a _similar_ name. It is important to note that **this is a fictional case study**.  
 
 [discrete]
 === Authors
