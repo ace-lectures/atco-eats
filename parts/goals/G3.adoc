@@ -10,5 +10,5 @@ The expected benefits of this app primarily center around increasing the on camp
 The goals that present these benefits, as well as the stakeholders that they affect can be seen in this goal model diagram:
 
 .Goal model for the app
-image::models/goal_model.svg[scale=70%,align="center"]
+image::models/goal_model.svg[pdfwidth=100%,align="center"]
 
