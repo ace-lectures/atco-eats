@@ -9,22 +9,22 @@ We will rely on interviews to interact with direct stakeholders indentified in <
 
 * Community member (<<cameron>>):
 ** Type of interview: *Closed*. The objective is to gather structured information about how the person interacts with the Firebird.
-** Question: _"When looking for a place to eat on campus, what are the 5 key decision factors for your choice?"_. We are targetting the local community, and whant to understand what they are looking for.
+** Question: _"When looking for a place to eat on campus, what are the 5 key decision factors for your choice?"_. We are targetting the local community, and want to understand what they are looking for.
 
 * Citizen of Hamilton (<<carter>>):
 ** Type of interview: *Open*. The objective is to collect as much information as possible on how hamiltonians select new restaurants to try out.
-** Question: _"When looking for a new restaurant, what are you looking for?"_. We will use this question as opener, and bounce on the different topics thje interviewee might raise to gather as many feedback as possible.
+** Question: _"When looking for a new restaurant, what are you looking for?"_. We will use this question as an opener and bounce between the different topics the interviewee might raise to gather as much feedback as possible.
 ** Remark: Based on preliminary interviews, we could build a survey to validate the collected data at scale.
 
 * Administrative Assistant (<<logan>>):
 ** Type of interview: *Closed*. We want to identify precisely what drives the decision of chosing one catering partner over another oner.
-** Question: _"When ordering catering, what dimensions drives your choice of one provider instead of another?"_. We will use this question to get information related to motivational choice (as the pain point of expense report was already identified).
+** Question: _"When ordering catering, what aspects affect your choice of one provider instead of another?"_. We will use this question to get information related to motivational choice (as the pain point of expense report was already identified).
 ** Remark: The expense report pain point is _assumed_, but might have to be validated at some point.
 
 * Restaurant Manager (<<drew>>):
 ** Type of interview: *Closed*. We want to validate the results of the <<ideation>> (Appendix A) by zooming in the remaining ambiguities.
-** Question: _"Can you elaborate a process that would support the Loyalty Program identified during the workshop?"_. This question will help clarifying the ambiguity existing around this feature.
+** Question: _"Can you elaborate a process that would support the Loyalty Program identified during the workshop?"_. This question help to clarify the ambiguity existing around this feature.
 
 * Line cook (<<dylan>>): 
 ** Type of interview: *Open*. We want to understand their line of work as part of the kitchen staff, and how introducing meal boxes could impact their work.
-** Question: _"How is your shift organized in the kitchen?"_. This question is essential to understand the daily routine of a line cook, as this is a particular expertise that none of the project developers has.
+** Question: _"How is your shift organized in the kitchen?"_. This question is essential to understand the daily routine of a line cook, as this is a particular expertise that none of the project developers have.
