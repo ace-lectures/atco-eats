@@ -6,7 +6,7 @@
 |===
 |Section | Version | Lead | Delivered | Reviewer | Approved 
 
-| **<<e1>>** | Milestone #1 | <<sm>> | 28-08-2023 | <<tc>> |
+| **<<e1>>** | Milestone #1 | <<sm>> | 28-08-2023 | <<tc>> | 29-08-2023
 | **<<e2>>** |  |  |  |  |
 | **<<e3>>** |  |  |  |  |
 | **<<e4>>** |  |  |  |  |
