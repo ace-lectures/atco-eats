@@ -6,10 +6,10 @@ TIP: _Clear and precise definitions of all the vocabulary specific to the applic
 endif::[]
 
 [[mosaic,Mosaic]] Mosaic (Information System)::
-    Mosaic is McMaster's internal portal. It acts as a unique entry point aggfregating each and every tool used to support McMaster's community. Students use it for course enrollment, staff for expense reports, faculty for accessing class rosters. Acting as a portal, it covers Student Administration, Finance, HR, Research Administration, and Facilities Maintenance Management.
+    Mosaic is McMaster's internal portal. It acts as a unique entry point aggregating each and every tool used to support McMaster's community. Students use it for course enrollment, staff for expense reports, faculty for accessing class rosters. Acting as a portal, it covers Student Administration, Finance, HR, Research Administration, and Facilities Maintenance Management.
 
 [[staff,Staff]] Staff::
-    When referring to _staff_, this document refers to persons employed by McMaster to support its operations, who, as such, might commit to expenses in food and hospitality. This generally includes administration staff and full-time faculty members. 
+    When referring to _staff_, this document refers to persons employed by McMaster to support its operations, who might commit to expenses in food and hospitality. This generally includes administration staff and full-time faculty members. 
 
 [[community,Community]] McMaster community::
     McMaster's community includes <<staff>>, as well as students (undergrad and graduate ones).
