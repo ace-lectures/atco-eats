@@ -22,3 +22,6 @@ endif::[]
 
 [[macid,MacID]] MacID::
     Mac ID is the local _Single Sign On_ (SSO) deployed as McMaster as a unique and centralized way to support authentication among the different apps used by the university (_e.g._, <<mosaic>>, Avenue to Learn)
+
+[[mealplan,Meal Plan]] Meal Plan::
+    {todo} <<tc>>

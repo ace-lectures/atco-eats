@@ -12,7 +12,9 @@ include::metadata.adoc[]
 :unknown: icon:question-circle[]
 :clock: icon:clock[]
 :ec: icon:square-o[]
-
+:draft: icon:bomb[] This section is a DRAFT icon:bomb[]
+:todo: icon:calendar-check[] TODO icon:calendar-check[] 
+ 
 
 include::parts/core.adoc[]
 
