@@ -10,3 +10,5 @@ endif::[]
 - **Intearctions with <<mosaic>>**: To support a meal plan debit, *{project-title}* needs to send a request for payment to the system Internal billing works the other way around: the system exposes an endpoint providing pending invoices, and periodically <<mosaic>> collect them and start the accounting reconciliation process.
 
 - **Mobile support**: The system must work with classical smartphone, _i.e._, Apple and Android devices.
+
+- **Internet support**: The system must work with internet browsers in the event that users do not have access to a smartphone.
