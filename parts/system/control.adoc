@@ -5,10 +5,10 @@
 |===
 |Section | Version | Lead | Delivered | Reviewer | Approved 
 
-| **<<s1>>** | | | | |
-| **<<s2>>** | | | | |
-| **<<s3>>** | | | | |
-| **<<s4>>** | | | | |
+| **<<s1>>** | Milestone #2 | <<sm>> | | <<tc>> |
+| **<<s2>>** | Milestone #2 | <<tc>> | | <<sm>> |
+| **<<s3>>** | Milestone #2 | <<sm>> | | <<tc>> |
+| **<<s4>>** | Milestone #2 | <<tc>> | | <<sm>> |
 | **<<s5>>** | | | | |
-| **<<s6>>** | | | | |
+| **<<s6>>** | Milestone #2 | <<sm>> | | <<tc>> |
 |===
