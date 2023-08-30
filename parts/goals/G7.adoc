@@ -21,7 +21,7 @@ endif::[]
 
 |===
 
-==== Direct Stakeholders
+==== (G.7.1) Direct Stakeholders
 
 ===== Patrons
 
@@ -32,8 +32,8 @@ Cameron (Community member)::
     Cameron is a grad student in Engineering, splitting their time between working on campus as a teaching assistant and their research work on biomedical nano-robots. They are not living on campus, and coming to Mac is a 25 minutes commute. They are on a tight budget, and cannot afford eating out too often. They enjoy spending time with their friends (other grad students, or from outside McMaster).
 
 [#carter,reftext=Carter]
-Avery (Citizen of Hamilton)::
-    Avery lives in Stoney Creek, and work as an assistant manager in a local grocery store. With their partner, they have two teenage children, and enjoy spending quality time together dining in nice restaurants. They are not necessarily looking for fancy food, but more for nice, fun and positive atmosphere for their monthly family dinner. 
+Carter (Citizen of Hamilton)::
+    Carter lives in Stoney Creek, and work as an assistant manager in a local grocery store. With their partner, they have two teenage children, and enjoy spending quality time together dining in nice restaurants. They are not necessarily looking for fancy food, but more for nice, fun and positive atmosphere for their monthly family dinner. 
 
 ===== Indirect customer 
 
@@ -55,7 +55,7 @@ Drew (Restaurant Manager)::
 Dylan (Line Cook)::
     Dylan has worked as a line cook at The Firebird since 2019. Preparing tasty food that patrons will enjoy is really important for them, that's why they were a little bit skeptical when they heard top-management starting to talk about "meal boxes". They fear that such approaches might jeopardize the quality of food they like to serve.
 
-==== Indirect Stakeholders
+==== (G.7.2) Indirect Stakeholders
 
 - **<<mosaic>> Operational Maintainers**: As *{project-title}* will be integrated into <<mosaic>>, it needs tro comply to operational constraints required by <<mosaic>> for integration purposes.
 
@@ -64,7 +64,7 @@ Dylan (Line Cook)::
 - **McMaster Senate**: The Senate is in charge of voting by-laws that might influence the operations of *{project-title}*
 
 
-==== Requirements Sources
+==== (G.7.3) Requirements Sources
 
 * **Liquor Licence and Control Act, 2019**: This act regulates the sell of alcoholic products in the Province of Ontario. As The FireBird is located in Ontario, *{project-title}* must be compliant with this Act
 ** https://www.ontario.ca/laws/statute/19l15b
