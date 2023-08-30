@@ -11,4 +11,4 @@ endif::[]
 
 - **Mobile support**: The system must work with classical smartphone, _i.e._, Apple and Android devices.
 
-- **Internet support**: The system must work with internet browsers in the event that users do not have access to a smartphone.
+- **Internet support**: The system must work with internet browsers to support staff and in the event that customers do no wish to download the app.
