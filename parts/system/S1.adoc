@@ -5,4 +5,8 @@ ifdef::env-draft[]
 TIP: _Overall structure expressed by the list of major software and, if applicable, hardware parts._  <<BM22>>
 endif::[]
 
-{emptysec}
+.Components involved in {project-title} mobile app
+image::models/component_mobile.svg[scale=75%,align="center"]
+
+.Components involved in {project-title} administration (web) app
+image::models/component_web.svg[scale=75%,align="center"]

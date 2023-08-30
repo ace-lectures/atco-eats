@@ -1,7 +1,7 @@
 'PlantUML style inspired by McMaster Colour Palette
 
-skinparam nodesep 75
-skinparam ranksep 75
+skinparam nodesep 45
+skinparam ranksep 45
 
 hide empty members
 hide footbox
