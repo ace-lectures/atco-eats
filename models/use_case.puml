@@ -4,11 +4,11 @@
   
 left to right direction
 
-actor User as U
+actor CommunityMember as CM
 
 
 rectangle "System" {
-  U --> (Do Something)
+  CM --> (Do Something)
 }
 @enduml
   
