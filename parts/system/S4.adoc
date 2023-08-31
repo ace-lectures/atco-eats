@@ -11,21 +11,21 @@ endif::[]
 * **Trigger**: Student wants to get some food in between classes
 * **Main Success Scenario**
 
-    1. Student opens the *{project-title}* app.
-    2. App offers menu options for the student to choose from.
-    3. Student uses the lookup function to find food that they want.
-    4. Student selects food and then goes to checkout.
-    5. Student pays for food using credit card. Payment success and order goes through.
-    6. After some time student receives notification that food is ready.
+    - 1. Student opens the *{project-title}* app.
+    - 2. App offers menu options for the student to choose from.
+    - 3. Student uses the lookup function to find food that they want.
+    - 4. Student selects food and then goes to checkout.
+    - 5. Student pays for food using credit card. Payment success and order goes through.
+    - 6. After some time student receives notification that food is ready.
 
 * **Secondary Scenarios**
 
-    1.1. Student creates a new user account.
-    1.2. Student logs into already existing account.
-    5.1. Student pays using student card.
-    5.2. Upon successful payment, student decides to save payment information to account for next purchase.
-    5.3. If student already has an account, prompt student to use loyalty points to pay for food.
-    5.4. Payment is rejected, student is unable to complete purchase.
+    - 1.1. Student creates a new user account.
+    - 1.2. Student logs into already existing account.
+    - 5.1. Student pays using student card.
+    - 5.2. Upon successful payment, student decides to save payment information to account for next purchase.
+    - 5.3. If student already has an account, prompt student to use loyalty points to pay for food.
+    - 5.4. Payment is rejected, student is unable to complete purchase.
 
 * **Success Postcondition**: Student receives email for purchase and notification when food is ready.
 
@@ -42,31 +42,38 @@ This diagram helps to explain this usage scenario as it helps us to see all the 
 * **Trigger**: Customer inputs new order
 * **Main Success Scenario**
 
-    1. Line cook receives notification for new food order.
-    2. Line cook acknowledges new order, app puts it in cooking queue.
-    3. Line cook begins preparing food for order.
-    4. Upon completion, line cook places food in box for pickup and marks order as complete in system.
+    - 1. Line cook receives notification for new food order.
+    - 2. Line cook acknowledges new order, app puts it in cooking queue.
+    - 3. Line cook begins preparing food for order.
+    - 4. Upon completion, line cook places food in box for pickup and marks order as complete in system.
 
 * **Secondary Scenarios**
 
-    4.1. Customer arrives prior to completion, wants to eat in restaurant instead of take-out.
-    4.2. Line cook puts food on plate instead of box and hands off to waitress.
+    - 4.1. Customer arrives prior to completion, wants to eat in restaurant instead of take-out.
+    - 4.2. Line cook puts food on plate instead of box and hands off to waitress.
 
 This scenario is important as it demonstrates the potential workflow that a line cook might take to integrate online orders with in-person orders. We can expect that they will want minimal contact with the app so having it be a one button scenario is good so that they can focus on cooking.
 
-==== Usage Scenario 3: Admin Assistant processing payment for catering order
-* **Primary Actor**: Admin assistant
+==== Usage Scenario 3: Restaurant manager sends invoice to Mosaic through app
+* **Primary Actor**: Restaurant manager
 * **Precondition**: Admin assistant has already called and placed order for food and has catering order number
-* **Trigger**: Admin assistant wants to user Department number to pay for the catering order
+* **Trigger**: Admin assistant wants to use Department number to pay for the catering order
 * **Main Success Scenario**
 
-    1. Admin assistant opens the *{project-title}* app.
-    2. Admin assistant navigates to the catering section of the app.
-    3. Admin assistant inputs catering order number into the app. App then displays payment process screen.
-    4. Admin assistant inputs department information to pay for the catering.
-    5. Restaurant begins to prepare for catering event.
+    - 1. Restaurant manager opens the *{project-title}* web-portal.
+    - 2. Restaurant manager logs in.
+    - 3. Restaurant manager navigates to the catering section of the app.
+    - 4. Restaurant manager inputs catering order number into the app. App then displays payment process screen.
+    - 5. Restaurant manager prepares invoice for the catering event
+    - 6. Restaurant manager sends invoice to Mosaic through web-portal.
+    - 7. Restaurant manager begins to prepare for catering event
 
 * **Secondary Scenarios**
+
+    - 4.1. Admin assistant inputs wrong catering order. Reject order.
+    - 4.2. Restaurant manager inputs wrong catering order number. Redo invoice
+    - 5.1. Admin assistant inputs wrong department number. Reject payment
+    - 5.2. Restaurant manager inputs wrong department number. Redo invoice.
 
 * **Success Postcondition**: Admin assistant receives email for catering service payment receipt.
 
@@ -78,16 +85,16 @@ This scenario is important as it demonstrates the potential workflow that an adm
 * **Trigger**: End of the day and manager needs to tally up sales for the day
 * **Main Success Scenario**
 
-    1. Restaurant manager opens up *{project-title}* app in browser on computer.
-    2. Restaurant manager logs in.
-    3. Restaurant manager navigates to sales tab.
-    4. Restaurant manager clicks on 'generate sales report'.
-    5. App summarizes sales for the day in easy to use and read format.
-    6. App prompts restaurant manager to download and save report to local computer.
-    7. Restaurant manager closes app and then prints sales report document.
+    - 1. Restaurant manager opens up *{project-title}* app in browser on computer.
+    - 2. Restaurant manager logs in.
+    - 3. Restaurant manager navigates to sales tab.
+    - 4. Restaurant manager clicks on 'generate sales report'.
+    - 5. App summarizes sales for the day in easy to use and read format.
+    - 6. App prompts restaurant manager to download and save report to local computer.
+    - 7. Restaurant manager closes app and then prints sales report document.
 * **Secondary Scenarios**
 
-    6.1. Restaurant manager views sales report on computer and hates report. Ignores problems and blames staff.
+    - 6.1. Restaurant manager views sales report on computer and hates report. Ignores problems and blames staff.
 
 * **Success Postcondition**: Restaurant manager has sales report document on local machine and physical copy.
 
@@ -95,20 +102,20 @@ This scenario is important as the restaurant manager will need to see the sales 
 
 ==== Usage Scenario 5: Hamilton Citizen wants to eat at the Firebird
 * **Primary Actor**: Hamilton citizen
-* **Precondition**: Hamilton citizen is on campus
+* **Precondition**: Hamilton citizen is on picnic at Cootes
 * **Trigger**: Hamilton citizen is hungry and needs a drink
 * **Main Success Scenario**
 
-    1. Hamilton citizen opens browser to look for food options (and stops paying attention conference they are attending).
-    2. Citizen find the Firebird is nearby, navigates to *{project-title}* app website.
-    3. Citizen goes through menu to find options that they might enjoy and drinks that they crave.
-    4. Citizen decides to run to restaurant as soon as conference is over.
+    - 1. Hamilton citizen opens browser to look for food options (and stops paying attention conference they are attending).
+    - 2. Citizen find the Firebird is nearby, navigates to *{project-title}* app website.
+    - 3. Citizen goes through menu to find options that they might enjoy and drinks that they crave.
+    - 4. Citizen decides to run to restaurant as soon as and then goes to play road hockey.
 
 * **Secondary Scenarios**
 
-    2.1. Citizen doesn't know how to navigate to app website, gives up and goes to Subway.
-    3.1. Citizen doesn't like options, gives up and goes to Grain&Grit.
-    4.1. Citizen is differently-abled, rolls up to the Firebird instead popping wheelies out of excitement.
+    - 2.1. Citizen doesn't know how to navigate to app website, - gives up and goes to Subway.
+    - 3.1. Citizen doesn't like options, gives up and goes to Grain&Grit.
+    - 4.1. Citizen is differently-abled, rolls up to the Firebird instead, popping wheelies out of excitement.
 
 * **Success Postcondition**: Hamilton Citizen dines at restaurant and loves food.
 
