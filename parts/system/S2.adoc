@@ -34,6 +34,8 @@ endif::[]
 
 . **Update menu provider**: Menu manager shall provide an interface to staff to update the menu with new items or remove old ones.
 
+. **Select menu item**: Menu manager shall allow customers to select the items that they wish to purchase.
+
 ===== Non-Functional Requirements
 
 . **Legibility**: Menu manager shall space out menu items consistently to facilitate reading and understanding of on-screen information.
