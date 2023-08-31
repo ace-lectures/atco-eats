@@ -24,4 +24,4 @@ endif::[]
     Mac ID is the local _Single Sign On_ (SSO) deployed as McMaster as a unique and centralized way to support authentication among the different apps used by the university (_e.g._, <<mosaic>>, Avenue to Learn)
 
 [[mealplan,Meal Plan]] Meal Plan::
-    {todo} <<tc>>
+    The meal plan is an opt-in option that the majority of students who live in residence take to get meals, and is continually offered to all students. They are able to prepay money to their Mosaic account and use their student card to purchase food on campus, or other local restaurants that accept student meal plans as a form of payment.
