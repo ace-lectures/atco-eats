@@ -5,4 +5,123 @@ ifdef::env-draft[]
 TIP: _Examples of interaction between the environment (or human users) and the system, expressed as user stories. Such scenarios are not by themselves a substitute for precise descriptions of functionality (<<s3>>), but provide an important complement by specifying cases that these behavior descriptions must support; they also serve as a basis for developing test cases. The scenarios most relevant for stakeholders are given in chapter <<g5>> in the Goals book, at a general level, as use cases; in contrast, <<s4>> can refer to system components and functionality (from other chapters of the System book) as well as special and erroneous cases, and introduce more specific scenarios._  <<BM22>>
 endif::[]
 
-{emptysec}
+==== Usage Scenario 1: Ordering food from the app
+* **Primary Actor**: Student
+* **Precondition**: Student has internet access and the app downloaded
+* **Trigger**: Student wants to get some food in between classes
+* **Main Success Scenario**
+
+    1. Student opens the *{project-title}* app.
+    2. App offers menu options for the student to choose from.
+    3. Student uses the lookup function to find food that they want.
+    4. Student selects food and then goes to checkout.
+    5. Student pays for food using credit card. Payment success and order goes through.
+    6. After some time student receives notification that food is ready.
+
+* **Secondary Scenarios**
+
+    1.1. Student creates a new user account.
+    1.2. Student logs into already existing account.
+    5.1. Student pays using student card.
+    5.2. Upon successful payment, student decides to save payment information to account for next purchase.
+    5.3. If student already has an account, prompt student to use loyalty points to pay for food.
+    5.4. Payment is rejected, student is unable to complete purchase.
+
+* **Success Postcondition**: Student receives email for purchase and notification when food is ready.
+
+This scenario is important as it demonstrates how students are most likely to interact with the app in order to get food and meet the demands of their busy schedules. We can expect them to have multiple different payment methods, and change they're dining plans on a whim if class gets cancelled or they decide to skip class because they are exhausted.
+
+.Activity diagram for usage scenario 1
+image::models/activity_diagram1.drawio.png[scale=60%,align="center"]
+
+This diagram helps to explain this usage scenario as it helps us to see all the different decisions that happen during this scenario. These will very likely turn into if statements for the software development.
+
+==== Usage Scenario 2: Line cook using the app
+* **Primary Actor**: Line cook
+* **Precondition**: Line cook is already at station preparing food
+* **Trigger**: Customer inputs new order
+* **Main Success Scenario**
+
+    1. Line cook receives notification for new food order.
+    2. Line cook acknowledges new order, app puts it in cooking queue.
+    3. Line cook begins preparing food for order.
+    4. Upon completion, line cook places food in box for pickup and marks order as complete in system.
+
+* **Secondary Scenarios**
+
+    4.1. Customer arrives prior to completion, wants to eat in restaurant instead of take-out.
+    4.2. Line cook puts food on plate instead of box and hands off to waitress.
+
+This scenario is important as it demonstrates the potential workflow that a line cook might take to integrate online orders with in-person orders. We can expect that they will want minimal contact with the app so having it be a one button scenario is good so that they can focus on cooking.
+
+==== Usage Scenario 3: Admin Assistant processing payment for catering order
+* **Primary Actor**: Admin assistant
+* **Precondition**: Admin assistant has already called and placed order for food and has catering order number
+* **Trigger**: Admin assistant wants to user Department number to pay for the catering order
+* **Main Success Scenario**
+
+    1. Admin assistant opens the *{project-title}* app.
+    2. Admin assistant navigates to the catering section of the app.
+    3. Admin assistant inputs catering order number into the app. App then displays payment process screen.
+    4. Admin assistant inputs department information to pay for the catering.
+    5. Restaurant begins to prepare for catering event.
+
+* **Secondary Scenarios**
+
+* **Success Postcondition**: Admin assistant receives email for catering service payment receipt.
+
+This scenario is important as it demonstrates the potential workflow that an admin assistant might take to pay for catering services. This shows how it can be easier to pay for catering services if the app is integrated with Mosaic and able to access department accounts to withdraw the required money.
+
+==== Usage Scenario 4: Restaurant Manager checks sales report
+* **Primary Actor**: Restaurant manager
+* **Precondition**: Restaurant manager is at computer
+* **Trigger**: End of the day and manager needs to tally up sales for the day
+* **Main Success Scenario**
+
+    1. Restaurant manager opens up *{project-title}* app in browser on computer.
+    2. Restaurant manager logs in.
+    3. Restaurant manager navigates to sales tab.
+    4. Restaurant manager clicks on 'generate sales report'.
+    5. App summarizes sales for the day in easy to use and read format.
+    6. App prompts restaurant manager to download and save report to local computer.
+    7. Restaurant manager closes app and then prints sales report document.
+* **Secondary Scenarios**
+
+    6.1. Restaurant manager views sales report on computer and hates report. Ignores problems and blames staff.
+
+* **Success Postcondition**: Restaurant manager has sales report document on local machine and physical copy.
+
+This scenario is important as the restaurant manager will need to see the sales reports of the day/week/month to determine current success of app and restaurant. These sales reports are a major part of what makes the app useful as it will be able to generate these reports on command for a desired time frame in order to summarize information critical to the success of the restaurant.
+
+==== Usage Scenario 5: Hamilton Citizen wants to eat at the Firebird
+* **Primary Actor**: Hamilton citizen
+* **Precondition**: Hamilton citizen is on campus
+* **Trigger**: Hamilton citizen is hungry and needs a drink
+* **Main Success Scenario**
+
+    1. Hamilton citizen opens browser to look for food options (and stops paying attention conference they are attending).
+    2. Citizen find the Firebird is nearby, navigates to *{project-title}* app website.
+    3. Citizen goes through menu to find options that they might enjoy and drinks that they crave.
+    4. Citizen decides to run to restaurant as soon as conference is over.
+
+* **Secondary Scenarios**
+
+    2.1. Citizen doesn't know how to navigate to app website, gives up and goes to Subway.
+    3.1. Citizen doesn't like options, gives up and goes to Grain&Grit.
+    4.1. Citizen is differently-abled, rolls up to the Firebird instead popping wheelies out of excitement.
+
+* **Success Postcondition**: Hamilton Citizen dines at restaurant and loves food.
+
+This scenario is important to show why having a website as well as downloadable application to attract more customers to the restaurant. As not everyone who is on campus is necessarily a community member, having someway to be discovered and learn more information about the restaurant is critical for attracting curious customers.
+
+.Activity diagram for usage scenario 5
+image::models/activity_diagram2.drawio.png[scale=60%,align="center"]
+
+This diagram helps to explain this scenario as it justifies the existence of the app on the internet for not just staff but users too. It help to show the importance of online presence for attracting more customers, satisfying one of the goals of having more customers.
+
+
+
+
+
+
+
