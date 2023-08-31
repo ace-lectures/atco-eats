@@ -1,0 +1,85 @@
+@startuml
+
+!include ../_style/puml.style
+  
+class Patron {
+    + firstname: String
+    + lastname: String
+}
+
+class CommunityMember extends Patron {
+    + macID: String
+    + identifier: String
+}
+
+class Credentials {
+    + login: String
+    - <<encrypted>> password: String
+}
+Credentials <--* Patron
+
+class LoyaltyCard {
+    + balance: Integer
+}
+LoyaltyCard <-* Patron
+
+enum PAYMENT_TYPE {
+    + <<External>> CREDIT
+    + <<External>> DEBIT
+    + <<External>> INTERAC
+    + <<Internal>> MEAL_PLAN
+    + <<Internal>> EXPENSE_REPORT
+}
+
+enum STATUS {
+    + RECEIVED
+    + IN_PROGRESS
+    + READY
+    + PAYED
+}
+
+abstract class Order {
+    + received: Date
+    + delivered: Date
+}
+Order *-> STATUS
+PAYMENT_TYPE <--* Order
+
+class MealBoxOrder extends Order {
+    + pickup: Date
+}
+
+MealBoxOrder *--> "*" MealBoxItem
+
+class MealBoxItem {
+    + quantity: Integer
+}
+
+class MealBox {
+    + name: String
+    + description: String
+    + price: Float
+}
+
+MealBox <- MealBoxItem
+
+class MealBoxMenu
+
+MealBoxMenu *-> MealBox
+
+class CateringOrder extends Order {
+    + claimant: String
+    + approver: String
+    + email: EmailAddress
+    + phone: PhoneNumber
+    + chartCode: String
+    + description: String
+}
+
+
+Patron *-> "*" Order
+
+
+
+
+@enduml

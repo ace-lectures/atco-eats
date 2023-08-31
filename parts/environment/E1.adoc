@@ -5,6 +5,8 @@ ifdef::env-draft[]
 TIP: _Clear and precise definitions of all the vocabulary specific to the application domain, including technical terms, words from ordinary language used in a special meaning, and acronyms. It introduces the terminology of the project; not just of the environment in the strict sense, but of all its parts._  <<BM22>>
 endif::[]
 
+==== Vocabulary
+
 [[mosaic,Mosaic]] Mosaic (Information System)::
     Mosaic is McMaster's internal portal. It acts as a unique entry point aggregating each and every tool used to support McMaster's community. Students use it for course enrollment, staff for expense reports, faculty for accessing class rosters. Acting as a portal, it covers Student Administration, Finance, HR, Research Administration, and Facilities Maintenance Management.
 
@@ -25,3 +27,12 @@ endif::[]
 
 [[mealplan,Meal Plan]] Meal Plan::
     The meal plan is an opt-in option that the majority of students who live in residence take to get meals, and is continually offered to all students. They are able to prepay money to their Mosaic account and use their student card to purchase food on campus, or other local restaurants that accept student meal plans as a form of payment.
+
+[[greenbox,Green Box]] Green Box::
+    As part of McMaster sustainability program, <<community>> member can subscribe to a reusable container program. More information available here: https://hospitality.mcmaster.ca/wellness-sustainability/sustainability/choose-to-reuse/reusable-containers/.
+
+
+==== Domain Model
+
+.Domain Model for {project-title}
+image::models/domain_model.svg[scale=70%,align="center"]
