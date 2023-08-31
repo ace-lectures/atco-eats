@@ -6,7 +6,7 @@ TIP: _Fundamental usage paths through the system. It presents the main scenarios
 endif::[]
 
 .High Level use cases diagram
-image::models/use_case_diagram.drawio.png[scale=70%,align="center"]
+image::models/use_case_diagram.png[scale=70%,align="center"]
 
 The use case diagram above highlights how we anticipate our direct stakeholders will interact with the app. More details for these usages are as follows:
 
