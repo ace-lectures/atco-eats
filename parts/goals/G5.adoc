@@ -8,45 +8,46 @@ endif::[]
 .High Level use cases diagram
 image::models/use_case_diagram.png[scale=70%,align="center"]
 
-The use case diagram above highlights how we anticipate our direct stakeholders will interact with the app. More details for these usages are as follows:
+The use case diagram above highlights how we anticipate our direct stakeholders will interact with the app for the principal use cases. More details for these usages are as follows:
 
 * *Order food.* 
 
-    - Customer (hamilton citizen and by extension community member) opens app to order food
-    - Customer accesses menu
-    - Customer goes through menu looking for food
-    - Customer finds food and places order
-    - Customer pays for food
+    1. Customer (hamilton citizen and by extension community member) opens the app to order food
+    2. Customer accesses the meal box menu
+    3. Customer goes through menu looking for food
+    4. Customer finds food and places order for meal boxes
+    5. Customer pays for food
 
-* *Update food order status.* 
+* *Receive "order status" update.* 
 
-    - Push notification when order has been received
-    - Push notification when payment is completed
-    - Send receipt to customer
-    - Line cook marks when food cooking is complete
-    - Push notification for food cooking complete
+    1. The system pushes a notification when an order has been received
+    2. The system pushes pushes another notification when the payment is completed
+    3. The system sends a receipt to the customer
+    4.  Line cook marks when food cooking is complete
+    5. The system pushes notification for food cooking complete
 
 * *Pay for food.* 
 
-    - Customer can pay for food with credit
-    - Customer can pay for food with debit
-    - Community member can pay for food with student mealplan/mosaic account
-    - Customer with account can use loyalty points to pay
-    - Community member might have greenbox for discount
+    1. The system determines the price of the order (including loyalty rewards and green box discounts, if any)
+    2. Customer select their payment type.
+    3. Payment is submitted to the right provider (External or Internal) to be processed.
 
-* *Process payment for catering.* 
+* *Submit catering invoice.* 
 
-    - Restaurant receives catering order
-    - Restaurant manager determines necessary inventory
-    - Restaurant manager determine necessary labor costs
-    - Restaurant manager puts together invoice
-    - Restaurant manager sends invoice to Mosaic
+    1. The restaurant receives catering order by traditional means (_e.g._ email, phone)
+    2. The restaurant processes the catering order using their regular process
+    3. Restaurant manager creates an order and select `INTERNAL` as payment type
+    4. They fill out the required accounting information provided by their client
+    5. They save the order in *{project-title}*, which transmit it to <<mosaic>> for payment  
 
 * *Check sales reports.* 
 
-    - Restaurant manager wants to assess business for the day
-    - Restaurant manager opens web-portal to access app
-    - Restaurant manager accesses sales for the day
-    - Restaurant manager generates sales report
-    - App prompts manager to save report to local machine
+    1. Restaurant manager opens web-portal to access app
+    2. Restaurant manager accesses sales for the day
+    3. Restaurant manager generates sales report
+    4. App prompts manager to save report to local machine 
 
+* *Finalize Order.*
+
+    1. The line cook has a list of meal boxes to prepare for the next pickup slot
+    2. When they have finished their current batch, they push a button to change their status to `READY`
