@@ -1,8 +1,0 @@
-[#g2,reftext=G.2]
-=== (G.2) Current situation
-
-ifdef::env-draft[]
-TIP: _Current state of processes to be addressed by the project and the resulting system. It describes the current situation, upon which the system is expected to improve_  <<BM22>>
-endif::[]
-
-_The Firebird_ operates as a classical restaurant on campus. Events are organized to attract graduate students, and a patio was added for outdoor seating in the 90's to increase seat capacity during summer months. Often desribed as Hamilton's hidden jewel, its location does not help to attract external patrons (_e.g._, no parking). Local patrons would consider it as any restaurant in the area: for example, staff cannot order catering for events through <<mosaic>>, and have to consider it as any other invoice.

@@ -1,6 +1,0 @@
-Thomas Chiang <chiangte@mcmaster.ca>; Sébastien Mosser <mossers@mcmaster.ca>
-:project-title: ATCO Eats
-:course-number: SE/CS 3RA3
-:course-term: Fall
-:revnumber: 2
-:env-draft:
