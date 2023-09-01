@@ -14,7 +14,7 @@ The system relies on the following four software components:
 
 In addition to these components, the system will interact with two external components to support integration with <<mosaic>> and payment processing (see <<e2>> for details). 
 
-Patrons use a mobile application to interact with the system, for the loyalty program as well as ordering meal boxes. Restaurant staff use a web-based system to administrate the system (patrons database, catering orders). It is important to note that Administrative Staff does not interact directly with the system, and will continue ordering catering or booking tables by phone or email
+Patrons use `Client-App` (a mobile application) to interact with the system, for the loyalty program as well as ordering meal boxes. this application can also be accessed in a web browser. Restaurant staff use a web-based system named `Web-Portal` to administrate the system (patrons database, catering orders). It is important to note that Administrative Staff does not interact directly with the system, and will continue ordering catering or booking tables by phone or email
 
 .Components involved in {project-title} mobile app
 image::models/component_mobile.svg[scale=75%,align="center"]

@@ -1,0 +1,66 @@
+<mxfile host="app.diagrams.net" modified="2023-09-01T20:42:56.796Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="nCvPlWHcF7ItlUx4L_FY" version="21.7.1" type="device">
+  <diagram name="Page-1" id="oBy2D88ccJq6RtBKwOCw">
+    <mxGraphModel dx="1116" dy="1732" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="64pXmVSMRAuf0BwSI_Gu-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="64pXmVSMRAuf0BwSI_Gu-2" target="64pXmVSMRAuf0BwSI_Gu-10" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="64pXmVSMRAuf0BwSI_Gu-2" value="" style="ellipse;fillColor=strokeColor;html=1;" parent="1" vertex="1">
+          <mxGeometry x="500" y="-10" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="64pXmVSMRAuf0BwSI_Gu-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="64pXmVSMRAuf0BwSI_Gu-3" target="64pXmVSMRAuf0BwSI_Gu-4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="64pXmVSMRAuf0BwSI_Gu-3" value="Citizen navigates to website" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="455" y="140" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="64pXmVSMRAuf0BwSI_Gu-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="64pXmVSMRAuf0BwSI_Gu-4" target="64pXmVSMRAuf0BwSI_Gu-6" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="64pXmVSMRAuf0BwSI_Gu-4" value="Citizen goes through menu on website" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="455" y="220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="64pXmVSMRAuf0BwSI_Gu-9" value="yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="64pXmVSMRAuf0BwSI_Gu-6" target="64pXmVSMRAuf0BwSI_Gu-8" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="64pXmVSMRAuf0BwSI_Gu-12" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="64pXmVSMRAuf0BwSI_Gu-6" target="64pXmVSMRAuf0BwSI_Gu-15" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="730" y="370" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="64pXmVSMRAuf0BwSI_Gu-6" value="&lt;br&gt;Is citizen happy with menu options?" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="427.5" y="310" width="175" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="64pXmVSMRAuf0BwSI_Gu-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="64pXmVSMRAuf0BwSI_Gu-8" target="64pXmVSMRAuf0BwSI_Gu-13" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="515" y="575" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="64pXmVSMRAuf0BwSI_Gu-8" value="Run to restaurant" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="455" y="480" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="64pXmVSMRAuf0BwSI_Gu-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="64pXmVSMRAuf0BwSI_Gu-10" target="64pXmVSMRAuf0BwSI_Gu-3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="64pXmVSMRAuf0BwSI_Gu-10" value="Citizen looks online for restaurant to visit" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="455" y="50" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="64pXmVSMRAuf0BwSI_Gu-13" value="" style="ellipse;html=1;shape=endState;fillColor=strokeColor;" parent="1" vertex="1">
+          <mxGeometry x="700" y="560" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="64pXmVSMRAuf0BwSI_Gu-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="64pXmVSMRAuf0BwSI_Gu-15" target="64pXmVSMRAuf0BwSI_Gu-13" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="64pXmVSMRAuf0BwSI_Gu-15" value="Citizen gives up and goes to Subway" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="655" y="430" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

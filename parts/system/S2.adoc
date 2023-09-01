@@ -20,7 +20,7 @@ endif::[]
 
 . [[NF211]] **Password encryption**: Patron manager shall encrypt passwords during login/sign-up process. (NF211)
 
-. [[NF212]] **Password strength**: Patron manager shall require minimum 10 characters, at least 1 numerical character, at least 1 special character, at least 1 upper case character, and at least 1 lower case character for a password. (NF212)
+. [[NF212]] **Personal Data Privacy**: Patron Manager shall ensure that the patron database is not accessible outside of the restaurant management team.  (NF212)
 
 ==== (S.2.2) Menu Provider
 
@@ -36,7 +36,7 @@ endif::[]
 
 ===== Non-Functional Requirements
 
-. [[NF221]] **Legibility**: Menu manager shall provide options to improve readability of text and images on screen. (NF221)
+. [[NF221]] **Accessibility**: Menu manager shall be compatible with screen readers and other accessibility services available on client side. (NF221)
 
 . [[NF222]] **Pictures of food**: Menu manager shall provide some pictures of menu items to entice customers to purchase food that looks particularly delicious. (NF222)
 
@@ -74,6 +74,6 @@ endif::[]
 
 ===== Non-Functional Requirements
 
-. [[NF241]] **Email receipt opt-out**: Billing shall provide the option to the user to opt-out of getting email receipts. (NF241)
+. [[NF241]] **Secured Communication**: Billing shall ensure secured communication with external (Debit, Credit, Interac) and internal (meal plans, catering) payment services, using state-of-the-art protocols validated with partners. (NF241)
 
-. [[NF242]] **Tax and accounting compliant**: Order manager shall shall comply with accounting regulations set by McMaster University, the Ontario Government, and the Government of Canada. (NF242)
+. [[NF242]] **Tax and accounting compliant**: Billing shall comply with accounting regulations set by McMaster University, the Ontario Government, and the Government of Canada. (NF242)

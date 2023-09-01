@@ -54,7 +54,7 @@ Ilist_impeding -- ordering
 ' * client app *
 ' **************
 
-component mobile as "ClientApp"
+component mobile as "Client-App"
 Imenu_lookup <.. mobile
 mobile ..> Iloyalty
 mobile .> Iprocess_order

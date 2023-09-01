@@ -7,7 +7,7 @@ endif::[]
 
 ==== (S.3.1) APIs
 
-The *{project-title}* system only offers one API to the external world: `PendingInvoice`. thisn interface is used to integrate the systemn with <<mosaic>>, which will regularly pull pending invoices and start payment processing.
+The *{project-title}* system only offers one API to the external world: `PendingInvoice`. This interface is used to integrate the system with <<mosaic>>, which will regularly pull pending invoices and start payment processing.
 
 .External API exposed by {project-title}
 image::models/external_API.svg[scale=70%,align="center"]
@@ -22,7 +22,7 @@ We focus here on the two parts of the system that differs the most from "classic
 
 ===== (S.3.2.1) Impeding Orders (Line Cook)
 
-The Line Cook stakeholder (<<dylan>>) needs to have access quickly to the next batch of mealboxes to prepare (to ensure good quality of freshly prepared food). As they are working in a kitchen, they cannot rely on classical "tablet-like" interfaces that would requires clean hands. As such, they need to interact with a _Flush!_ physical push button located in the kitchen that automaticallt update the status of the ordered food on their behalf.
+The Line Cook stakeholder (<<dylan>>) needs to have quick access to the next batch of mealboxes to prepare (to ensure good quality of freshly prepared food). As they are working in a kitchen, they cannot rely on classical "tablet-like" interfaces that would requires clean hands. As such, they need to interact with a _Flush!_ physical push button located in the kitchen that automaticallt update the status of the ordered food on their behalf.
 
 .Line Cook: Impeding Order Screen
 image::mockups/Impeding_Order.png[scale=70%,align="center"]

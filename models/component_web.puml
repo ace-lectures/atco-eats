@@ -46,7 +46,7 @@ Ipending <. mosaic
 ' * client app *
 ' **************
 
-component "Web\nAdmin" as web
+component "Web-Portal" as web
 Actor "Restaurant\nStaff" as S
 
 S .> web

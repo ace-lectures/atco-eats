@@ -10,7 +10,7 @@ image::models/use_case_diagram.png[scale=70%,align="center"]
 
 The use case diagram above highlights how we anticipate our direct stakeholders will interact with the app for the principal use cases. More details for these usages are as follows:
 
-* *Order food.* 
+* [[uc1,UC1]] *UC1: Order food.* 
 
     1. Customer (hamilton citizen and by extension community member) opens the app to order food
     2. Customer accesses the meal box menu
@@ -18,7 +18,7 @@ The use case diagram above highlights how we anticipate our direct stakeholders 
     4. Customer finds food and places order for meal boxes
     5. Customer pays for food
 
-* *Receive "order status" update.* 
+* [[uc2,UC2]] *UC2: Receive "order status" update.* 
 
     1. The system pushes a notification when an order has been received
     2. The system pushes pushes another notification when the payment is completed
@@ -26,13 +26,13 @@ The use case diagram above highlights how we anticipate our direct stakeholders 
     4.  Line cook marks when food cooking is complete
     5. The system pushes notification for food cooking complete
 
-* *Pay for food.* 
+* [[uc3,UC3]] *UC3: Pay for food.* 
 
     1. The system determines the price of the order (including loyalty rewards and green box discounts, if any)
     2. Customer select their payment type.
     3. Payment is submitted to the right provider (External or Internal) to be processed.
 
-* *Submit catering invoice.* 
+* [[uc4,UC4]] *UC4: Submit catering invoice.* 
 
     1. The restaurant receives catering order by traditional means (_e.g._ email, phone)
     2. The restaurant processes the catering order using their regular process
@@ -40,14 +40,14 @@ The use case diagram above highlights how we anticipate our direct stakeholders 
     4. They fill out the required accounting information provided by their client
     5. They save the order in *{project-title}*, which transmit it to <<mosaic>> for payment  
 
-* *Check sales reports.* 
+* [[uc5,UC5]] *UC5: Check sales reports.* 
 
     1. Restaurant manager opens web-portal to access app
     2. Restaurant manager accesses sales for the day
     3. Restaurant manager generates sales report
     4. App prompts manager to save report to local machine 
 
-* *Finalize Order.*
+* [[uc6,UC6]] *UC6: Finalize Order.*
 
     1. The line cook has a list of meal boxes to prepare for the next pickup slot
     2. When they have finished their current batch, they push a button to change their status to `READY`

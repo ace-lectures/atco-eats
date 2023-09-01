@@ -2,10 +2,12 @@
 === (S.4) Detailed usage scenarios
 
 ifdef::env-draft[]
-TIP: _Examples of interaction between the environment (or human users) and the system, expressed as user stories. Such scenarios are not by themselves a substitute for precise descriptions of functionality (<<s3>>), but provide an important complement by specifying cases that these behavior descriptions must support; they also serve as a basis for developing test cases. The scenarios most relevant for stakeholders are given in chapter <<g5>> in the Goals book, at a general level, as use cases; in contrast, <<s4>> can refer to system components and functionality (from other chapters of the System book) as well as special and erroneous cases, and introduce more specific scenarios._  <<BM22>>
+TIP: _Examples of interaction between the environment (or human users) and the system, expressed as use cases. Such scenarios are not by themselves a substitute for precise descriptions of functionality (<<s3>>), but provide an important complement by specifying cases that these behavior descriptions must support; they also serve as a basis for developing test cases. The scenarios most relevant for stakeholders are given in chapter <<g5>> in the Goals book, at a general level, as use cases; in contrast, <<s4>> can refer to system components and functionality (from other chapters of the System book) as well as special and erroneous cases, and introduce more specific scenarios._  <<BM22>>
 endif::[]
 
-==== Usage Scenario 1: Ordering food from the app
+==== (S.4.1) Ordering food from the app
+
+* **Use Case**: <<uc1>>, <<uc2>>, <<uc3>>
 * **Primary Actor**: Community member
 * **Precondition**: Community member has internet access and the app downloaded
 * **Trigger**: Community member wants to get some food in between classes
@@ -32,19 +34,21 @@ endif::[]
 
 This scenario is important as it demonstrates how community members are most likely to interact with the app in order to get food and meet the demands of their busy schedules. We can expect them to have multiple different payment methods, and change they're dining plans on a whim if class gets cancelled or they decide to skip class because they are exhausted.
 
-.Activity diagram for usage scenario 1
-image::models/activity_diagram1.drawio.png[scale=40%,align="center"]
+.Activity diagram for 'Ordering food from the app'
+image::models/activity_order_food.png[scale=70%,align="center"]
 
-This diagram helps to explain this usage scenario as it helps us to see all the different decisions that happen during this scenario. These will very likely turn into if statements for the software development.
+This diagram helps to explain this usage scenario as it helps us to see all the different decisions that happen during this scenario. These will very likely turn into if statements for the software development. It also covers the "guest" mode descriobed by the fourth scenario.
 
-==== Usage Scenario 2: Line cook using the app (for impending order and finalizing cooking)
+==== (S.4.2) Line cook using the app (for impending order and finalizing cooking)
+
+* **Use Case**: List Impending Food Orders (<<s3>>), <<uc6>>.
 * **Primary Actor**: Line cook
 * **Precondition**: Line cook is already at station preparing food
 * **Trigger**: Customer inputs new order
 * **Main Success Scenario**
 
-    - 1. Line cook receives notification for new food order.
-    - 2. Line cook acknowledges new order, app puts it in cooking queue.
+    - 1. Line cook receives sound notification for new meal box order.
+    - 2. the app puts it in cooking queue.
     - 3. Line cook begins preparing food for order.
     - 4. Upon completion, line cook places food in box for pickup and marks order as complete in system.
 
@@ -55,7 +59,9 @@ This diagram helps to explain this usage scenario as it helps us to see all the 
 
 This scenario is important as it demonstrates the potential workflow that a line cook might take to integrate online orders with in-person orders. We can expect that they will want minimal contact with the app so having it be a one button scenario is good so that they can focus on cooking.
 
-==== Usage Scenario 3: Submit catering order
+==== (S.4.3) Usage Scenario 3: Submit catering order
+
+* **Use Case**: <<uc4>>
 * **Primary Actor**: Restaurant manager
 * **Precondition**: Admin assistant has already called and placed order for food and has catering order number
 * **Trigger**: Admin assistant wants to use Department number to pay for the catering order
@@ -80,16 +86,19 @@ This scenario is important as it demonstrates the potential workflow that a line
 
 This scenario is important as it demonstrates the potential workflow that an admin assistant might take to pay for catering services. This shows how it can be easier to pay for catering services if the app is integrated with Mosaic and able to access department accounts to withdraw the required money.
 
-==== Usage Scenario 4: Hamilton Citizen wants to eat at the Firebird
+==== (S.4.4) Hamilton Citizen wants to eat at the Firebird
+
+* **Use Case**: <<uc1>>, <<uc2>>, <<uc3>>
 * **Primary Actor**: Hamilton citizen
 * **Precondition**: Hamilton citizen is on picnic at Cootes
 * **Trigger**: Hamilton citizen is hungry
 * **Main Success Scenario**
 
     - 1. Hamilton citizen opens browser to look for food options during picnic because they didn't pack enough.
-    - 2. Citizen find the Firebird is nearby, navigates to *{project-title}* app website.
+    - 2. Citizen find the Firebird is nearby, navigates to *{project-title}* app website (`Client-App`).
     - 3. Citizen goes through mealbox menu to find options that they might enjoy and drinks that they crave.
-    - 4. Citizen decides to run to restaurant as soon as and then goes to play road hockey.
+    - 4. Citizen access the app as a guest (no account), order boxes and pay.
+    - 5. Citizen decides to run to restaurant as soon as and then goes to play road hockey.
 
 * **Secondary Scenarios**
 
@@ -101,13 +110,15 @@ This scenario is important as it demonstrates the potential workflow that an adm
 
 This scenario is important to show why having a website as well as downloadable application to attract more customers to the restaurant. As not everyone who is on campus is necessarily a community member, having someway to be discovered and learn more information about the restaurant is critical for attracting curious customers.
 
-.Activity diagram for usage scenario 4
-image::models/activity_diagram2.drawio.png[scale=60%,align="center"]
+.Activity diagram for "Hamilton Citizen wants to eat at the Firebird"
+image::models/activity_browse.png[scale=70%,align="center"]
 
 This diagram helps to explain this scenario as it justifies the existence of the app on the internet for not just staff but users too. It help to show the importance of online presence for attracting more customers, satisfying one of the goals of having more customers.
 
 
-==== Usage Scenario 5: Restaurant Manager checks sales report
+==== (S.4.5) Restaurant Manager checks sales report
+
+* **Use Case**: <<uc5>>
 * **Primary Actor**: Restaurant manager
 * **Precondition**: Restaurant manager is at computer
 * **Trigger**: End of the day and manager needs to tally up sales for the day
