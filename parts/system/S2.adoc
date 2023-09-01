@@ -8,76 +8,76 @@ endif::[]
 ==== (S.2.1) Patron Manager
 ===== Functional Requirements
 
-. **Sign-up service**: Patron manager shall allow customers the option to sign-up and create an account to gain access to the loyalty program.
+. [[F211]] **Sign-up service**: Patron manager shall allow customers the option to sign-up and create an account to gain access to the loyalty program. (F211)
 
-. **Sign-up service**: Patron manager shall allow customers the option to sign-up and create an account to gain access to the loyalty program.
+. [[F212]] **Sign-up service**: Patron manager shall allow customers the option to sign-up and create an account to gain access to the loyalty program. (F212)
 
-. **Log-in/out service**: Patron manager shall allow customers to login and logout when desired without losing and points previously earned.
+. [[F213]] **Log-in/out service**: Patron manager shall allow customers to login and logout when desired without losing and points previously earned. (F213)
 
-. **Check loyalty status**: Patron manager shall allow customers to check the status of their loyalty points including points until next available reward.
+. [[F214]] **Check loyalty status**: Patron manager shall allow customers to check the status of their loyalty points including points until next available reward. (F214)
 
-. **Password recovery**: Patron manager shall allow customers to recover password in the event they have forgotten their login information.
+. [[F215]] **Password recovery**: Patron manager shall allow customers to recover password in the event they have forgotten their login information. (F215)
 
 ===== Non-Functional Requirements
 
-. **Logo location**: Patron manager shall display the Firebird logo to customers while accessing services.
+. [[NF211]] **Logo location**: Patron manager shall display the Firebird logo to customers while accessing services. (NF211)
 
-. **Text size and color**: Patron manager shall provide options to change font color and size to facilitate legibility of on-screen information.
+. [[NF212]] **Text size and color**: Patron manager shall provide options to change font color and size to facilitate legibility of on-screen information. (NF212)
 
 ==== (S.2.2) Menu Provider
 
 ===== Functional Requirements
 
-. **Provide menu**: Menu manager shall provide customer with access to the menu so that they can choose their desired item for order.
+. [[F221]] **Provide menu**: Menu manager shall provide customer with access to the menu so that they can choose their desired item for order. (F221)
 
-. **Search through menu**: Menu manager shall provide customer with the ability to lookup specific items in the menu.
+. [[F222]] **Search through menu**: Menu manager shall provide customer with the ability to lookup specific items in the menu. (F222)
 
-. **Update menu provider**: Menu manager shall provide an interface to staff to update the menu with new items or remove old ones.
+. [[F223]] **Update menu provider**: Menu manager shall provide an interface to staff to update the menu with new items or remove old ones. (F223)
 
-. **Select menu item**: Menu manager shall allow customers to select the items that they wish to purchase.
+. [[F224]] **Select menu item**: Menu manager shall allow customers to select the items that they wish to purchase. (F224)
 
 ===== Non-Functional Requirements
 
-. **Legibility**: Menu manager shall space out menu items consistently to facilitate reading and understanding of on-screen information.
+. [[NF221]] **Legibility**: Menu manager shall space out menu items consistently to facilitate reading and understanding of on-screen information. (NF221)
 
-. **Pictures of food**: Menu manager shall provide some pictures of menu items to entice customers to purchase food that looks particularly delicious.
+. [[NF222]] **Pictures of food**: Menu manager shall provide some pictures of menu items to entice customers to purchase food that looks particularly delicious. (NF222)
 
 ==== (S.2.3) Order Manager
 
 ===== Functional Requirements
 
-. **Complete food order (Process Order)**: Order manager shall provide customer with an interface to complete food order purchase.
+. [[F231]] **Complete food order (Process Order)**: Order manager shall provide customer with an interface to complete food order purchase. (F231)
 
-. **Receive food order**: Order manager shall provide line cook with ordered list of food that requires cooking and preparation.
+. [[F232]] **Receive food order**: Order manager shall provide line cook with ordered list of food that requires cooking and preparation. (F232)
 
-. **Food order complete**: Order manager shall provide line cook with interface to state when food cooking is complete. This will also prompt user with notification when food cooking is complete
+. [[F233]] **Food order complete**: Order manager shall provide line cook with interface to state when food cooking is complete. This will also prompt user with notification when food cooking is complete. (F233)
 
-. **Catering order (Process Order)**: Order manager shall provide contact information to staff that wish to order catering for an event.
+. [[F234]] **Catering order (Process Order)**: Order manager shall provide contact information to staff that wish to order catering for an event. (F234)
 
 ===== Non-Functional Requirements
 
-. **Push notifications**: Order manager shall by default enable push notifications from the app to customer phone. 
+. [[NF231]] **Push notifications**: Order manager shall by default enable push notifications from the app to customer phone. (NF231)
 
-. **Cart management**: Order manager shall provide a helpful interface for users to manage/modify their orders during the ordering process.
+. [[NF232]] **Cart management**: Order manager shall provide a helpful interface for users to manage/modify their orders during the ordering process. (NF232)
 
 ==== (S.2.4) Billing
 
 ===== Functional Requirements
 
-. **Order payment (Process Payment)**: Billing shall provide user with an interface to pay for their order using an external payment service.
+. [[F241]] **Order payment (Process Payment)**: Billing shall provide user with an interface to pay for their order using an external payment service. (F241)
 
-. **Order payment (MealPlan Payment)**: Billing shall provide customer with an interface to pay for their order using their student meal plan card.
+. [[F242]] **Order payment (MealPlan Payment)**: Billing shall provide customer with an interface to pay for their order using their student meal plan card. (F242)
 
-. **Order payment (Pending Invoices)**: Billing shall provide restaurant manager with an interface to create invoices for catering orders using department number of faculty.
+. [[F243]] **Order payment (Pending Invoices)**: Billing shall provide restaurant manager with an interface to create invoices for catering orders using department number of faculty. (F243)
 
-. **Sales reports**: Billing shall provide restaurant manager with an interface to request and review sales reports though the app.
+. [[F244]] **Sales reports**: Billing shall provide restaurant manager with an interface to request and review sales reports though the app. (F244)
 
-. **Use loyalty points**: Billing shall prompt user if they want to use loyalty points (if they have enough) before completing payment.
+. [[F245]] **Use loyalty points**: Billing shall prompt user if they want to use loyalty points (if they have enough) before completing payment. (F245)
 
-. **Email purchase receipt**: Billing shall email customer the receipt upon payment completed
+. [[F246]] **Email purchase receipt**: Billing shall email customer the receipt upon payment completed. (F246)
 
 ===== Non-Functional Requirements
 
-. **Save payment option**: Billing shall prompt the user to have the option to save their payment option for future purchases.
+. [[NF241]] **Save payment option**: Billing shall prompt the user to have the option to save their payment option for future purchases. (NF241)
 
-. **Email receipt opt-out**: Billing shall provide the option to the user to opt-out of getting email receipts.
+. [[NF242]] **Email receipt opt-out**: Billing shall provide the option to the user to opt-out of getting email receipts. (NF242)
