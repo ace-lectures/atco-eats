@@ -46,13 +46,15 @@ component ordering as "Order\nManager"
 () "Process\nOrder" as Iprocess_order
 ordering .> Ibilling
 Iprocess_order - ordering
+() "ListImpeding" as Ilist_impeding
+Ilist_impeding -- ordering
 
 
 ' **************
 ' * client app *
 ' **************
 
-component mobile as "MobileApp"
+component mobile as "ClientApp"
 Imenu_lookup <.. mobile
 mobile ..> Iloyalty
 mobile .> Iprocess_order

@@ -4,9 +4,6 @@
 skinparam ranksep  5
 skinparam nodesep 45
 
-
-
-
 ' ***********************
 ' * Internal Components *
 ' ***********************
@@ -32,7 +29,9 @@ Ipatrons_mgmt - patrons
 
 component ordering as "Order\nManager"
 () "Process\nOrder" as Iprocess_order
+() "ListImpeding" as Ilist_impeding
 ordering .> Ibilling
+Ilist_impeding - ordering
 Iprocess_order -- ordering
 
 ' ***********************
@@ -54,6 +53,7 @@ S .> web
 web .> Ipatrons_mgmt
 Imenu_mgmt <.. web
 web ..> Iprocess_order
+web ..> Ilist_impeding
 
 @enduml
   

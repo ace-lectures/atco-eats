@@ -9,7 +9,7 @@ The system relies on the following four software components:
 
 * **`Patron Manager`**: The component in charge of managing the patrons database (`Manage Patrons`), as well as providing services related to the loyalty program (`Loyalty`). It centralizes the business logic related to customer management in *{project-title}*.
 * **`Menu Provider`**: The component in charge of exposing the menu to the patrons using the system. It exposes an administration interface (`Manage Menu`), as well as a way to seach for items (`Lookup`). The component focuses only on what is available for *{project-title}*, and will not contain 100% of the restaurant menu.
-* **`Order Manager`**: The component in charge of processing orders made through the system (`Process Order`). It implements the business logic related to selling goods (mealboxes or catering services).
+* **`Order Manager`**: The component in charge of processing orders made through the system (`Process Order`). It implements the business logic related to selling goods (mealboxes or catering services), and listing elements to be cooked by the kitchen (`List Impeding`).
 * **`Billing`**: The component acting as an integrated gateway to external payment services (`Process Payment`) and internal meal plans (`MealPlan Payment`). It also exposes a way to collect `Pending Invoices` when requested, to support interaction with <<mosaic>>.
 
 In addition to these components, the system will interact with two external components to support integration with <<mosaic>> and payment processing (see <<e2>> for details). 
