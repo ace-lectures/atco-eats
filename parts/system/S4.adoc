@@ -6,37 +6,38 @@ TIP: _Examples of interaction between the environment (or human users) and the s
 endif::[]
 
 ==== Usage Scenario 1: Ordering food from the app
-* **Primary Actor**: Student
-* **Precondition**: Student has internet access and the app downloaded
-* **Trigger**: Student wants to get some food in between classes
+* **Primary Actor**: Community member
+* **Precondition**: Community member has internet access and the app downloaded
+* **Trigger**: Community member wants to get some food in between classes
 * **Main Success Scenario**
 
-    - 1. Student opens the *{project-title}* app.
-    - 2. App offers menu options for the student to choose from.
-    - 3. Student uses the lookup function to find food that they want.
-    - 4. Student selects food and then goes to checkout.
-    - 5. Student pays for food using credit card. Payment success and order goes through.
-    - 6. After some time student receives notification that food is ready.
+    - 1. Community member opens the *{project-title}* app.
+    - 2. App offers mealbox menu options for the Community member to choose from.
+    - 3. Community member uses the lookup function to find food that they want.
+    - 4. Community member selects food and then goes to checkout.
+    - 5. Community member specifies pickup time. Default is ASAP.
+    - 6. Community member pays for food using credit card. Payment success and order goes through.
+    - 7. After some time Community member receives notification that food is ready.
 
 * **Secondary Scenarios**
 
-    - 1.1. Student creates a new user account.
-    - 1.2. Student logs into already existing account.
-    - 5.1. Student pays using student card.
-    - 5.2. Upon successful payment, student decides to save payment information to account for next purchase.
-    - 5.3. If student already has an account, prompt student to use loyalty points to pay for food.
-    - 5.4. Payment is rejected, student is unable to complete purchase.
+    - 1.1. Community member creates a new user account.
+    - 1.2. Community member logs into already existing account if not already logged in.
+    - 5.1. Community member pays using McMaster ID card.
+    - 5.2. Upon successful payment, Community member decides to save payment information to account for next purchase.
+    - 5.3. If community member already has an account, prompt community member to use loyalty points to pay for food.
+    - 5.4. Payment is rejected, Community member is unable to complete purchase.
 
-* **Success Postcondition**: Student receives email for purchase and notification when food is ready.
+* **Success Postcondition**: Community member receives email for purchase and notification when food is ready.
 
-This scenario is important as it demonstrates how students are most likely to interact with the app in order to get food and meet the demands of their busy schedules. We can expect them to have multiple different payment methods, and change they're dining plans on a whim if class gets cancelled or they decide to skip class because they are exhausted.
+This scenario is important as it demonstrates how community members are most likely to interact with the app in order to get food and meet the demands of their busy schedules. We can expect them to have multiple different payment methods, and change they're dining plans on a whim if class gets cancelled or they decide to skip class because they are exhausted.
 
 .Activity diagram for usage scenario 1
-image::models/activity_diagram1.drawio.png[scale=60%,align="center"]
+image::models/activity_diagram1.drawio.png[scale=40%,align="center"]
 
 This diagram helps to explain this usage scenario as it helps us to see all the different decisions that happen during this scenario. These will very likely turn into if statements for the software development.
 
-==== Usage Scenario 2: Line cook using the app
+==== Usage Scenario 2: Line cook using the app (for impending order and finalizing cooking)
 * **Primary Actor**: Line cook
 * **Precondition**: Line cook is already at station preparing food
 * **Trigger**: Customer inputs new order
@@ -54,7 +55,7 @@ This diagram helps to explain this usage scenario as it helps us to see all the 
 
 This scenario is important as it demonstrates the potential workflow that a line cook might take to integrate online orders with in-person orders. We can expect that they will want minimal contact with the app so having it be a one button scenario is good so that they can focus on cooking.
 
-==== Usage Scenario 3: Restaurant manager sends invoice to Mosaic through app
+==== Usage Scenario 3: Submit catering order
 * **Primary Actor**: Restaurant manager
 * **Precondition**: Admin assistant has already called and placed order for food and has catering order number
 * **Trigger**: Admin assistant wants to use Department number to pay for the catering order
@@ -79,7 +80,34 @@ This scenario is important as it demonstrates the potential workflow that a line
 
 This scenario is important as it demonstrates the potential workflow that an admin assistant might take to pay for catering services. This shows how it can be easier to pay for catering services if the app is integrated with Mosaic and able to access department accounts to withdraw the required money.
 
-==== Usage Scenario 4: Restaurant Manager checks sales report
+==== Usage Scenario 4: Hamilton Citizen wants to eat at the Firebird
+* **Primary Actor**: Hamilton citizen
+* **Precondition**: Hamilton citizen is on picnic at Cootes
+* **Trigger**: Hamilton citizen is hungry
+* **Main Success Scenario**
+
+    - 1. Hamilton citizen opens browser to look for food options during picnic because they didn't pack enough.
+    - 2. Citizen find the Firebird is nearby, navigates to *{project-title}* app website.
+    - 3. Citizen goes through mealbox menu to find options that they might enjoy and drinks that they crave.
+    - 4. Citizen decides to run to restaurant as soon as and then goes to play road hockey.
+
+* **Secondary Scenarios**
+
+    - 2.1. Citizen doesn't know how to navigate to app website, - gives up and goes to Subway.
+    - 3.1. Citizen doesn't like options, gives up and goes to Grain&Grit.
+    - 4.1. Citizen is differently-abled, rolls up to the Firebird instead, popping wheelies out of excitement.
+
+* **Success Postcondition**: Hamilton Citizen dines at restaurant and loves food.
+
+This scenario is important to show why having a website as well as downloadable application to attract more customers to the restaurant. As not everyone who is on campus is necessarily a community member, having someway to be discovered and learn more information about the restaurant is critical for attracting curious customers.
+
+.Activity diagram for usage scenario 4
+image::models/activity_diagram2.drawio.png[scale=60%,align="center"]
+
+This diagram helps to explain this scenario as it justifies the existence of the app on the internet for not just staff but users too. It help to show the importance of online presence for attracting more customers, satisfying one of the goals of having more customers.
+
+
+==== Usage Scenario 5: Restaurant Manager checks sales report
 * **Primary Actor**: Restaurant manager
 * **Precondition**: Restaurant manager is at computer
 * **Trigger**: End of the day and manager needs to tally up sales for the day
@@ -100,31 +128,6 @@ This scenario is important as it demonstrates the potential workflow that an adm
 
 This scenario is important as the restaurant manager will need to see the sales reports of the day/week/month to determine current success of app and restaurant. These sales reports are a major part of what makes the app useful as it will be able to generate these reports on command for a desired time frame in order to summarize information critical to the success of the restaurant.
 
-==== Usage Scenario 5: Hamilton Citizen wants to eat at the Firebird
-* **Primary Actor**: Hamilton citizen
-* **Precondition**: Hamilton citizen is on picnic at Cootes
-* **Trigger**: Hamilton citizen is hungry and needs a drink
-* **Main Success Scenario**
-
-    - 1. Hamilton citizen opens browser to look for food options (and stops paying attention conference they are attending).
-    - 2. Citizen find the Firebird is nearby, navigates to *{project-title}* app website.
-    - 3. Citizen goes through menu to find options that they might enjoy and drinks that they crave.
-    - 4. Citizen decides to run to restaurant as soon as and then goes to play road hockey.
-
-* **Secondary Scenarios**
-
-    - 2.1. Citizen doesn't know how to navigate to app website, - gives up and goes to Subway.
-    - 3.1. Citizen doesn't like options, gives up and goes to Grain&Grit.
-    - 4.1. Citizen is differently-abled, rolls up to the Firebird instead, popping wheelies out of excitement.
-
-* **Success Postcondition**: Hamilton Citizen dines at restaurant and loves food.
-
-This scenario is important to show why having a website as well as downloadable application to attract more customers to the restaurant. As not everyone who is on campus is necessarily a community member, having someway to be discovered and learn more information about the restaurant is critical for attracting curious customers.
-
-.Activity diagram for usage scenario 5
-image::models/activity_diagram2.drawio.png[scale=60%,align="center"]
-
-This diagram helps to explain this scenario as it justifies the existence of the app on the internet for not just staff but users too. It help to show the importance of online presence for attracting more customers, satisfying one of the goals of having more customers.
 
 
 
