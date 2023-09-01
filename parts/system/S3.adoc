@@ -7,8 +7,29 @@ endif::[]
 
 ==== (S.3.1) APIs
 
-{emptysec}
+The *{project-title}* system only offers one API to the external world: `PendingInvoice`. thisn interface is used to integrate the systemn with <<mosaic>>, which will regularly pull pending invoices and start payment processing.
+
+.External API exposed by {project-title}
+image::models/external_API.svg[scale=70%,align="center"]
+
+- The interface exposes one single operation, to `list` the pending invoices.
+- The system shall receive a single argument, being an authentication token which grants access to the system
+- The system shall answer with all catering orders with `payed?` attribute being `false` and `status` being `DELIVERED`.
 
 ==== (S.3.2) Wireframe Mockups
 
-{emptysec}
+We focus here on the two parts of the system that differs the most from "classical" food ordering systems such as DoorDash or Uber Eats.
+
+===== (S.3.2.1) Impeding Orders (Line Cook)
+
+The Line Cook stakeholder (<<dylan>>) needs to have access quickly to the next batch of mealboxes to prepare (to ensure good quality of freshly prepared food). As they are working in a kitchen, they cannot rely on classical "tablet-like" interfaces that would requires clean hands. As such, they need to interact with a _Flush!_ physical push button located in the kitchen that automaticallt update the status of the ordered food on their behalf.
+
+.Line Cook: Impeding Order Screen
+image::mockups/Impeding_Order.png[scale=70%,align="center"]
+
+===== (S.3.2.2) Submit Catering Invoice (Restaurant Manager)
+
+The Restaurant Manager fills out all the information provided by the Administrative Assistant using traditional means (_e.g._, phone, email). Then, they submit the invoice on their side, and wait for the payment to be processed by <<mosaic>>. The interface shall allow the restaurant manager (<<drew>>) to submit the information expected by McMaster's accountant to process the invoice (see the domain model, <<e1>>) .
+
+.Restaurant Manager: Submitting Catering Invoice
+image::mockups/Submit_Catering.png[scale=70%,align="center"]

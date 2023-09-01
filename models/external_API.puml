@@ -1,0 +1,24 @@
+@startuml
+
+!include ../_style/puml.style
+  
+interface PendingInvoices {
+    + list(token: Authentication): InvoiceResponse 
+}
+
+PendingInvoices .> InvoiceResponse
+
+class InvoiceResponse {
+    + timestamp: DateTime
+}
+
+InvoiceResponse --> "*" CateringOrder
+
+PendingInvoices --> Authentication 
+
+class CateringOrder <<DomainModel>>
+
+class Authentication <<Security>>
+
+
+@enduml

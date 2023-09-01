@@ -35,12 +35,14 @@ enum STATUS {
     + RECEIVED
     + IN_PROGRESS
     + READY
-    + PAYED
+    + DELIVERED
 }
 
 abstract class Order {
+    + id: Integer
     + received: Date
     + delivered: Date
+    + payed?: Boolean
 }
 Order *-> STATUS
 PAYMENT_TYPE <--* Order
@@ -49,7 +51,7 @@ class MealBoxOrder extends Order {
     + pickup: Date
 }
 
-MealBoxOrder *--> "*" MealBoxItem
+MealBoxOrder *--> "1..n" MealBoxItem
 
 class MealBoxItem {
     + quantity: Integer
@@ -74,6 +76,14 @@ class CateringOrder extends Order {
     + phone: PhoneNumber
     + chartCode: String
     + description: String
+}
+
+CateringOrder *--> "1..n" CateringItem
+
+class CateringItem {
+    + quantity: Integer
+    + description: String
+    + specialRequest: String
 }
 
 
