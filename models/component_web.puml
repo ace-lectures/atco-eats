@@ -47,7 +47,7 @@ Ipending <. mosaic
 ' **************
 
 component "Web\nAdmin" as web
-Actor "Staff" as S
+Actor "Restaurant\nStaff" as S
 
 S .> web
 web .> Ipatrons_mgmt
