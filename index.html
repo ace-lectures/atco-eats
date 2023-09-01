@@ -1,0 +1,2583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.20">
+<meta name="author" content="Thomas Chiang, Sébastien Mosser">
+<title>ATCO Eats: Requirements Standard Plan</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<style>
+/*! Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
+/* Uncomment the following line when using as a custom stylesheet */
+/* @import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700"; */
+html{font-family:sans-serif;-webkit-text-size-adjust:100%}
+a{background:none}
+a:focus{outline:thin dotted}
+a:active,a:hover{outline:0}
+h1{font-size:2em;margin:.67em 0}
+b,strong{font-weight:bold}
+abbr{font-size:.9em}
+abbr[title]{cursor:help;border-bottom:1px dotted #dddddf;text-decoration:none}
+dfn{font-style:italic}
+hr{height:0}
+mark{background:#ff0;color:#000}
+code,kbd,pre,samp{font-family:monospace;font-size:1em}
+pre{white-space:pre-wrap}
+q{quotes:"\201C" "\201D" "\2018" "\2019"}
+small{font-size:80%}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sup{top:-.5em}
+sub{bottom:-.25em}
+img{border:0}
+svg:not(:root){overflow:hidden}
+figure{margin:0}
+audio,video{display:inline-block}
+audio:not([controls]){display:none;height:0}
+fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
+legend{border:0;padding:0}
+button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}
+button,input{line-height:normal}
+button,select{text-transform:none}
+button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}
+button[disabled],html input[disabled]{cursor:default}
+input[type=checkbox],input[type=radio]{padding:0}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+textarea{overflow:auto;vertical-align:top}
+table{border-collapse:collapse;border-spacing:0}
+*,::before,::after{box-sizing:border-box}
+html,body{font-size:100%}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;line-height:1;position:relative;cursor:auto;-moz-tab-size:4;-o-tab-size:4;tab-size:4;word-wrap:anywhere;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
+a:hover{cursor:pointer}
+img,object,embed{max-width:100%;height:auto}
+object,embed{height:100%}
+img{-ms-interpolation-mode:bicubic}
+.left{float:left!important}
+.right{float:right!important}
+.text-left{text-align:left!important}
+.text-right{text-align:right!important}
+.text-center{text-align:center!important}
+.text-justify{text-align:justify!important}
+.hide{display:none}
+img,object,svg{display:inline-block;vertical-align:middle}
+textarea{height:auto;min-height:50px}
+select{width:100%}
+.subheader,.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{line-height:1.45;color:#7a2518;font-weight:400;margin-top:0;margin-bottom:.25em}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,pre,form,p,blockquote,th,td{margin:0;padding:0}
+a{color:#2156a5;text-decoration:underline;line-height:inherit}
+a:hover,a:focus{color:#1d4b8f}
+a img{border:0}
+p{line-height:1.6;margin-bottom:1.25em;text-rendering:optimizeLegibility}
+p aside{font-size:.875em;line-height:1.35;font-style:italic}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{font-family:"Open Sans","DejaVu Sans",sans-serif;font-weight:300;font-style:normal;color:#ba3925;text-rendering:optimizeLegibility;margin-top:1em;margin-bottom:.5em;line-height:1.0125em}
+h1 small,h2 small,h3 small,#toctitle small,.sidebarblock>.content>.title small,h4 small,h5 small,h6 small{font-size:60%;color:#e99b8f;line-height:0}
+h1{font-size:2.125em}
+h2{font-size:1.6875em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.375em}
+h4,h5{font-size:1.125em}
+h6{font-size:1em}
+hr{border:solid #dddddf;border-width:1px 0 0;clear:both;margin:1.25em 0 1.1875em}
+em,i{font-style:italic;line-height:inherit}
+strong,b{font-weight:bold;line-height:inherit}
+small{font-size:60%;line-height:inherit}
+code{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;color:rgba(0,0,0,.9)}
+ul,ol,dl{line-height:1.6;margin-bottom:1.25em;list-style-position:outside;font-family:inherit}
+ul,ol{margin-left:1.5em}
+ul li ul,ul li ol{margin-left:1.25em;margin-bottom:0}
+ul.circle{list-style-type:circle}
+ul.disc{list-style-type:disc}
+ul.square{list-style-type:square}
+ul.circle ul:not([class]),ul.disc ul:not([class]),ul.square ul:not([class]){list-style:inherit}
+ol li ul,ol li ol{margin-left:1.25em;margin-bottom:0}
+dl dt{margin-bottom:.3125em;font-weight:bold}
+dl dd{margin-bottom:1.25em}
+blockquote{margin:0 0 1.25em;padding:.5625em 1.25em 0 1.1875em;border-left:1px solid #ddd}
+blockquote,blockquote p{line-height:1.6;color:rgba(0,0,0,.85)}
+@media screen and (min-width:768px){h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2}
+h1{font-size:2.75em}
+h2{font-size:2.3125em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.6875em}
+h4{font-size:1.4375em}}
+table{background:#fff;margin-bottom:1.25em;border:1px solid #dedede;word-wrap:normal}
+table thead,table tfoot{background:#f7f8f7}
+table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:.5em .625em .625em;font-size:inherit;color:rgba(0,0,0,.8);text-align:left}
+table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
+table tr.even,table tr.alt{background:#f8f8f7}
+table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{line-height:1.6}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
+h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
+.center{margin-left:auto;margin-right:auto}
+.stretch{width:100%}
+.clearfix::before,.clearfix::after,.float-group::before,.float-group::after{content:" ";display:table}
+.clearfix::after,.float-group::after{clear:both}
+:not(pre).nobreak{word-wrap:normal}
+:not(pre).nowrap{white-space:nowrap}
+:not(pre).pre-wrap{white-space:pre-wrap}
+:not(pre):not([class^=L])>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background:#f7f7f8;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed}
+pre{color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;line-height:1.45;text-rendering:optimizeSpeed}
+pre code,pre pre{color:inherit;font-size:inherit;line-height:inherit}
+pre>code{display:block}
+pre.nowrap,pre.nowrap pre{white-space:pre;word-wrap:normal}
+em em{font-style:normal}
+strong strong{font-weight:400}
+.keyseq{color:rgba(51,51,51,.8)}
+kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background:#f7f7f7;border:1px solid #ccc;border-radius:3px;box-shadow:0 1px 0 rgba(0,0,0,.2),inset 0 0 0 .1em #fff;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
+.keyseq kbd:first-child{margin-left:0}
+.keyseq kbd:last-child{margin-right:0}
+.menuseq,.menuref{color:#000}
+.menuseq b:not(.caret),.menuref{font-weight:inherit}
+.menuseq{word-spacing:-.02em}
+.menuseq b.caret{font-size:1.25em;line-height:.8}
+.menuseq i.caret{font-weight:bold;text-align:center;width:.45em}
+b.button::before,b.button::after{position:relative;top:-1px;font-weight:400}
+b.button::before{content:"[";padding:0 3px 0 2px}
+b.button::after{content:"]";padding:0 2px 0 3px}
+p a>code:hover{color:rgba(0,0,0,.9)}
+#header,#content,#footnotes,#footer{width:100%;margin:0 auto;max-width:62.5em;*zoom:1;position:relative;padding-left:.9375em;padding-right:.9375em}
+#header::before,#header::after,#content::before,#content::after,#footnotes::before,#footnotes::after,#footer::before,#footer::after{content:" ";display:table}
+#header::after,#content::after,#footnotes::after,#footer::after{clear:both}
+#content{margin-top:1.25em}
+#content::before{content:none}
+#header>h1:first-child{color:rgba(0,0,0,.85);margin-top:2.25rem;margin-bottom:0}
+#header>h1:first-child+#toc{margin-top:8px;border-top:1px solid #dddddf}
+#header>h1:only-child,body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #dddddf;padding-bottom:8px}
+#header .details{border-bottom:1px solid #dddddf;line-height:1.45;padding-top:.25em;padding-bottom:.25em;padding-left:.25em;color:rgba(0,0,0,.6);display:flex;flex-flow:row wrap}
+#header .details span:first-child{margin-left:-.125em}
+#header .details span.email a{color:rgba(0,0,0,.85)}
+#header .details br{display:none}
+#header .details br+span::before{content:"\00a0\2013\00a0"}
+#header .details br+span.author::before{content:"\00a0\22c5\00a0";color:rgba(0,0,0,.85)}
+#header .details br+span#revremark::before{content:"\00a0|\00a0"}
+#header #revnumber{text-transform:capitalize}
+#header #revnumber::after{content:"\00a0"}
+#content>h1:first-child:not([class]){color:rgba(0,0,0,.85);border-bottom:1px solid #dddddf;padding-bottom:8px;margin-top:0;padding-top:1rem;margin-bottom:1.25rem}
+#toc{border-bottom:1px solid #e7e7e9;padding-bottom:.5em}
+#toc>ul{margin-left:.125em}
+#toc ul.sectlevel0>li>a{font-style:italic}
+#toc ul.sectlevel0 ul.sectlevel1{margin:.5em 0}
+#toc ul{font-family:"Open Sans","DejaVu Sans",sans-serif;list-style-type:none}
+#toc li{line-height:1.3334;margin-top:.3334em}
+#toc a{text-decoration:none}
+#toc a:active{text-decoration:underline}
+#toctitle{color:#7a2518;font-size:1.2em}
+@media screen and (min-width:768px){#toctitle{font-size:1.375em}
+body.toc2{padding-left:15em;padding-right:0}
+#toc.toc2{margin-top:0!important;background:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #e7e7e9;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto}
+#toc.toc2 #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
+#toc.toc2>ul{font-size:.9em;margin-bottom:0}
+#toc.toc2 ul ul{margin-left:0;padding-left:1em}
+#toc.toc2 ul.sectlevel0 ul.sectlevel1{padding-left:0;margin-top:.5em;margin-bottom:.5em}
+body.toc2.toc-right{padding-left:0;padding-right:15em}
+body.toc2.toc-right #toc.toc2{border-right-width:0;border-left:1px solid #e7e7e9;left:auto;right:0}}
+@media screen and (min-width:1280px){body.toc2{padding-left:20em;padding-right:0}
+#toc.toc2{width:20em}
+#toc.toc2 #toctitle{font-size:1.375em}
+#toc.toc2>ul{font-size:.95em}
+#toc.toc2 ul ul{padding-left:1.25em}
+body.toc2.toc-right{padding-left:0;padding-right:20em}}
+#content #toc{border:1px solid #e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;border-radius:4px}
+#content #toc>:first-child{margin-top:0}
+#content #toc>:last-child{margin-bottom:0}
+#footer{max-width:none;background:rgba(0,0,0,.8);padding:1.25em}
+#footer-text{color:hsla(0,0%,100%,.8);line-height:1.44}
+#content{margin-bottom:.625em}
+.sect1{padding-bottom:.625em}
+@media screen and (min-width:768px){#content{margin-bottom:1.25em}
+.sect1{padding-bottom:1.25em}}
+.sect1:last-child{padding-bottom:0}
+.sect1+.sect1{border-top:1px solid #e7e7e9}
+#content h1>a.anchor,h2>a.anchor,h3>a.anchor,#toctitle>a.anchor,.sidebarblock>.content>.title>a.anchor,h4>a.anchor,h5>a.anchor,h6>a.anchor{position:absolute;z-index:1001;width:1.5ex;margin-left:-1.5ex;display:block;text-decoration:none!important;visibility:hidden;text-align:center;font-weight:400}
+#content h1>a.anchor::before,h2>a.anchor::before,h3>a.anchor::before,#toctitle>a.anchor::before,.sidebarblock>.content>.title>a.anchor::before,h4>a.anchor::before,h5>a.anchor::before,h6>a.anchor::before{content:"\00A7";font-size:.85em;display:block;padding-top:.1em}
+#content h1:hover>a.anchor,#content h1>a.anchor:hover,h2:hover>a.anchor,h2>a.anchor:hover,h3:hover>a.anchor,#toctitle:hover>a.anchor,.sidebarblock>.content>.title:hover>a.anchor,h3>a.anchor:hover,#toctitle>a.anchor:hover,.sidebarblock>.content>.title>a.anchor:hover,h4:hover>a.anchor,h4>a.anchor:hover,h5:hover>a.anchor,h5>a.anchor:hover,h6:hover>a.anchor,h6>a.anchor:hover{visibility:visible}
+#content h1>a.link,h2>a.link,h3>a.link,#toctitle>a.link,.sidebarblock>.content>.title>a.link,h4>a.link,h5>a.link,h6>a.link{color:#ba3925;text-decoration:none}
+#content h1>a.link:hover,h2>a.link:hover,h3>a.link:hover,#toctitle>a.link:hover,.sidebarblock>.content>.title>a.link:hover,h4>a.link:hover,h5>a.link:hover,h6>a.link:hover{color:#a53221}
+details,.audioblock,.imageblock,.literalblock,.listingblock,.stemblock,.videoblock{margin-bottom:1.25em}
+details{margin-left:1.25rem}
+details>summary{cursor:pointer;display:block;position:relative;line-height:1.6;margin-bottom:.625rem;outline:none;-webkit-tap-highlight-color:transparent}
+details>summary::-webkit-details-marker{display:none}
+details>summary::before{content:"";border:solid transparent;border-left:solid;border-width:.3em 0 .3em .5em;position:absolute;top:.5em;left:-1.25rem;transform:translateX(15%)}
+details[open]>summary::before{border:solid transparent;border-top:solid;border-width:.5em .3em 0;transform:translateY(15%)}
+details>summary::after{content:"";width:1.25rem;height:1em;position:absolute;top:.3em;left:-1.25rem}
+.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{text-rendering:optimizeLegibility;text-align:left;font-family:"Noto Serif","DejaVu Serif",serif;font-size:1rem;font-style:italic}
+table.tableblock.fit-content>caption.title{white-space:nowrap;width:0}
+.paragraph.lead>p,#preamble>.sectionbody>[class=paragraph]:first-of-type p{font-size:1.21875em;line-height:1.6;color:rgba(0,0,0,.85)}
+.admonitionblock>table{border-collapse:separate;border:0;background:none;width:100%}
+.admonitionblock>table td.icon{text-align:center;width:80px}
+.admonitionblock>table td.icon img{max-width:none}
+.admonitionblock>table td.icon .title{font-weight:bold;font-family:"Open Sans","DejaVu Sans",sans-serif;text-transform:uppercase}
+.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6);word-wrap:anywhere}
+.admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
+.exampleblock>.content{border:1px solid #e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;border-radius:4px}
+.sidebarblock{border:1px solid #dbdbd6;margin-bottom:1.25em;padding:1.25em;background:#f3f3f2;border-radius:4px}
+.sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
+.exampleblock>.content>:first-child,.sidebarblock>.content>:first-child{margin-top:0}
+.exampleblock>.content>:last-child,.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
+.literalblock pre,.listingblock>.content>pre{border-radius:4px;overflow-x:auto;padding:1em;font-size:.8125em}
+@media screen and (min-width:768px){.literalblock pre,.listingblock>.content>pre{font-size:.90625em}}
+@media screen and (min-width:1280px){.literalblock pre,.listingblock>.content>pre{font-size:1em}}
+.literalblock pre,.listingblock>.content>pre:not(.highlight),.listingblock>.content>pre[class=highlight],.listingblock>.content>pre[class^="highlight "]{background:#f7f7f8}
+.literalblock.output pre{color:#f7f7f8;background:rgba(0,0,0,.9)}
+.listingblock>.content{position:relative}
+.listingblock code[data-lang]::before{display:none;content:attr(data-lang);position:absolute;font-size:.75em;top:.425rem;right:.5rem;line-height:1;text-transform:uppercase;color:inherit;opacity:.5}
+.listingblock:hover code[data-lang]::before{display:block}
+.listingblock.terminal pre .command::before{content:attr(data-prompt);padding-right:.5em;color:inherit;opacity:.5}
+.listingblock.terminal pre .command:not([data-prompt])::before{content:"$"}
+.listingblock pre.highlightjs{padding:0}
+.listingblock pre.highlightjs>code{padding:1em;border-radius:4px}
+.listingblock pre.prettyprint{border-width:0}
+.prettyprint{background:#f7f7f8}
+pre.prettyprint .linenums{line-height:1.45;margin-left:2em}
+pre.prettyprint li{background:none;list-style-type:inherit;padding-left:0}
+pre.prettyprint li code[data-lang]::before{opacity:1}
+pre.prettyprint li:not(:first-child) code[data-lang]::before{display:none}
+table.linenotable{border-collapse:separate;border:0;margin-bottom:0;background:none}
+table.linenotable td[class]{color:inherit;vertical-align:top;padding:0;line-height:inherit;white-space:normal}
+table.linenotable td.code{padding-left:.75em}
+table.linenotable td.linenos,pre.pygments .linenos{border-right:1px solid;opacity:.35;padding-right:.5em;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+pre.pygments span.linenos{display:inline-block;margin-right:.75em}
+.quoteblock{margin:0 1em 1.25em 1.5em;display:table}
+.quoteblock:not(.excerpt)>.title{margin-left:-1.5em;margin-bottom:.75em}
+.quoteblock blockquote,.quoteblock p{color:rgba(0,0,0,.85);font-size:1.15rem;line-height:1.75;word-spacing:.1em;letter-spacing:0;font-style:italic;text-align:justify}
+.quoteblock blockquote{margin:0;padding:0;border:0}
+.quoteblock blockquote::before{content:"\201c";float:left;font-size:2.75em;font-weight:bold;line-height:.6em;margin-left:-.6em;color:#7a2518;text-shadow:0 1px 2px rgba(0,0,0,.1)}
+.quoteblock blockquote>.paragraph:last-child p{margin-bottom:0}
+.quoteblock .attribution{margin-top:.75em;margin-right:.5ex;text-align:right}
+.verseblock{margin:0 1em 1.25em}
+.verseblock pre{font-family:"Open Sans","DejaVu Sans",sans-serif;font-size:1.15rem;color:rgba(0,0,0,.85);font-weight:300;text-rendering:optimizeLegibility}
+.verseblock pre strong{font-weight:400}
+.verseblock .attribution{margin-top:1.25rem;margin-left:.5ex}
+.quoteblock .attribution,.verseblock .attribution{font-size:.9375em;line-height:1.45;font-style:italic}
+.quoteblock .attribution br,.verseblock .attribution br{display:none}
+.quoteblock .attribution cite,.verseblock .attribution cite{display:block;letter-spacing:-.025em;color:rgba(0,0,0,.6)}
+.quoteblock.abstract blockquote::before,.quoteblock.excerpt blockquote::before,.quoteblock .quoteblock blockquote::before{display:none}
+.quoteblock.abstract blockquote,.quoteblock.abstract p,.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{line-height:1.6;word-spacing:0}
+.quoteblock.abstract{margin:0 1em 1.25em;display:block}
+.quoteblock.abstract>.title{margin:0 0 .375em;font-size:1.15em;text-align:center}
+.quoteblock.excerpt>blockquote,.quoteblock .quoteblock{padding:0 0 .25em 1em;border-left:.25em solid #dddddf}
+.quoteblock.excerpt,.quoteblock .quoteblock{margin-left:0}
+.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{color:inherit;font-size:1.0625rem}
+.quoteblock.excerpt .attribution,.quoteblock .quoteblock .attribution{color:inherit;font-size:.85rem;text-align:left;margin-right:0}
+p.tableblock:last-child{margin-bottom:0}
+td.tableblock>.content{margin-bottom:1.25em;word-wrap:anywhere}
+td.tableblock>.content>:last-child{margin-bottom:-1.25em}
+table.tableblock,th.tableblock,td.tableblock{border:0 solid #dedede}
+table.grid-all>*>tr>*{border-width:1px}
+table.grid-cols>*>tr>*{border-width:0 1px}
+table.grid-rows>*>tr>*{border-width:1px 0}
+table.frame-all{border-width:1px}
+table.frame-ends{border-width:1px 0}
+table.frame-sides{border-width:0 1px}
+table.frame-none>colgroup+*>:first-child>*,table.frame-sides>colgroup+*>:first-child>*{border-top-width:0}
+table.frame-none>:last-child>:last-child>*,table.frame-sides>:last-child>:last-child>*{border-bottom-width:0}
+table.frame-none>*>tr>:first-child,table.frame-ends>*>tr>:first-child{border-left-width:0}
+table.frame-none>*>tr>:last-child,table.frame-ends>*>tr>:last-child{border-right-width:0}
+table.stripes-all>*>tr,table.stripes-odd>*>tr:nth-of-type(odd),table.stripes-even>*>tr:nth-of-type(even),table.stripes-hover>*>tr:hover{background:#f8f8f7}
+th.halign-left,td.halign-left{text-align:left}
+th.halign-right,td.halign-right{text-align:right}
+th.halign-center,td.halign-center{text-align:center}
+th.valign-top,td.valign-top{vertical-align:top}
+th.valign-bottom,td.valign-bottom{vertical-align:bottom}
+th.valign-middle,td.valign-middle{vertical-align:middle}
+table thead th,table tfoot th{font-weight:bold}
+tbody tr th{background:#f7f8f7}
+tbody tr th,tbody tr th p,tfoot tr th,tfoot tr th p{color:rgba(0,0,0,.8);font-weight:bold}
+p.tableblock>code:only-child{background:none;padding:0}
+p.tableblock{font-size:1em}
+ol{margin-left:1.75em}
+ul li ol{margin-left:1.5em}
+dl dd{margin-left:1.125em}
+dl dd:last-child,dl dd:last-child>:last-child{margin-bottom:0}
+li p,ul dd,ol dd,.olist .olist,.ulist .ulist,.ulist .olist,.olist .ulist{margin-bottom:.625em}
+ul.checklist,ul.none,ol.none,ul.no-bullet,ol.no-bullet,ol.unnumbered,ul.unstyled,ol.unstyled{list-style-type:none}
+ul.no-bullet,ol.no-bullet,ol.unnumbered{margin-left:.625em}
+ul.unstyled,ol.unstyled{margin-left:0}
+li>p:empty:only-child::before{content:"";display:inline-block}
+ul.checklist>li>p:first-child{margin-left:-1em}
+ul.checklist>li>p:first-child>.fa-square-o:first-child,ul.checklist>li>p:first-child>.fa-check-square-o:first-child{width:1.25em;font-size:.8em;position:relative;bottom:.125em}
+ul.checklist>li>p:first-child>input[type=checkbox]:first-child{margin-right:.25em}
+ul.inline{display:flex;flex-flow:row wrap;list-style:none;margin:0 0 .625em -1.25em}
+ul.inline>li{margin-left:1.25em}
+.unstyled dl dt{font-weight:400;font-style:normal}
+ol.arabic{list-style-type:decimal}
+ol.decimal{list-style-type:decimal-leading-zero}
+ol.loweralpha{list-style-type:lower-alpha}
+ol.upperalpha{list-style-type:upper-alpha}
+ol.lowerroman{list-style-type:lower-roman}
+ol.upperroman{list-style-type:upper-roman}
+ol.lowergreek{list-style-type:lower-greek}
+.hdlist>table,.colist>table{border:0;background:none}
+.hdlist>table>tbody>tr,.colist>table>tbody>tr{background:none}
+td.hdlist1,td.hdlist2{vertical-align:top;padding:0 .625em}
+td.hdlist1{font-weight:bold;padding-bottom:1.25em}
+td.hdlist2{word-wrap:anywhere}
+.literalblock+.colist,.listingblock+.colist{margin-top:-.5em}
+.colist td:not([class]):first-child{padding:.4em .75em 0;line-height:1;vertical-align:top}
+.colist td:not([class]):first-child img{max-width:none}
+.colist td:not([class]):last-child{padding:.25em 0}
+.thumb,.th{line-height:0;display:inline-block;border:4px solid #fff;box-shadow:0 0 0 1px #ddd}
+.imageblock.left{margin:.25em .625em 1.25em 0}
+.imageblock.right{margin:.25em 0 1.25em .625em}
+.imageblock>.title{margin-bottom:0}
+.imageblock.thumb,.imageblock.th{border-width:6px}
+.imageblock.thumb>.title,.imageblock.th>.title{padding:0 .125em}
+.image.left,.image.right{margin-top:.25em;margin-bottom:.25em;display:inline-block;line-height:0}
+.image.left{margin-right:.625em}
+.image.right{margin-left:.625em}
+a.image{text-decoration:none;display:inline-block}
+a.image object{pointer-events:none}
+sup.footnote,sup.footnoteref{font-size:.875em;position:static;vertical-align:super}
+sup.footnote a,sup.footnoteref a{text-decoration:none}
+sup.footnote a:active,sup.footnoteref a:active{text-decoration:underline}
+#footnotes{padding-top:.75em;padding-bottom:.75em;margin-bottom:.625em}
+#footnotes hr{width:20%;min-width:6.25em;margin:-.25em 0 .75em;border-width:1px 0 0}
+#footnotes .footnote{padding:0 .375em 0 .225em;line-height:1.3334;font-size:.875em;margin-left:1.2em;margin-bottom:.2em}
+#footnotes .footnote a:first-of-type{font-weight:bold;text-decoration:none;margin-left:-1.05em}
+#footnotes .footnote:last-of-type{margin-bottom:0}
+#content #footnotes{margin-top:-.625em;margin-bottom:0;padding:.75em 0}
+div.unbreakable{page-break-inside:avoid}
+.big{font-size:larger}
+.small{font-size:smaller}
+.underline{text-decoration:underline}
+.overline{text-decoration:overline}
+.line-through{text-decoration:line-through}
+.aqua{color:#00bfbf}
+.aqua-background{background:#00fafa}
+.black{color:#000}
+.black-background{background:#000}
+.blue{color:#0000bf}
+.blue-background{background:#0000fa}
+.fuchsia{color:#bf00bf}
+.fuchsia-background{background:#fa00fa}
+.gray{color:#606060}
+.gray-background{background:#7d7d7d}
+.green{color:#006000}
+.green-background{background:#007d00}
+.lime{color:#00bf00}
+.lime-background{background:#00fa00}
+.maroon{color:#600000}
+.maroon-background{background:#7d0000}
+.navy{color:#000060}
+.navy-background{background:#00007d}
+.olive{color:#606000}
+.olive-background{background:#7d7d00}
+.purple{color:#600060}
+.purple-background{background:#7d007d}
+.red{color:#bf0000}
+.red-background{background:#fa0000}
+.silver{color:#909090}
+.silver-background{background:#bcbcbc}
+.teal{color:#006060}
+.teal-background{background:#007d7d}
+.white{color:#bfbfbf}
+.white-background{background:#fafafa}
+.yellow{color:#bfbf00}
+.yellow-background{background:#fafa00}
+span.icon>.fa{cursor:default}
+a span.icon>.fa{cursor:inherit}
+.admonitionblock td.icon [class^="fa icon-"]{font-size:2.5em;text-shadow:1px 1px 2px rgba(0,0,0,.5);cursor:default}
+.admonitionblock td.icon .icon-note::before{content:"\f05a";color:#19407c}
+.admonitionblock td.icon .icon-tip::before{content:"\f0eb";text-shadow:1px 1px 2px rgba(155,155,0,.8);color:#111}
+.admonitionblock td.icon .icon-warning::before{content:"\f071";color:#bf6900}
+.admonitionblock td.icon .icon-caution::before{content:"\f06d";color:#bf3400}
+.admonitionblock td.icon .icon-important::before{content:"\f06a";color:#bf0000}
+.conum[data-value]{display:inline-block;color:#fff!important;background:rgba(0,0,0,.8);border-radius:50%;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans","DejaVu Sans",sans-serif;font-style:normal;font-weight:bold}
+.conum[data-value] *{color:#fff!important}
+.conum[data-value]+b{display:none}
+.conum[data-value]::after{content:attr(data-value)}
+pre .conum[data-value]{position:relative;top:-.125em}
+b.conum *{color:inherit!important}
+.conum:not([data-value]):empty{display:none}
+dt,th.tableblock,td.content,div.footnote{text-rendering:optimizeLegibility}
+h1,h2,p,td.content,span.alt,summary{letter-spacing:-.01em}
+p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
+p,blockquote,dt,td.content,td.hdlist1,span.alt,summary{font-size:1.0625rem}
+p{margin-bottom:1.25rem}
+.sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
+.exampleblock>.content{background:#fffef7;border-color:#e0e0dc;box-shadow:0 1px 4px #e0e0dc}
+.print-only{display:none!important}
+@page{margin:1.25cm .75cm}
+@media print{*{box-shadow:none!important;text-shadow:none!important}
+html{font-size:80%}
+a{color:inherit!important;text-decoration:underline!important}
+a.bare,a[href^="#"],a[href^="mailto:"]{text-decoration:none!important}
+a[href^="http:"]:not(.bare)::after,a[href^="https:"]:not(.bare)::after{content:"(" attr(href) ")";display:inline-block;font-size:.875em;padding-left:.25em}
+abbr[title]{border-bottom:1px dotted}
+abbr[title]::after{content:" (" attr(title) ")"}
+pre,blockquote,tr,img,object,svg{page-break-inside:avoid}
+thead{display:table-header-group}
+svg{max-width:100%}
+p,blockquote,dt,td.content{font-size:1em;orphans:3;widows:3}
+h2,h3,#toctitle,.sidebarblock>.content>.title{page-break-after:avoid}
+#header,#content,#footnotes,#footer{max-width:none}
+#toc,.sidebarblock,.exampleblock>.content{background:none!important}
+#toc{border-bottom:1px solid #dddddf!important;padding-bottom:0!important}
+body.book #header{text-align:center}
+body.book #header>h1:first-child{border:0!important;margin:2.5em 0 1em}
+body.book #header .details{border:0!important;display:block;padding:0!important}
+body.book #header .details span:first-child{margin-left:0!important}
+body.book #header .details br{display:block}
+body.book #header .details br+span::before{content:none!important}
+body.book #toc{border:0!important;text-align:left!important;padding:0!important;margin:0!important}
+body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-break-before:always}
+.listingblock code[data-lang]::before{display:block}
+#footer{padding:0 .9375em}
+.hide-on-print{display:none!important}
+.print-only{display:block!important}
+.hide-for-print{display:none!important}
+.show-for-print{display:inherit!important}}
+@media amzn-kf8,print{#header>h1:first-child{margin-top:1.25rem}
+.sect1{padding:0!important}
+.sect1+.sect1{border:0}
+#footer{background:none}
+#footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
+@media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="book toc2 toc-left">
+<div id="header">
+<h1>ATCO Eats: Requirements Standard Plan</h1>
+<div class="details">
+<span id="author" class="author">Thomas Chiang</span><br>
+<span id="email" class="email"><a href="mailto:chiangte@mcmaster.ca">chiangte@mcmaster.ca</a></span><br>
+<span id="author2" class="author">Sébastien Mosser</span><br>
+<span id="email2" class="email"><a href="mailto:mossers@mcmaster.ca">mossers@mcmaster.ca</a></span><br>
+<span id="revnumber">version 2,</span>
+<span id="revdate">2023-09-01</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_control_information">Control Information</a></li>
+<li><a href="#_g_goals">(G) Goals</a>
+<ul class="sectlevel2">
+<li><a href="#g1">(G.1) Context and Overall Objectives</a></li>
+<li><a href="#g2">(G.2) Current situation</a></li>
+<li><a href="#g3">(G.3) Expected Benefits</a></li>
+<li><a href="#g4">(G.4) Functionality overview</a></li>
+<li><a href="#g5">(G.5) High-level usage scenarios</a></li>
+<li><a href="#g6">(G.6) Limitations and Exclusions</a></li>
+<li><a href="#g7">(G.7) Stakeholders and requirements sources</a>
+<ul class="sectlevel3">
+<li><a href="#_g_7_1_direct_stakeholders">(G.7.1) Direct Stakeholders</a></li>
+<li><a href="#_g_7_2_indirect_stakeholders">(G.7.2) Indirect Stakeholders</a></li>
+<li><a href="#_g_7_3_requirements_sources">(G.7.3) Requirements Sources</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_e_environment">(E) Environment</a>
+<ul class="sectlevel2">
+<li><a href="#e1">(E.1) Glossary</a>
+<ul class="sectlevel3">
+<li><a href="#_e_1_1_vocabulary">(E.1.1) Vocabulary</a></li>
+<li><a href="#_e_1_2_domain_model">(E.1.2) Domain Model</a></li>
+</ul>
+</li>
+<li><a href="#e2">(E.2) Components</a></li>
+<li><a href="#e3">(E.3) Constraints</a></li>
+<li><a href="#e4">(E.4) Assumptions</a></li>
+<li><a href="#e5">(E.5) Effects</a></li>
+<li><a href="#e6">(E.6) Invariants</a></li>
+</ul>
+</li>
+<li><a href="#_s_system">(S) System</a>
+<ul class="sectlevel2">
+<li><a href="#s1">(S.1) Components</a></li>
+<li><a href="#s2">(S.2) Functionality</a>
+<ul class="sectlevel3">
+<li><a href="#_s_2_1_patron_manager">(S.2.1) Patron Manager</a></li>
+<li><a href="#_s_2_2_menu_provider">(S.2.2) Menu Provider</a></li>
+<li><a href="#_s_2_3_order_manager">(S.2.3) Order Manager</a></li>
+<li><a href="#_s_2_4_billing">(S.2.4) Billing</a></li>
+</ul>
+</li>
+<li><a href="#s3">(S.3) Interfaces</a>
+<ul class="sectlevel3">
+<li><a href="#_s_3_1_apis">(S.3.1) APIs</a></li>
+<li><a href="#_s_3_2_wireframe_mockups">(S.3.2) Wireframe Mockups</a></li>
+</ul>
+</li>
+<li><a href="#s4">(S.4) Detailed usage scenarios</a>
+<ul class="sectlevel3">
+<li><a href="#_s_4_1_ordering_food_from_the_app">(S.4.1) Ordering food from the app</a></li>
+<li><a href="#_s_4_2_line_cook_using_the_app_for_impending_order_and_finalizing_cooking">(S.4.2) Line cook using the app (for impending order and finalizing cooking)</a></li>
+<li><a href="#_s_4_3_usage_scenario_3_submit_catering_order">(S.4.3) Usage Scenario 3: Submit catering order</a></li>
+<li><a href="#_s_4_4_hamilton_citizen_wants_to_eat_at_the_firebird">(S.4.4) Hamilton Citizen wants to eat at the Firebird</a></li>
+<li><a href="#_s_4_5_restaurant_manager_checks_sales_report">(S.4.5) Restaurant Manager checks sales report</a></li>
+</ul>
+</li>
+<li><a href="#s5">(S.5) Prioritization</a></li>
+<li><a href="#s6">(S.6) Verification and acceptance criteria</a></li>
+</ul>
+</li>
+<li><a href="#_p_project">(P) Project</a>
+<ul class="sectlevel2">
+<li><a href="#p1">(P.1) Roles and personnel</a></li>
+<li><a href="#p2">(P.2) Imposed technical choices</a></li>
+<li><a href="#p3">(P.3) Schedule and milestones</a></li>
+<li><a href="#p4">(P.4) Tasks and deliverables</a></li>
+<li><a href="#p5">(P.5) Required technology elements</a></li>
+<li><a href="#p6">(P.6) Risk and mitigation analysis</a></li>
+<li><a href="#p7">(P.7) Requirements process and report</a></li>
+</ul>
+</li>
+<li><a href="#_references">References</a></li>
+<li><a href="#_interaction_with_the_client">Appendix A: Interaction with the Client</a>
+<ul class="sectlevel2">
+<li><a href="#_first_contact">First Contact</a></li>
+<li><a href="#_first_meeting_with_client_minutes">First Meeting with Client (Minutes)</a></li>
+<li><a href="#_response_from_acme_to_the_firebird">Response from ACME to The Firebird</a></li>
+<li><a href="#ideation">Ideation Workshop Report</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_control_information"><a class="link" href="#_control_information">Control Information</a></h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 22.2222%;">
+<col style="width: 22.2222%;">
+<col style="width: 22.2222%;">
+<col style="width: 22.2223%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" rowspan="2"><p class="tableblock"><strong>Version</strong></p></td>
+<td class="tableblock halign-center valign-top" colspan="2"><p class="tableblock"><strong>Delivery</strong></p></td>
+<td class="tableblock halign-center valign-top" colspan="2"><p class="tableblock"><strong>Feedback</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><em>Deadline</em></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><em>Delivered</em></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><em>Received</em></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><em>Integrated</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>V1</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">29-08-2023</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">29-08-2023</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>V2</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">01-09-2023</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">01-09-2023</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>V3</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">15-09-2023</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_disclaimer" class="discrete">Disclaimer</h3>
+<div class="paragraph">
+<p>This document is written as an example of a <em>reasonable</em> requirements document, using the temnplate defined by Bertrand Meyer in his <em>Handbook of Requirements and Business Analysis</em> <a href="#BM22">[1]</a> (2022).
+It does not has the ambition of being a <em>perfect</em> implementation of this template, as it mixes different sources and methods (e.g., <a href="#RE97">[2]</a>) to fit the objectives of COMPSCI/SFWRENG 3RA3 at McMaster.
+In addition of the two authors, this document is built on top of the expertise and discussions with Mireille Blay-Fornarino (Université Côte d&#8217;Azur), Jean-Michel Bruel (Université de Toulouse), and Richard Paige (McMaster University).</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+In this document, we use <em>The Firebird</em> as an <strong>imaginary client</strong>. The objective is to root the document into a concrete example for McMaster&#8217;s students, which host since 1969 a restaurant with a <em>similar</em> name. It is important to note that <strong>this is a fictional case study</strong>.
+</td>
+</tr>
+</table>
+</div>
+<h3 id="_authors" class="discrete">Authors</h3>
+<div id="tc" class="dlist">
+<dl>
+<dt class="hdlist1">Thomas Chiang.</dt>
+<dd>
+<p>Thomas is a Software Engineering PhD candidate at McMaster University, specialized in model driven engineering, language engineering, and safety engineering. His research interests are about improving safety engineering through model-driven engineering techniques, as well as developing principles for graphical modeling language development. You can reach him at <a href="mailto:chiangte@mcmaster.ca">chiangte@mcmaster.ca</a>, and find more information here: <a href="https://www.linkedin.com/in/thomas-chiang-908362a1" class="bare">https://www.linkedin.com/in/thomas-chiang-908362a1</a>.</p>
+</dd>
+</dl>
+</div>
+<div id="sm" class="dlist">
+<dl>
+<dt class="hdlist1">Sébastien Mosser, P.Eng., Ph.D.</dt>
+<dd>
+<p>Sébastien is Associate Professor of Software Engineering at McMaster University. His research interest are related to software engineering, more specifically language engineering and modelling in a DevOps context. He is teaching McMaster&#8217;s Requirements Engineering (3RA3) course since Fall 2023, after having taught equivalent courses at <em>Université Côte d&#8217;Azur</em> and <em>Université du Québec à Montréal</em> since 2012. You can reach him at <a href="mailto:mossers@mcmaster.ca">mossers@mcmaster.ca</a>, and find more information here: <a href="https://mosser.github.io" class="bare">https://mosser.github.io</a></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_g_goals"><a class="link" href="#_g_goals">(G) Goals</a></h2>
+<div class="sectionbody">
+<h3 id="_control_information_2" class="discrete">Control Information</h3>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. ATCO Eats&#8201;&#8212;&#8201;Versionning Information&#8201;&#8212;&#8201;Goal Book</caption>
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 22.2222%;">
+<col style="width: 11.1111%;">
+<col style="width: 22.2222%;">
+<col style="width: 11.1111%;">
+<col style="width: 22.2223%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top">Section</th>
+<th class="tableblock halign-center valign-top">Version</th>
+<th class="tableblock halign-center valign-top">Lead</th>
+<th class="tableblock halign-center valign-top">Delivered on</th>
+<th class="tableblock halign-center valign-top">Reviewer</th>
+<th class="tableblock halign-center valign-top">Approved on</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong><a href="#g1">G.1</a></strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Milestone #1</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="#sm">SM</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">28-08-2023</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="#tc">TC</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">29-08-2023</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong><a href="#g2">G.2</a></strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Milestone #1</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="#sm">SM</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">28-08-2023</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="#tc">TC</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">29-08-2023</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong><a href="#g3">G.3</a></strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Milestone #1</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="#tc">TC</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">29-08-2023</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="#sm">SM</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">29-08-2023</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong><a href="#g4">G.4</a></strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Milestone #1</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="#tc">TC</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">25-08-2023</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="#sm">SM</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">28-08-2023</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong><a href="#g5">G.5</a></strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Milestone #2</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="#tc">TC</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">31-09-2023</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="#sm">SM</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">01-09-2023</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong><a href="#g6">G.6</a></strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Milestone #2</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="#tc">TC</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">30-09-2023</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="#sm">SM</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">31-09-2023</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong><a href="#g7">G.7</a></strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Milestone #1</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="#sm">SM</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">28-08-2023</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="#tc">TC</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">29-08-2023</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect2">
+<h3 id="g1"><a class="link" href="#g1">(G.1) Context and Overall Objectives</a></h3>
+<div class="paragraph">
+<p>The COVID-19 crisis hit the food and hospitality industry really hard, and restaurants are still recovering from it. By investing in the deployment of a new app, <em>The Firebird Pub &amp; Grill</em> aims to integrate their food offer into McMaster&#8217;s community in a seamless way, by interacting with internal information systems for event caterings, as well as providing an ideal support for students' life on campus with mealboxes. Launching this new system will also targets the expansion of the patrons' pool, by focusing on McMaster as part of the Hamiltonian community.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="g2"><a class="link" href="#g2">(G.2) Current situation</a></h3>
+<div class="paragraph">
+<p><em>The Firebird</em> operates as a classical restaurant on campus. Events are organized to attract graduate students, and a patio was added for outdoor seating in the 90&#8217;s to increase seat capacity during summer months. Often desribed as Hamilton&#8217;s hidden jewel, its location does not help to attract external patrons (<em>e.g.</em>, no parking). Local patrons would consider it as any restaurant in the area: for example, staff cannot order catering for events through <a href="#mosaic">Mosaic</a>, and have to consider it as any other invoice.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="g3"><a class="link" href="#g3">(G.3) Expected Benefits</a></h3>
+<div class="paragraph">
+<p>The expected benefits of this app primarily center around increasing the on campus population. Despite the fact that Covid-19 is mostly under control, people are still generally shy to go out and be in person on campus with all of the new infrastructure allowing them to complete many of their tasks for school from the comfort of their home. However we have seen a sharp increase in people enjoying going out with their friends and family once the pandemic restrictions were lifted. Therefore the largest benefit that this app can bring is an increase in the on campus population. This is enabled for students by having the new take-out box system that allows students to order whenever and pick up warm and delicious food between classes easily as well as accepting student meal plan cards. It is also enabled by the integration with <a href="#mosaic">Mosaic</a> to facilitate payment from departments and faculty for catering for events which can entice more people to be present for in-person events to enjoy the delicious food from the Firebird. Finally the loyalty program will incentivize repeat customers so that they can enjoy complimentary benefits at the Firebird! (note that the exact nature of the benefits has not been determined at the time of creating this document and will be refined at a later date.)</p>
+</div>
+<div class="paragraph">
+<p>The goals that present these benefits, as well as the stakeholders that they affect can be seen in this goal model diagram:</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="models/goal_model.drawio.png" alt="goal model.drawio">
+</div>
+<div class="title">Figure 1. Goal model for the app</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="g4"><a class="link" href="#g4">(G.4) Functionality overview</a></h3>
+<div class="paragraph">
+<p>The high level functional requirements for the application based on client input can be defined as follows in no particular order:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Integration with campus staff.</strong> Client wants to be able to leverage the location of The Firebird to allow McMaster&#8217;s staff to order food for events directly through their internal information system and automatically support billing (instead of staff paying with their credit card and then submitting an expense report). This can be done primarily through Mosaic or something like Mosaic</p>
+</li>
+<li>
+<p><strong>Integration with campus life.</strong> Client wants the app to facilitate student life ie. Enable students to easily access food in between classes and during busy periods like midterms and exams. This can be done by enabling food order in boxes and quick pickup in restaurant.</p>
+</li>
+<li>
+<p><strong>Attacting new customers.</strong> Client hopes to use the app to encourage repeat customers. A loyalty program or card was given as an example to encourage patrons to enjoy The Phoenix patio during the summer, as well as points acquisition for potentially free appetizers during a visit.</p>
+</li>
+<li>
+<p><strong>Device Compatibility.</strong> To reach the broadest possible audience, the app that is being developed to be available across multiple operating systems and environments (Apple, Android, web browser).</p>
+</li>
+<li>
+<p><strong>Accepting meal plan cards</strong> As part of the clients desire to integrate with Campus, having a payment method that accepts credit, debit, <em>and</em> student meal cards is critical to the functionality of the app.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Of these functional requirements, 2 that are of critical importance is the integration with campus staff and integration with campus life. Integration with campus staff is critical to facilitate catering services of The Phoenix across campus through various system integrations. One of the main goals of the integrations is to reduce burden on staff for ordering catering services by having to pay out of pocket and then seek reimbursement from their department or faculty. Integration with campus life is another critical requirement to enable students to more efficiently get quality meals during particularly time-constrained periods of their studies, thus improving their quality of life during their stay at McMaster.</p>
+</div>
+<div class="paragraph">
+<p>Some high level non-functional requirements for the application can be defined as follows in no particular order:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Compliance with McMaster University by-laws</strong></p>
+</li>
+<li>
+<p><strong>Compliance with Ontario alcohol service laws and regulations</strong></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>These two non-functional requirements critical for legal reasons. As The Phoenix is on McMaster property, it must comply with the by-laws created and enforced by the university. As The Phoenix is also a bar with a liquor license it is also critical that they operate their business with respect to the by-laws and regulations of the Ontario Government.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="g5"><a class="link" href="#g5">(G.5) High-level usage scenarios</a></h3>
+<div class="imageblock text-center">
+<div class="content">
+<img src="models/use_case_diagram.png" alt="use case diagram">
+</div>
+<div class="title">Figure 2. High Level use cases diagram</div>
+</div>
+<div class="paragraph">
+<p>The use case diagram above highlights how we anticipate our direct stakeholders will interact with the app for the principal use cases. More details for these usages are as follows:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a id="uc1"></a> <strong>UC1: Order food.</strong></p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Customer (hamilton citizen and by extension community member) opens the app to order food</p>
+</li>
+<li>
+<p>Customer accesses the meal box menu</p>
+</li>
+<li>
+<p>Customer goes through menu looking for food</p>
+</li>
+<li>
+<p>Customer finds food and places order for meal boxes</p>
+</li>
+<li>
+<p>Customer pays for food</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p><a id="uc2"></a> <strong>UC2: Receive "order status" update.</strong></p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The system pushes a notification when an order has been received</p>
+</li>
+<li>
+<p>The system pushes pushes another notification when the payment is completed</p>
+</li>
+<li>
+<p>The system sends a receipt to the customer</p>
+</li>
+<li>
+<p>Line cook marks when food cooking is complete</p>
+</li>
+<li>
+<p>The system pushes notification for food cooking complete</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p><a id="uc3"></a> <strong>UC3: Pay for food.</strong></p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The system determines the price of the order (including loyalty rewards and green box discounts, if any)</p>
+</li>
+<li>
+<p>Customer select their payment type.</p>
+</li>
+<li>
+<p>Payment is submitted to the right provider (External or Internal) to be processed.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p><a id="uc4"></a> <strong>UC4: Submit catering invoice.</strong></p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The restaurant receives catering order by traditional means (<em>e.g.</em> email, phone)</p>
+</li>
+<li>
+<p>The restaurant processes the catering order using their regular process</p>
+</li>
+<li>
+<p>Restaurant manager creates an order and select <code>INTERNAL</code> as payment type</p>
+</li>
+<li>
+<p>They fill out the required accounting information provided by their client</p>
+</li>
+<li>
+<p>They save the order in <strong>ATCO Eats</strong>, which transmit it to <a href="#mosaic">Mosaic</a> for payment</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p><a id="uc5"></a> <strong>UC5: Check sales reports.</strong></p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Restaurant manager opens web-portal to access app</p>
+</li>
+<li>
+<p>Restaurant manager accesses sales for the day</p>
+</li>
+<li>
+<p>Restaurant manager generates sales report</p>
+</li>
+<li>
+<p>App prompts manager to save report to local machine</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p><a id="uc6"></a> <strong>UC6: Finalize Order.</strong></p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The line cook has a list of meal boxes to prepare for the next pickup slot</p>
+</li>
+<li>
+<p>When they have finished their current batch, they push a button to change their status to <code>READY</code></p>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="g6"><a class="link" href="#g6">(G.6) Limitations and Exclusions</a></h3>
+<div class="paragraph">
+<p>Below is a list of limitations that the system will not do:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>System will not integrate with social media to do advertising or allow cross-posting</p>
+</li>
+<li>
+<p>System will not be responsible for checking if food has been picked-up by customer. Once the food ready alert has been sent out system role is over.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="g7"><a class="link" href="#g7">(G.7) Stakeholders and requirements sources</a></h3>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 2. Stakeholders for ATCO Eats</caption>
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 40%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-middle" colspan="2">Stakeholder</th>
+<th class="tableblock halign-left valign-top">Persona</th>
+<th class="tableblock halign-left valign-top">Category</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-middle" rowspan="2"><p class="tableblock">Patrons</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#community">Community</a> member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#cameron">Cameron</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Direct</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Citizen of Hamilton</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#carter">Carter</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Direct</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Indirect Customer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Administrative Assistant</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#logan">Logan</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Direct</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle" rowspan="2"><p class="tableblock">Restaurant staff</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Restaurant Manager</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#drew">Drew</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Direct</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Line Cook</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dylan">Dylan</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Direct</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle" colspan="3"><p class="tableblock"><a href="#mosaic">Mosaic</a> Operational Maintainers</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Indirect</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle" colspan="3"><p class="tableblock">Payment Gateway operators</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Indirect</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle" colspan="3"><p class="tableblock">McMaster Senate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Indirect</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_g_7_1_direct_stakeholders"><a class="link" href="#_g_7_1_direct_stakeholders">(G.7.1) Direct Stakeholders</a></h4>
+<div class="sect4">
+<h5 id="_patrons"><a class="link" href="#_patrons">Patrons</a></h5>
+<div class="paragraph">
+<p>Patrons directly interact with The Firebird, by booking tables and participating to events organized by the restaurant (<em>e.g.</em>, Trivia night on Tuesdays). They can be refined into community members, already on McMaster campus (supporting the objective of better integrating with the community), and citizens of Hamilton (supporting the objective of extending the pool of patrons).</p>
+</div>
+<div id="cameron" class="dlist">
+<dl>
+<dt class="hdlist1">Cameron (Community member)</dt>
+<dd>
+<p>Cameron is a grad student in Engineering, splitting their time between working on campus as a teaching assistant and their research work on biomedical nano-robots. They are not living on campus, and coming to Mac is a 25 minutes commute. They are on a tight budget, and cannot afford eating out too often. They enjoy spending time with their friends (other grad students, or from outside McMaster).</p>
+</dd>
+</dl>
+</div>
+<div id="carter" class="dlist">
+<dl>
+<dt class="hdlist1">Carter (Citizen of Hamilton)</dt>
+<dd>
+<p>Carter lives in Stoney Creek, and work as an assistant manager in a local grocery store. With their partner, they have two teenage children, and enjoy spending quality time together dining in nice restaurants. They are not necessarily looking for fancy food, but more for nice, fun and positive atmosphere for their monthly family dinner.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_indirect_customer"><a class="link" href="#_indirect_customer">Indirect customer</a></h5>
+<div class="paragraph">
+<p>Indirect customers are staff members who classicaly book catering or tables on behalf of other members. They usually do not participate to these events: they are handling the booking, then a faculty/staff member would pay the bill and submit an expense report. They have then to fill out and validate such report with Account Payable.</p>
+</div>
+<div id="logan" class="dlist">
+<dl>
+<dt class="hdlist1">Logan (Administrative Assistant)</dt>
+<dd>
+<p>Logan works as an administrative assistant at <em>McMaster Centre for Awesome Research on Everything</em> (CARE) since 2016, helping out a group of 12 professors. When CARE organizes events or conferences, they are in charge of organizing the agenda, including ordering food for breaks. They are also in charge of organizing the itinerary when guests are hosted by CARE, including booking restaurants for dinners. They usually only work with providers able to submit invoices directly through <a href="#mosaic">Mosaic</a> to lighten their workload.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_restaurant_staff"><a class="link" href="#_restaurant_staff">Restaurant Staff</a></h5>
+<div class="paragraph">
+<p>Restaurant staff are directly impacted by <strong>ATCO Eats</strong>, from the front-house (<em>e.g.</em>, welcoming patrons, taking orders) to the back-house (preparing food ordered through the app).</p>
+</div>
+<div id="drew" class="dlist">
+<dl>
+<dt class="hdlist1">Drew (Restaurant Manager)</dt>
+<dd>
+<p>Drew started working at The Firebird in 2022, with the great re-opening as part of the <em>Back to Mac</em> operation. With 10+ years of experience in restaurant management in the GTA, they were hired to help adapt The FireBird to its new post-covid operational context. They are known for their direct management style, favoring problem-solving over finger pointing.</p>
+</dd>
+</dl>
+</div>
+<div id="dylan" class="dlist">
+<dl>
+<dt class="hdlist1">Dylan (Line Cook)</dt>
+<dd>
+<p>Dylan has worked as a line cook at The Firebird since 2019. Preparing tasty food that patrons will enjoy is really important for them, that&#8217;s why they were a little bit skeptical when they heard top-management starting to talk about "meal boxes". They fear that such approaches might jeopardize the quality of food they like to serve.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_g_7_2_indirect_stakeholders"><a class="link" href="#_g_7_2_indirect_stakeholders">(G.7.2) Indirect Stakeholders</a></h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong><a href="#mosaic">Mosaic</a> Operational Maintainers</strong>: As <strong>ATCO Eats</strong> will be integrated into <a href="#mosaic">Mosaic</a>, it needs tro comply to operational constraints required by <a href="#mosaic">Mosaic</a> for integration purposes.</p>
+</li>
+<li>
+<p><strong>Payment Gateway operators</strong>: <strong>ATCO Eats</strong> will support payment mechanisms, and as such will have to interact with payment service providers such as Stax, Stripe, &#8230;&#8203;</p>
+</li>
+<li>
+<p><strong>McMaster Senate</strong>: The Senate is in charge of voting by-laws that might influence the operations of <strong>ATCO Eats</strong></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_g_7_3_requirements_sources"><a class="link" href="#_g_7_3_requirements_sources">(G.7.3) Requirements Sources</a></h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Account Payable Policies</strong> needs to be respected to support internal invoicing. In particular, AP-01 states that catering expenses must be supported by an <em>"official itemized invoice marked paid or official itemized receipt, and list of attendees (where applicable). Indicate the nature of the event and description of how the business reception, meeting or University event facilitates University business."</em></p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://financial-affairs.mcmaster.ca/services/accounts-payable-reimbursements/accounts-payable-policies-procedures/" class="bare">https://financial-affairs.mcmaster.ca/services/accounts-payable-reimbursements/accounts-payable-policies-procedures/</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Campus Food &amp; Beverage Policy</strong>: This by-law regulates how food is served on campus. It makes a distinction between food services operated on exempted locations (The FireBird building is such an exempted location) and food services operated elsewhere in the university (<em>e.g.</em>, catering). As operating on McMaster&#8217;s grounds, <strong>ATCO Eats</strong> must be compliant with this policy.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://vpof.mcmaster.ca/app/uploads/2023/05/Campus-Food-Beverage-Policy88.pdf" class="bare">https://vpof.mcmaster.ca/app/uploads/2023/05/Campus-Food-Beverage-Policy88.pdf</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Liquor Licence and Control Act, 2019</strong>: This act regulates the sell of alcoholic products in the Province of Ontario. As The FireBird is located in Ontario, <strong>ATCO Eats</strong> must be compliant with this Act</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.ontario.ca/laws/statute/19l15b" class="bare">https://www.ontario.ca/laws/statute/19l15b</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Mobile &amp; Web Accessibility Checklists</strong> needs to be validated to ensure the app is accessible for users and staff.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Mobile_accessibility_checklist" class="bare">https://developer.mozilla.org/en-US/docs/Web/Accessibility/Mobile_accessibility_checklist</a></p>
+</li>
+<li>
+<p><a href="https://www.w3.org/TR/WCAG/" class="bare">https://www.w3.org/TR/WCAG/</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Mosaic Technical Documentation</strong>: Despite not being publicly acessible, we assume that UTS can provide technical documentation so that <strong>ATCO Eats</strong> will be eventually integrated into <a href="#mosaic">Mosaic</a>.</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Personal Information Protection and Electronic Documents Act (PIPEDA)</strong>: As <strong>ATCO Eats</strong> might process personal information, and operates in Canada, it must respect the federal regulation on privacy.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/pipeda_brief/" class="bare">https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/pipeda_brief/</a></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_e_environment"><a class="link" href="#_e_environment">(E) Environment</a></h2>
+<div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<em>The Environment book describes the application domain and external context, physical or virtual (or a mix), in which the system will operate.</em> <a href="#BM22">[1]</a>
+</td>
+</tr>
+</table>
+</div>
+<h3 id="_control_information_3" class="discrete">Control Information</h3>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 3. ATCO Eats&#8201;&#8212;&#8201;Versionning Information&#8201;&#8212;&#8201;Environment Book</caption>
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 22.2222%;">
+<col style="width: 11.1111%;">
+<col style="width: 22.2222%;">
+<col style="width: 11.1111%;">
+<col style="width: 22.2223%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top">Section</th>
+<th class="tableblock halign-center valign-top">Version</th>
+<th class="tableblock halign-center valign-top">Lead</th>
+<th class="tableblock halign-center valign-top">Delivered</th>
+<th class="tableblock halign-center valign-top">Reviewer</th>
+<th class="tableblock halign-center valign-top">Approved</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" rowspan="2"><p class="tableblock"><strong><a href="#e1">E.1</a></strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Milestone #1</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="#sm">SM</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">28-08-2023</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="#tc">TC</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">29-08-2023</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Milestone #2</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="#sm">SM</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">31-08-2023</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="#tc">TC</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">01-09-2023</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong><a href="#e2">E.2</a></strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Milestone #2</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="#sm">SM</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">29-08-2023</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="#tc">TC</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">30-08-2023</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong><a href="#e3">E.3</a></strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Milestone #2</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="#tc">TC</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">30-08-2023</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="#sm">SM</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">31-08-2023</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong><a href="#e4">E.4</a></strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Milestone #2</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="#tc">TC</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">30-08-2023</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="#sm">SM</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">31-08-2023</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong><a href="#e5">E.5</a></strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Milestone #1</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="#tc">TC</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">25-08-2023</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="#sm">SM</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">28-08-2023</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong><a href="#e6">E.6</a></strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Milestone #1</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="#tc">TC</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">25-08-2023</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="#sm">SM</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">28-08-2023</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect2">
+<h3 id="e1"><a class="link" href="#e1">(E.1) Glossary</a></h3>
+<div class="sect3">
+<h4 id="_e_1_1_vocabulary"><a class="link" href="#_e_1_1_vocabulary">(E.1.1) Vocabulary</a></h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><a id="catering"></a> Catering Services</dt>
+<dd>
+<p>McMaster operates its own internal catering system, in compliance of the by-laws controlling food operations on campus grounds. Extensive information of Catering operations can be found here: <a href="https://hospitality.mcmaster.ca/catering-gifts/catering-services/" class="bare">https://hospitality.mcmaster.ca/catering-gifts/catering-services/</a></p>
+</dd>
+<dt class="hdlist1"><a id="greenbox"></a> Green Box</dt>
+<dd>
+<p>As part of McMaster sustainability program, <a href="#community">Community</a> member can subscribe to a reusable container program. More information available here: <a href="https://hospitality.mcmaster.ca/wellness-sustainability/sustainability/choose-to-reuse/reusable-containers/" class="bare">https://hospitality.mcmaster.ca/wellness-sustainability/sustainability/choose-to-reuse/reusable-containers/</a>.</p>
+</dd>
+<dt class="hdlist1"><a id="macid"></a> MacID</dt>
+<dd>
+<p>Mac ID is the local <em>Single Sign On</em> (SSO) deployed as McMaster as a unique and centralized way to support authentication among the different apps used by the university (<em>e.g.</em>, <a href="#mosaic">Mosaic</a>, Avenue to Learn)</p>
+</dd>
+<dt class="hdlist1"><a id="community"></a> McMaster community</dt>
+<dd>
+<p>McMaster&#8217;s community includes <a href="#staff">Staff</a>, as well as students (undergrad and graduate ones).</p>
+</dd>
+<dt class="hdlist1"><a id="mealbox"></a> Meal Box</dt>
+<dd>
+<p>New offer available at The Firebird. It consists in pre-made meals that are designed to be affordable, healthy and balanced, allowing McMaster <a href="#community">Community</a> to focus on their busy life and not on cooking meals. A meal box includes a small starter, a main dish, and a dessert. Boxes are cooked to order to ensure freshness and meal quality.</p>
+</dd>
+<dt class="hdlist1"><a id="mealplan"></a> Meal Plan</dt>
+<dd>
+<p>The meal plan is an opt-in option that the majority of students who live in residence take to get meals, and is continually offered to all students. They are able to prepay money to their Mosaic account and use their student card to purchase food on campus, or other local restaurants that accept student meal plans as a form of payment.</p>
+</dd>
+<dt class="hdlist1"><a id="mosaic"></a> Mosaic (Information System)</dt>
+<dd>
+<p>Mosaic is McMaster&#8217;s internal portal. It acts as a unique entry point aggregating each and every tool used to support McMaster&#8217;s community. Students use it for course enrollment, staff for expense reports, faculty for accessing class rosters. Acting as a portal, it covers Student Administration, Finance, HR, Research Administration, and Facilities Maintenance Management.</p>
+</dd>
+<dt class="hdlist1"><a id="staff"></a> Staff</dt>
+<dd>
+<p>When referring to <em>staff</em>, this document refers to persons employed by McMaster to support its operations, who might commit to expenses in food and hospitality. This generally includes administration staff and full-time faculty members.</p>
+</dd>
+<dt class="hdlist1"><a id="uts"></a> University Technology Service</dt>
+<dd>
+<p>McMaster internal IT service, in charge of operating its technological infrastructure. It includes, among others, <a href="#macid">MacID</a>, <a href="#mosaic">Mosaic</a>, Avenue to Learn (course management system).</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_e_1_2_domain_model"><a class="link" href="#_e_1_2_domain_model">(E.1.2) Domain Model</a></h4>
+<div class="imageblock text-center">
+<div class="content">
+<img src="models/domain_model.svg" alt="domain model">
+</div>
+<div class="title">Figure 3. Domain Model for ATCO Eats</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="e2"><a class="link" href="#e2">(E.2) Components</a></h3>
+<div class="paragraph">
+<p>The system interacts with two external components:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong><code>Mosaic</code></strong>: The component hosted by <a href="#uts">UTS</a> and providng services related to McMaster processes, such as meal plan and supporting internal billing. This legacy compomnent is out of scope for <strong>ATCO Eats</strong>, which needs to interact with it.</p>
+</li>
+<li>
+<p><strong><code>Payment Gateway</code></strong>: The component implementing the interface from the payment provider used to process payments (Visa, Mastercard, GoogleWallet, ApplePay). As the provider is not selected yet, we assume here a "global" interface which is compatible with out preliminary study of the provider market.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="e3"><a class="link" href="#e3">(E.3) Constraints</a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Interactions with <a href="#mosaic">Mosaic</a></strong>: To support a meal plan debit, <strong>ATCO Eats</strong> needs to send a request for payment to the system Internal billing works the other way around: the system exposes an endpoint providing pending invoices, and periodically <a href="#mosaic">Mosaic</a> collect them and start the accounting reconciliation process.</p>
+</li>
+<li>
+<p><strong>Mobile support</strong>: The system must work with classical smartphone, <em>i.e.</em>, Apple and Android devices and comply with app store policy.</p>
+</li>
+<li>
+<p><strong>Internet support</strong>: The system must work with internet browsers (<em>i.e.</em>, Chrome, Safari, Edge) to support staff and in the event that customers do no wish to download the app.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="e4"><a class="link" href="#e4">(E.4) Assumptions</a></h3>
+<div class="paragraph">
+<p>Some assumptions made can be found below:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Operating system support</strong>: We assume that we will have to support mobile operating systems that are still supported by mobile companies (iOS 15 and Android 11 at the time of writing).</p>
+</li>
+<li>
+<p><strong>Internet browser support</strong>: We assume that we only need to support three major internet browsers (Edge, Chrome, Safari).</p>
+</li>
+<li>
+<p><strong>Integration with existing restaurant infrastructure</strong>: We assume that for the minimum viable product for this application we do not need to integrate with pre-existing systems for sales reporting and inventory tracking.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="e5"><a class="link" href="#e5">(E.5) Effects</a></h3>
+<div class="paragraph">
+<p>Some of the potential effects of the application can be defined as follows:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Increase in student happiness, health, and morale. This is possible due through the facilitation of access to food, preventing students from having to make the choice to eat or attend class. It can also promote more social interactions among the student population through easier catering options or just promoting more attractions of the
+The FireBird.</p>
+</li>
+<li>
+<p>Increase in on-campus student population. This is possible as the app may promote more reasons for students to be on campus through the loyalty program that rewards them for their in person patronage, even if it&#8217;s just by picking up their orders.</p>
+</li>
+<li>
+<p>Increase in events on campus. This is possible through integration with staff on campus and allowing seamless payment through departments, faculties, and clubs. This would also promote competition on campus, potentially allowing for better prices on catering for events or better quality food for catered events.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="e6"><a class="link" href="#e6">(E.6) Invariants</a></h3>
+<div class="paragraph">
+<p>Some Invariants of this system can be defined as follows:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The Firebird will operate specifically within the McMaster University Campus, on land owned by McMaster</p>
+</li>
+<li>
+<p>The Firebird can assume that McMaster will be responsible for their own systems, outside of the application being developed for The Firebird</p>
+</li>
+<li>
+<p>The Firebird can assume that there will always be patrons under the legal drinking age based on the legal drinking age set by the Ontario Government</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_s_system"><a class="link" href="#_s_system">(S) System</a></h2>
+<div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<em>the System book refines the Goal one by focusing on more detailed requirements.</em>
+</td>
+</tr>
+</table>
+</div>
+<h3 id="_control_information_4" class="discrete">Control Information</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 22.2222%;">
+<col style="width: 11.1111%;">
+<col style="width: 22.2222%;">
+<col style="width: 11.1111%;">
+<col style="width: 22.2223%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top">Section</th>
+<th class="tableblock halign-center valign-top">Version</th>
+<th class="tableblock halign-center valign-top">Lead</th>
+<th class="tableblock halign-center valign-top">Delivered</th>
+<th class="tableblock halign-center valign-top">Reviewer</th>
+<th class="tableblock halign-center valign-top">Approved</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong><a href="#s1">S.1</a></strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Milestone #2</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="#sm">SM</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">29-08-2023</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="#tc">TC</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">01-09-2023</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong><a href="#s2">S.2</a></strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Milestone #2</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="#tc">TC</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">31-08-2023</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="#sm">SM</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">01-09-2023</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong><a href="#s3">S.3</a></strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Milestone #2</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="#sm">SM</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">31-08-2023</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="#tc">TC</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">01-09-2023</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong><a href="#s4">S.4</a></strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Milestone #2</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="#tc">TC</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">31-08-2023</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="#sm">SM</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">01-09-2023</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong><a href="#s5">S.5</a></strong></p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong><a href="#s6">S.6</a></strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Milestone #2</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="#sm">SM</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">01-09-2023</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="#tc">TC</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">01-09-2023</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect2">
+<h3 id="s1"><a class="link" href="#s1">(S.1) Components</a></h3>
+<div class="paragraph">
+<p>The system relies on the following four software components:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong><code>Patron Manager</code></strong>: The component in charge of managing the patrons database (<code>Manage Patrons</code>), as well as providing services related to the loyalty program (<code>Loyalty</code>). It centralizes the business logic related to customer management in <strong>ATCO Eats</strong>.</p>
+</li>
+<li>
+<p><strong><code>Menu Provider</code></strong>: The component in charge of exposing the menu to the patrons using the system. It exposes an administration interface (<code>Manage Menu</code>), as well as a way to seach for items (<code>Lookup</code>). The component focuses only on what is available for <strong>ATCO Eats</strong>, and will not contain 100% of the restaurant menu.</p>
+</li>
+<li>
+<p><strong><code>Order Manager</code></strong>: The component in charge of processing orders made through the system (<code>Process Order</code>). It implements the business logic related to selling goods (mealboxes or catering services), and listing elements to be cooked by the kitchen (<code>List Impeding</code>).</p>
+</li>
+<li>
+<p><strong><code>Billing</code></strong>: The component acting as an integrated gateway to external payment services (<code>Process Payment</code>) and internal meal plans (<code>MealPlan Payment</code>). It also exposes a way to collect <code>Pending Invoices</code> when requested, to support interaction with <a href="#mosaic">Mosaic</a>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In addition to these components, the system will interact with two external components to support integration with <a href="#mosaic">Mosaic</a> and payment processing (see <a href="#e2">E.2</a> for details).</p>
+</div>
+<div class="paragraph">
+<p>Patrons use <code>Client-App</code> (a mobile application) to interact with the system, for the loyalty program as well as ordering meal boxes. this application can also be accessed in a web browser. Restaurant staff use a web-based system named <code>Web-Portal</code> to administrate the system (patrons database, catering orders). It is important to note that Administrative Staff does not interact directly with the system, and will continue ordering catering or booking tables by phone or email</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="models/component_mobile.svg" alt="component mobile">
+</div>
+<div class="title">Figure 4. Components involved in ATCO Eats mobile app</div>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="models/component_web.svg" alt="component web">
+</div>
+<div class="title">Figure 5. Components involved in ATCO Eats administration (web) app</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="s2"><a class="link" href="#s2">(S.2) Functionality</a></h3>
+<div class="sect3">
+<h4 id="_s_2_1_patron_manager"><a class="link" href="#_s_2_1_patron_manager">(S.2.1) Patron Manager</a></h4>
+<div class="sect4">
+<h5 id="_functional_requirements"><a class="link" href="#_functional_requirements">Functional Requirements</a></h5>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a id="F211"></a> <strong>Sign-up service</strong>: Patron manager shall allow customers the option to sign-up and create an account to gain access to the loyalty program. (F211)</p>
+</li>
+<li>
+<p><a id="F212"></a> <strong>Log-in/out service</strong>: Patron manager shall allow customers to login and logout when desired without losing any points previously earned. (F212)</p>
+</li>
+<li>
+<p><a id="F213"></a> <strong>Check loyalty status</strong>: Patron manager shall allow customers to check the status of their loyalty points including points until next available reward. (F213)</p>
+</li>
+<li>
+<p><a id="F214"></a> <strong>Password recovery</strong>: Patron manager shall allow customers to recover password in the event they have forgotten their account credentials. (F214)</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_non_functional_requirements"><a class="link" href="#_non_functional_requirements">Non-Functional Requirements</a></h5>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a id="NF211"></a> <strong>Password encryption</strong>: Patron manager shall encrypt passwords during login/sign-up process. (NF211)</p>
+</li>
+<li>
+<p><a id="NF212"></a> <strong>Personal Data Privacy</strong>: Patron Manager shall ensure that the patron database is not accessible outside of the restaurant management team.  (NF212)</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_s_2_2_menu_provider"><a class="link" href="#_s_2_2_menu_provider">(S.2.2) Menu Provider</a></h4>
+<div class="sect4">
+<h5 id="_functional_requirements_2"><a class="link" href="#_functional_requirements_2">Functional Requirements</a></h5>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a id="F221"></a> <strong>Provide menu</strong>: Menu manager shall provide customer with access to the menu so that they can choose their desired item for order. (F221)</p>
+</li>
+<li>
+<p><a id="F222"></a> <strong>Search through menu</strong>: Menu manager shall provide customer with the ability to lookup specific items in the menu. (F222)</p>
+</li>
+<li>
+<p><a id="F223"></a> <strong>Update menu provider</strong>: Menu manager shall provide an interface to staff to update the menu with new items or remove old ones. (F223)</p>
+</li>
+<li>
+<p><a id="F224"></a> <strong>Select menu item</strong>: Menu manager shall allow customers to select the items that they wish to purchase. (F224)</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_non_functional_requirements_2"><a class="link" href="#_non_functional_requirements_2">Non-Functional Requirements</a></h5>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a id="NF221"></a> <strong>Accessibility</strong>: Menu manager shall be compatible with screen readers and other accessibility services available on client side. (NF221)</p>
+</li>
+<li>
+<p><a id="NF222"></a> <strong>Pictures of food</strong>: Menu manager shall provide some pictures of menu items to entice customers to purchase food that looks particularly delicious. (NF222)</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_s_2_3_order_manager"><a class="link" href="#_s_2_3_order_manager">(S.2.3) Order Manager</a></h4>
+<div class="sect4">
+<h5 id="_functional_requirements_3"><a class="link" href="#_functional_requirements_3">Functional Requirements</a></h5>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a id="F231"></a> <strong>Complete food order (Process Order)</strong>: Order manager shall provide customer with an interface to complete food order purchase. (F231)</p>
+</li>
+<li>
+<p><a id="F232"></a> <strong>Receive food order</strong>: Order manager shall provide line cook with ordered list of food that requires cooking and preparation (if required). (F232)</p>
+</li>
+<li>
+<p><a id="F233"></a> <strong>Food order complete</strong>: Order manager shall provide line cook with interface to state when food cooking is complete.</p>
+</li>
+<li>
+<p><a id="F234"></a> <strong>Food order complete notification</strong> Order manager shall prompt user with notification when food is ready for pickup. (F233)</p>
+</li>
+<li>
+<p><a id="F235"></a> <strong>Catering order (Process Order)</strong>: Order manager shall provide contact information to staff that wish to order catering for an event. (F235)</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_non_functional_requirements_3"><a class="link" href="#_non_functional_requirements_3">Non-Functional Requirements</a></h5>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a id="NF231"></a> <strong>Push notifications</strong>: Order manager shall by default enable push notifications from the app (mobile app specifically) to customer smartphone. (NF231)</p>
+</li>
+<li>
+<p><a id="NF232"></a> <strong>Device operating system security compliant</strong>: Order manager shall send notifications to user smartphone only in compliance with security settings on user device. (NF232)</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_s_2_4_billing"><a class="link" href="#_s_2_4_billing">(S.2.4) Billing</a></h4>
+<div class="sect4">
+<h5 id="_functional_requirements_4"><a class="link" href="#_functional_requirements_4">Functional Requirements</a></h5>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a id="F241"></a> <strong>Order payment (Process Payment)</strong>: Billing shall provide user with an interface to pay for their order using an external payment service. (F241)</p>
+</li>
+<li>
+<p><a id="F242"></a> <strong>Order payment (Pending Invoices)</strong>: Billing shall provide restaurant manager with an interface to create invoices for catering orders using department number of faculty. (F242)</p>
+</li>
+<li>
+<p><a id="F243"></a> <strong>Sales reports</strong>: Billing shall provide restaurant manager with an interface to request and review sales reports though the app. (F243)</p>
+</li>
+<li>
+<p><a id="F244"></a> <strong>Use loyalty points</strong>: Billing shall prompt user if they want to use loyalty points (if they have enough) before completing payment. (F244)</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_non_functional_requirements_4"><a class="link" href="#_non_functional_requirements_4">Non-Functional Requirements</a></h5>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a id="NF241"></a> <strong>Secured Communication</strong>: Billing shall ensure secured communication with external (Debit, Credit, Interac) and internal (meal plans, catering) payment services, using state-of-the-art protocols validated with partners. (NF241)</p>
+</li>
+<li>
+<p><a id="NF242"></a> <strong>Tax and accounting compliant</strong>: Billing shall comply with accounting regulations set by McMaster University, the Ontario Government, and the Government of Canada. (NF242)</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="s3"><a class="link" href="#s3">(S.3) Interfaces</a></h3>
+<div class="sect3">
+<h4 id="_s_3_1_apis"><a class="link" href="#_s_3_1_apis">(S.3.1) APIs</a></h4>
+<div class="paragraph">
+<p>The <strong>ATCO Eats</strong> system only offers one API to the external world: <code>PendingInvoice</code>. This interface is used to integrate the system with <a href="#mosaic">Mosaic</a>, which will regularly pull pending invoices and start payment processing.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="models/external_API.svg" alt="external API">
+</div>
+<div class="title">Figure 6. External API exposed by ATCO Eats</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The interface exposes one single operation, to <code>list</code> the pending invoices.</p>
+</li>
+<li>
+<p>The system shall receive a single argument, being an authentication token which grants access to the system</p>
+</li>
+<li>
+<p>The system shall answer with all catering orders with <code>payed?</code> attribute being <code>false</code> and <code>status</code> being <code>DELIVERED</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_s_3_2_wireframe_mockups"><a class="link" href="#_s_3_2_wireframe_mockups">(S.3.2) Wireframe Mockups</a></h4>
+<div class="paragraph">
+<p>We focus here on the two parts of the system that differs the most from "classical" food ordering systems such as DoorDash or Uber Eats.</p>
+</div>
+<div class="sect4">
+<h5 id="_s_3_2_1_impeding_orders_line_cook"><a class="link" href="#_s_3_2_1_impeding_orders_line_cook">(S.3.2.1) Impeding Orders (Line Cook)</a></h5>
+<div class="paragraph">
+<p>The Line Cook stakeholder (<a href="#dylan">Dylan</a>) needs to have quick access to the next batch of mealboxes to prepare (to ensure good quality of freshly prepared food). As they are working in a kitchen, they cannot rely on classical "tablet-like" interfaces that would requires clean hands. As such, they need to interact with a <em>Flush!</em> physical push button located in the kitchen that automaticallt update the status of the ordered food on their behalf.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="mockups/Impeding_Order.png" alt="Impeding Order">
+</div>
+<div class="title">Figure 7. Line Cook: Impeding Order Screen</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_s_3_2_2_submit_catering_invoice_restaurant_manager"><a class="link" href="#_s_3_2_2_submit_catering_invoice_restaurant_manager">(S.3.2.2) Submit Catering Invoice (Restaurant Manager)</a></h5>
+<div class="paragraph">
+<p>The Restaurant Manager fills out all the information provided by the Administrative Assistant using traditional means (<em>e.g.</em>, phone, email). Then, they submit the invoice on their side, and wait for the payment to be processed by <a href="#mosaic">Mosaic</a>. The interface shall allow the restaurant manager (<a href="#drew">Drew</a>) to submit the information expected by McMaster&#8217;s accountant to process the invoice (see the domain model, <a href="#e1">E.1</a>) .</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="mockups/Submit_Catering.png" alt="Submit Catering">
+</div>
+<div class="title">Figure 8. Restaurant Manager: Submitting Catering Invoice</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="s4"><a class="link" href="#s4">(S.4) Detailed usage scenarios</a></h3>
+<div class="sect3">
+<h4 id="_s_4_1_ordering_food_from_the_app"><a class="link" href="#_s_4_1_ordering_food_from_the_app">(S.4.1) Ordering food from the app</a></h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Use Case</strong>: <a href="#uc1">UC1</a>, <a href="#uc2">UC2</a>, <a href="#uc3">UC3</a></p>
+</li>
+<li>
+<p><strong>Primary Actor</strong>: Community member</p>
+</li>
+<li>
+<p><strong>Precondition</strong>: Community member has internet access and the app downloaded</p>
+</li>
+<li>
+<p><strong>Trigger</strong>: Community member wants to get some food in between classes</p>
+</li>
+<li>
+<p><strong>Main Success Scenario</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>1. Community member opens the <strong>ATCO Eats</strong> app.</p>
+</li>
+<li>
+<p>2. App offers mealbox menu options for the Community member to choose from.</p>
+</li>
+<li>
+<p>3. Community member uses the lookup function to find food that they want.</p>
+</li>
+<li>
+<p>4. Community member selects food and then goes to checkout.</p>
+</li>
+<li>
+<p>5. Community member specifies pickup time. Default is ASAP.</p>
+</li>
+<li>
+<p>6. Community member pays for food using credit card. Payment success and order goes through.</p>
+</li>
+<li>
+<p>7. After some time Community member receives notification that food is ready.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Secondary Scenarios</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>1.1. Community member creates a new user account.</p>
+</li>
+<li>
+<p>1.2. Community member logs into already existing account if not already logged in.</p>
+</li>
+<li>
+<p>5.1. Community member pays using McMaster ID card.</p>
+</li>
+<li>
+<p>5.2. Upon successful payment, Community member decides to save payment information to account for next purchase.</p>
+</li>
+<li>
+<p>5.3. If community member already has an account, prompt community member to use loyalty points to pay for food.</p>
+</li>
+<li>
+<p>5.4. Payment is rejected, Community member is unable to complete purchase.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Success Postcondition</strong>: Community member receives email for purchase and notification when food is ready.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This scenario is important as it demonstrates how community members are most likely to interact with the app in order to get food and meet the demands of their busy schedules. We can expect them to have multiple different payment methods, and change they&#8217;re dining plans on a whim if class gets cancelled or they decide to skip class because they are exhausted.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="models/activity_order_food.png" alt="activity order food">
+</div>
+<div class="title">Figure 9. Activity diagram for 'Ordering food from the app'</div>
+</div>
+<div class="paragraph">
+<p>This diagram helps to explain this usage scenario as it helps us to see all the different decisions that happen during this scenario. These will very likely turn into if statements for the software development. It also covers the "guest" mode descriobed by the fourth scenario.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_s_4_2_line_cook_using_the_app_for_impending_order_and_finalizing_cooking"><a class="link" href="#_s_4_2_line_cook_using_the_app_for_impending_order_and_finalizing_cooking">(S.4.2) Line cook using the app (for impending order and finalizing cooking)</a></h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Use Case</strong>: List Impending Food Orders (<a href="#s3">S.3</a>), <a href="#uc6">UC6</a>.</p>
+</li>
+<li>
+<p><strong>Primary Actor</strong>: Line cook</p>
+</li>
+<li>
+<p><strong>Precondition</strong>: Line cook is already at station preparing food</p>
+</li>
+<li>
+<p><strong>Trigger</strong>: Customer inputs new order</p>
+</li>
+<li>
+<p><strong>Main Success Scenario</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>1. Line cook receives sound notification for new meal box order.</p>
+</li>
+<li>
+<p>2. the app puts it in cooking queue.</p>
+</li>
+<li>
+<p>3. Line cook begins preparing food for order.</p>
+</li>
+<li>
+<p>4. Upon completion, line cook places food in box for pickup and marks order as complete in system.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Secondary Scenarios</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>4.1. Customer arrives prior to completion, wants to eat in restaurant instead of take-out.</p>
+</li>
+<li>
+<p>4.2. Line cook puts food on plate instead of box and hands off to waitress.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This scenario is important as it demonstrates the potential workflow that a line cook might take to integrate online orders with in-person orders. We can expect that they will want minimal contact with the app so having it be a one button scenario is good so that they can focus on cooking.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_s_4_3_usage_scenario_3_submit_catering_order"><a class="link" href="#_s_4_3_usage_scenario_3_submit_catering_order">(S.4.3) Usage Scenario 3: Submit catering order</a></h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Use Case</strong>: <a href="#uc4">UC4</a></p>
+</li>
+<li>
+<p><strong>Primary Actor</strong>: Restaurant manager</p>
+</li>
+<li>
+<p><strong>Precondition</strong>: Admin assistant has already called and placed order for food and has catering order number</p>
+</li>
+<li>
+<p><strong>Trigger</strong>: Admin assistant wants to use Department number to pay for the catering order</p>
+</li>
+<li>
+<p><strong>Main Success Scenario</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>1. Restaurant manager opens the <strong>ATCO Eats</strong> web-portal.</p>
+</li>
+<li>
+<p>2. Restaurant manager logs in.</p>
+</li>
+<li>
+<p>3. Restaurant manager navigates to the catering section of the app.</p>
+</li>
+<li>
+<p>4. Restaurant manager inputs catering order number into the app. App then displays payment process screen.</p>
+</li>
+<li>
+<p>5. Restaurant manager prepares invoice for the catering event</p>
+</li>
+<li>
+<p>6. Restaurant manager sends invoice to Mosaic through web-portal.</p>
+</li>
+<li>
+<p>7. Restaurant manager begins to prepare for catering event</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Secondary Scenarios</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>4.1. Admin assistant inputs wrong catering order. Reject order.</p>
+</li>
+<li>
+<p>4.2. Restaurant manager inputs wrong catering order number. Redo invoice</p>
+</li>
+<li>
+<p>5.1. Admin assistant inputs wrong department number. Reject payment</p>
+</li>
+<li>
+<p>5.2. Restaurant manager inputs wrong department number. Redo invoice.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Success Postcondition</strong>: Admin assistant receives email for catering service payment receipt.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This scenario is important as it demonstrates the potential workflow that an admin assistant might take to pay for catering services. This shows how it can be easier to pay for catering services if the app is integrated with Mosaic and able to access department accounts to withdraw the required money.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_s_4_4_hamilton_citizen_wants_to_eat_at_the_firebird"><a class="link" href="#_s_4_4_hamilton_citizen_wants_to_eat_at_the_firebird">(S.4.4) Hamilton Citizen wants to eat at the Firebird</a></h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Use Case</strong>: <a href="#uc1">UC1</a>, <a href="#uc2">UC2</a>, <a href="#uc3">UC3</a></p>
+</li>
+<li>
+<p><strong>Primary Actor</strong>: Hamilton citizen</p>
+</li>
+<li>
+<p><strong>Precondition</strong>: Hamilton citizen is on picnic at Cootes</p>
+</li>
+<li>
+<p><strong>Trigger</strong>: Hamilton citizen is hungry</p>
+</li>
+<li>
+<p><strong>Main Success Scenario</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>1. Hamilton citizen opens browser to look for food options during picnic because they didn&#8217;t pack enough.</p>
+</li>
+<li>
+<p>2. Citizen find the Firebird is nearby, navigates to <strong>ATCO Eats</strong> app website (<code>Client-App</code>).</p>
+</li>
+<li>
+<p>3. Citizen goes through mealbox menu to find options that they might enjoy and drinks that they crave.</p>
+</li>
+<li>
+<p>4. Citizen access the app as a guest (no account), order boxes and pay.</p>
+</li>
+<li>
+<p>5. Citizen decides to run to restaurant as soon as and then goes to play road hockey.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Secondary Scenarios</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>2.1. Citizen doesn&#8217;t know how to navigate to app website, - gives up and goes to Subway.</p>
+</li>
+<li>
+<p>3.1. Citizen doesn&#8217;t like options, gives up and goes to Grain&amp;Grit.</p>
+</li>
+<li>
+<p>4.1. Citizen is differently-abled, rolls up to the Firebird instead, popping wheelies out of excitement.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Success Postcondition</strong>: Hamilton Citizen dines at restaurant and loves food.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This scenario is important to show why having a website as well as downloadable application to attract more customers to the restaurant. As not everyone who is on campus is necessarily a community member, having someway to be discovered and learn more information about the restaurant is critical for attracting curious customers.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="models/activity_browse.png" alt="activity browse">
+</div>
+<div class="title">Figure 10. Activity diagram for "Hamilton Citizen wants to eat at the Firebird"</div>
+</div>
+<div class="paragraph">
+<p>This diagram helps to explain this scenario as it justifies the existence of the app on the internet for not just staff but users too. It help to show the importance of online presence for attracting more customers, satisfying one of the goals of having more customers.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_s_4_5_restaurant_manager_checks_sales_report"><a class="link" href="#_s_4_5_restaurant_manager_checks_sales_report">(S.4.5) Restaurant Manager checks sales report</a></h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Use Case</strong>: <a href="#uc5">UC5</a></p>
+</li>
+<li>
+<p><strong>Primary Actor</strong>: Restaurant manager</p>
+</li>
+<li>
+<p><strong>Precondition</strong>: Restaurant manager is at computer</p>
+</li>
+<li>
+<p><strong>Trigger</strong>: End of the day and manager needs to tally up sales for the day</p>
+</li>
+<li>
+<p><strong>Main Success Scenario</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>1. Restaurant manager opens up <strong>ATCO Eats</strong> app in browser on computer.</p>
+</li>
+<li>
+<p>2. Restaurant manager logs in.</p>
+</li>
+<li>
+<p>3. Restaurant manager navigates to sales tab.</p>
+</li>
+<li>
+<p>4. Restaurant manager clicks on 'generate sales report'.</p>
+</li>
+<li>
+<p>5. App summarizes sales for the day in easy to use and read format.</p>
+</li>
+<li>
+<p>6. App prompts restaurant manager to download and save report to local computer.</p>
+</li>
+<li>
+<p>7. Restaurant manager closes app and then prints sales report document.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Secondary Scenarios</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>6.1. Restaurant manager views sales report on computer and hates report. Ignores problems and blames staff.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Success Postcondition</strong>: Restaurant manager has sales report document on local machine and physical copy.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This scenario is important as the restaurant manager will need to see the sales reports of the day/week/month to determine current success of app and restaurant. These sales reports are a major part of what makes the app useful as it will be able to generate these reports on command for a desired time frame in order to summarize information critical to the success of the restaurant.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="s5"><a class="link" href="#s5">(S.5) Prioritization</a></h3>
+<div class="paragraph">
+<p><span class="icon"><i class="fa fa-clock"></i></span> Nothing available (yet).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="s6"><a class="link" href="#s6">(S.6) Verification and acceptance criteria</a></h3>
+<div class="paragraph">
+<p>For the <strong>functional requirements</strong>, the validation will be done during development through acceptance testing. Acceptance testing will complement unit testing by providing a way to express and automate feature validation using the Gherkin Language. Early validation will be supported by the definition of mock-ups and their validation by relevant stakholders (see <a href="#s3">S.3</a> for an example with the Line Cook stakeholder). As part of the release process of <strong>ATCO Eats</strong> (see <a href="#p3">P.3</a> for release milestones), we will organize pre-deployment acceptance workshop(s) involving key personel from The Firebird, as well as representative instances of our other patrons-related personas.</p>
+</div>
+<div class="paragraph">
+<p>For the <strong>non-functional</strong> requirements:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>User Privacy</strong>: We will take measures when designing and developing <strong>ATCO Eats</strong> to integrate a <em>privacy by design</em> approach, leveraging visibility and encryption at the code level. This effort will be validated by an internal audit as part of the release process.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Covered requirements: <a href="#NF211">[NF211]</a>, <a href="#NF212">[NF212]</a>, <a href="#NF232">[NF232]</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Encrypted Communications</strong>: Communications with <a href="#mosaic">Mosaic</a> as well as payment gateways (see <a href="#e2">E.2</a>) needs to ensure secured payment. The implementation will follow good practices in the field (evaluated by internal code reviews), and an internal audit will be conducted as part of the release process.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Covered requirements: <a href="#NF231">[NF231]</a>, <a href="#NF232">[NF232]</a>, <a href="#NF241">[NF241]</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Accessibility</strong>: Developers will validate when delivering user interface related features that they are compliant with the accessibility checklists identified in <a href="#g7">G.7</a>. This audit will be part of the pull request that integrates the new feature into the product.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Covered requirements: <a href="#NF221">[NF221]</a> (conflict with <a href="#NF222">[NF222]</a>)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Respect of accounting rules</strong>: as we don&#8217;t have an accountant (direct) stakeholder, we will rely on information available in the Account Payable policies and the knowledge of our Admin Assistant (<a href="#logan">Logan</a>) to create a formal checklist of mandatory elements to be transmitted to Mosaic as part of the payment process. This will be automatically validated by dedicated unit tests.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Covered requirements: <a href="#NF242">[NF242]</a></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_p_project"><a class="link" href="#_p_project">(P) Project</a></h2>
+<div class="sectionbody">
+<h3 id="_control_information_5" class="discrete">Control Information</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 22.2222%;">
+<col style="width: 11.1111%;">
+<col style="width: 22.2222%;">
+<col style="width: 11.1111%;">
+<col style="width: 22.2223%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top">Section</th>
+<th class="tableblock halign-center valign-top">Version</th>
+<th class="tableblock halign-center valign-top">Lead</th>
+<th class="tableblock halign-center valign-top">Delivered</th>
+<th class="tableblock halign-center valign-top">Reviewer</th>
+<th class="tableblock halign-center valign-top">Approved</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong><a href="#p1">P.1</a></strong></p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong><a href="#p2">P.2</a></strong></p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong><a href="#p3">P.3</a></strong></p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong><a href="#p4">P.4</a></strong></p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong><a href="#p5">P.5</a></strong></p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong><a href="#p6">P.6</a></strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Milestone #1</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="#tc">TC</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">29-08-2023</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="#sm">SM</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">29-08-2023</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong><a href="#p7">P.7</a></strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Milestone #1</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="#sm">SM</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">29-08-2023</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="#tc">TC</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">29-08-2023</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect2">
+<h3 id="p1"><a class="link" href="#p1">(P.1) Roles and personnel</a></h3>
+<div class="paragraph">
+<p><span class="icon"><i class="fa fa-bomb"></i></span> This section is a DRAFT <span class="icon"><i class="fa fa-bomb"></i></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Security expert</p>
+</li>
+<li>
+<p>Product Owner</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="p2"><a class="link" href="#p2">(P.2) Imposed technical choices</a></h3>
+<div class="paragraph">
+<p><span class="icon"><i class="fa fa-bomb"></i></span> This section is a DRAFT <span class="icon"><i class="fa fa-bomb"></i></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Multiplatform (mobile/web) for client application</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="p3"><a class="link" href="#p3">(P.3) Schedule and milestones</a></h3>
+<div class="paragraph">
+<p><span class="icon"><i class="fa fa-clock"></i></span> Nothing available (yet).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="p4"><a class="link" href="#p4">(P.4) Tasks and deliverables</a></h3>
+<div class="paragraph">
+<p><span class="icon"><i class="fa fa-clock"></i></span> Nothing available (yet).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="p5"><a class="link" href="#p5">(P.5) Required technology elements</a></h3>
+<div class="paragraph">
+<p><span class="icon"><i class="fa fa-bomb"></i></span> This section is a DRAFT <span class="icon"><i class="fa fa-bomb"></i></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Compliance with external API for <a href="#mosaic">Mosaic</a></p>
+</li>
+<li>
+<p>Compliance with external API for Payment Gateway</p>
+</li>
+<li>
+<p>IoT physical button to supportt LineCook</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="p6"><a class="link" href="#p6">(P.6) Risk and mitigation analysis</a></h3>
+<div class="paragraph">
+<p>Some of the risks present during development are listed below:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Difficulties integrating with <a href="#mosaic">Mosaic</a>.</strong> One major aspect of this project is integration with existing infrastructure at McMaster. Thus this will require close work with the system administrator for <a href="#mosaic">Mosaic</a>. In the event that documentation on the system is poor, or it becomes difficult to get a representative to work with it can be extremely difficult to accomplish the integrations on schedule. One mitigation strategy for this would be to start working on integration from the start of the project, in parallel to the actual application. This would allow more time to documentation to be provided, and ideally allow for more flexibility to get a representative from the administration team to assist with the integration without taking away too much time from their primary responsibilities.</p>
+</li>
+<li>
+<p><strong>Competition with Heavenly catering.</strong> Heavenly catering already has a monopoly for catering on campus. Thus they can present a hurdle to the completion of the application by attempting to stall it or get it shut down altogether. This can be mitigated by involving high level McMaster administration to ensure that we have the university support for developing the application, as well as getting support from various faculty to support more competition for catering services on campus.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="p7"><a class="link" href="#p7">(P.7) Requirements process and report</a></h3>
+<div class="paragraph">
+<p>We will rely on interviews to interact with direct stakeholders indentified in <a href="#g7">G.7</a>. For each stakeholder, we identify the kind of interview, and the most important question to be asked.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Community member (<a href="#cameron">Cameron</a>):</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Type of interview: <strong>Closed</strong>. The objective is to gather structured information about how the person interacts with the Firebird.</p>
+</li>
+<li>
+<p>Question: <em>"When looking for a place to eat on campus, what are the 5 key decision factors for your choice?"</em>. We are targetting the local community, and want to understand what they are looking for.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Citizen of Hamilton (<a href="#carter">Carter</a>):</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Type of interview: <strong>Open</strong>. The objective is to collect as much information as possible on how hamiltonians select new restaurants to try out.</p>
+</li>
+<li>
+<p>Question: <em>"When looking for a new restaurant, what are you looking for?"</em>. We will use this question as an opener and bounce between the different topics the interviewee might raise to gather as much feedback as possible.</p>
+</li>
+<li>
+<p>Remark: Based on preliminary interviews, we could build a survey to validate the collected data at scale.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Administrative Assistant (<a href="#logan">Logan</a>):</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Type of interview: <strong>Closed</strong>. We want to identify precisely what drives the decision of chosing one catering partner over another oner.</p>
+</li>
+<li>
+<p>Question: <em>"When ordering catering, what aspects affect your choice of one provider instead of another?"</em>. We will use this question to get information related to motivational choice (as the pain point of expense report was already identified).</p>
+</li>
+<li>
+<p>Remark: The expense report pain point is <em>assumed</em>, but might have to be validated at some point.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Restaurant Manager (<a href="#drew">Drew</a>):</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Type of interview: <strong>Closed</strong>. We want to validate the results of the <a href="#ideation">Ideation Workshop Report</a> (Appendix A) by zooming in the remaining ambiguities.</p>
+</li>
+<li>
+<p>Question: <em>"Can you elaborate a process that would support the Loyalty Program identified during the workshop?"</em>. This question help to clarify the ambiguity existing around this feature.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Line cook (<a href="#dylan">Dylan</a>):</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Type of interview: <strong>Open</strong>. We want to understand their line of work as part of the kitchen staff, and how introducing meal boxes could impact their work.</p>
+</li>
+<li>
+<p>Question: <em>"How is your shift organized in the kitchen?"</em>. This question is essential to understand the daily routine of a line cook, as this is a particular expertise that none of the project developers have.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_references"><a class="link" href="#_references">References</a></h2>
+<div class="sectionbody">
+<div class="ulist bibliography">
+<ul class="bibliography">
+<li>
+<p><a id="BM22"></a>[1] Bertrand Meyer. <em>Handbook of Requirements and Business Analysis</em>. Springer. 2022.</p>
+</li>
+<li>
+<p><a id="RE97"></a>[2] Ian Sommerville and Peter Sawyer. <em>Requirements Engineering: A good Practice Guide</em>. Wiley. 1997.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_interaction_with_the_client"><a class="link" href="#_interaction_with_the_client">Appendix A: Interaction with the Client</a></h2>
+<div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The first two sections of this chapter are extracted from a version of this requirement document originally written by ChatGPT.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_first_contact"><a class="link" href="#_first_contact">First Contact</a></h3>
+<div class="paragraph">
+<p>Subject: Collaboration Inquiry - "ATCO Eats" Food Ordering App</p>
+</div>
+<div class="paragraph">
+<p>Dear ACME sales team,</p>
+</div>
+<div class="paragraph">
+<p>We hope this email finds you well. The Firebird Management Team is reaching out to explore the possibility of collaborating with your esteemed team for the development of our upcoming food ordering app, "ATCO Eats." We are impressed by your expertise in software development, particularly in the food industry, and believe your skills align perfectly with our project requirements.</p>
+</div>
+<div class="paragraph">
+<p>The primary objective of "ATCO Eats" is to offer a user-friendly and feature-rich platform that enhances our customers' food ordering experience. Key functionalities include seamless order placement, real-time tracking, secure payment processing, and a comprehensive loyalty program. We are confident that your contributions will play a vital role in transforming this vision into a practical and successful application.</p>
+</div>
+<div class="paragraph">
+<p>Should you be interested in pursuing this collaboration, we kindly request your availability for an initial meeting to delve deeper into the project scope and discuss potential collaboration terms. Your professionalism and expertise will undoubtedly be an asset in the development of "ATCO Eats." We eagerly await your response and the opportunity to work together.</p>
+</div>
+<div class="paragraph">
+<p>Best regards,</p>
+</div>
+<div class="paragraph">
+<p>The Firebird Management Team</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_first_meeting_with_client_minutes"><a class="link" href="#_first_meeting_with_client_minutes">First Meeting with Client (Minutes)</a></h3>
+<div class="paragraph">
+<p>Date: August 1, 2023</p>
+</div>
+<div class="paragraph">
+<p>Attendees: The Firebird Management, Project Team Members</p>
+</div>
+<div class="paragraph">
+<p>Agenda: Requirements Gathering for Food Ordering App - <strong>ATCO Eats</strong></p>
+</div>
+<div class="paragraph">
+<p>Meeting started at 02:15PM.</p>
+</div>
+<div class="paragraph">
+<p>Meeting Summary:</p>
+</div>
+<div class="paragraph">
+<p>On August 1, 2023, The Firebird Management and the project team members convened for the first meeting to discuss the requirements for the development of the "ATCO Eats" food ordering app.</p>
+</div>
+<div class="paragraph">
+<p>The Firebird Management conveyed their vision for a user-friendly and efficient app that would provide a seamless food ordering experience for their restaurant. <strong>ATCO Eats</strong> innovation is its <strong>Smart Menu Recommendation System</strong>. Unlike traditional food ordering apps, <strong>ATCO Eats</strong> employs advanced artificial intelligence algorithms to analyze customer preferences, order history, and even real-time data, enabling it to make personalized menu recommendations for each user. This feature sets the app apart from its competitors, creating a more engaging and delightful ordering process that keeps customers coming back for more.</p>
+</div>
+<div class="paragraph">
+<p>Key requirements highlighted during the meeting include:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Real-time Order Tracking</strong>: The Firebird emphasized the importance of offering customers real-time order tracking to enable them to monitor their food delivery status accurately.</p>
+</li>
+<li>
+<p><strong>Personalized Recommendations</strong>: The management expressed interest in incorporating personalized menu recommendations based on customers' previous orders and preferences.</p>
+</li>
+<li>
+<p><strong>User Interface and Navigation</strong>: The Firebird emphasized the significance of an intuitive and visually appealing user interface that simplifies navigation and enhances the overall app experience.</p>
+</li>
+<li>
+<p><strong>Loyalty Program Integration</strong>: The management desires to implement a loyalty program in the app, providing customers with rewards, discounts, and exclusive offers to foster customer retention.</p>
+</li>
+<li>
+<p><strong>Menu Customization</strong>: The Firebird wishes to enable users to customize their orders, allowing them to tailor menu items according to their taste and dietary requirements.</p>
+</li>
+<li>
+<p><strong>Notification System</strong>: The management intends to implement a notification system to inform users of special deals, limited-time offers, and new menu additions.</p>
+</li>
+<li>
+<p><strong>Payment Methods</strong>: The Firebird aims to offer various payment methods, including credit cards, debit cards, mobile wallets, and cash on delivery, to accommodate user preferences.</p>
+</li>
+<li>
+<p><strong>Additional Features</strong>: The management expressed openness to additional features that enhance user engagement and app functionality, such as feedback submission and in-app help.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The project team diligently recorded all requirements and addressed various queries raised by The Firebird. Both parties acknowledged the importance of data privacy and security, regulatory compliance, and seamless integration with existing systems.</p>
+</div>
+<div class="paragraph">
+<p>More specifically, the following key elements were listed in terms of operational concerns:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Network Connectivity</strong>: The app heavily relies on network connectivity to function properly. Operational constraints may arise in areas with poor or unreliable internet access, leading to potential difficulties in placing orders or tracking delivery status.</p>
+</li>
+<li>
+<p><strong>Payment Processing</strong>: The app&#8217;s secure payment processing system relies on external payment gateways. Operational constraints may occur if there are issues with these payment providers, causing payment delays or failures.</p>
+</li>
+<li>
+<p><strong>Server Capacity</strong>: The app&#8217;s server infrastructure needs to handle high traffic during peak hours, especially during weekends or special events. Insufficient server capacity may result in slow response times or even system crashes.</p>
+</li>
+<li>
+<p><strong>Device Compatibility</strong>: <strong>ATCO Eats</strong> needs to support a wide range of devices, including various smartphones and operating systems. Ensuring compatibility across different devices can be challenging and might lead to operational constraints if not adequately addressed.</p>
+</li>
+<li>
+<p><strong>Data Security and Privacy</strong>: The app handles sensitive customer information, including payment details and personal data. Strict adherence to data security and privacy regulations is essential to avoid potential breaches or legal complications. Failure to maintain robust security measures could lead to significant operational constraints and reputational damage.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Next Steps:</p>
+</div>
+<div class="paragraph">
+<p>The project team will consolidate the gathered requirements and prepare a comprehensive document for review and validation by The Firebird. <strong>A follow-up meeting is scheduled for December 6, 2023 to present the finalized requirements and initiate the app development phase</strong>.</p>
+</div>
+<div class="paragraph">
+<p>Adjournment:</p>
+</div>
+<div class="paragraph">
+<p>With a shared sense of enthusiasm and commitment, the meeting concluded on a positive note, reflecting the dedication of The Firebird and the project team towards creating a successful <strong>ATCO Eats</strong> food ordering app.</p>
+</div>
+<div class="paragraph">
+<p>Meeting adjourned at 04:30PM.</p>
+</div>
+<div class="paragraph">
+<p>End of Minutes</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_response_from_acme_to_the_firebird"><a class="link" href="#_response_from_acme_to_the_firebird">Response from ACME to The Firebird</a></h3>
+<div class="paragraph">
+<p>Subject: Request for Ideation Workshop</p>
+</div>
+<div class="paragraph">
+<p>Dear Firebird Management Team,</p>
+</div>
+<div class="paragraph">
+<p>We&#8217;ve identified some initial similarities between <strong>ATCO Eats</strong> and existing platforms like Uber Eats. To ensure that <strong>ATCO Eats</strong> is tailor-made for your needs and stands out in the market, we propose an ideation workshop. This session will allow us to collaboratively brainstorm and refine the project&#8217;s direction to meet your unique requirements effectively.</p>
+</div>
+<div class="paragraph">
+<p>Your participation in this workshop would be invaluable in shaping the project&#8217;s path. Please let us know your availability, and we will arrange a suitable time for the session.</p>
+</div>
+<div class="paragraph">
+<p>Thank you for your cooperation.</p>
+</div>
+<div class="paragraph">
+<p>Best regards,</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ideation"><a class="link" href="#ideation">Ideation Workshop Report</a></h3>
+<div class="paragraph">
+<p>Date: August 15, 2023</p>
+</div>
+<div class="paragraph">
+<p>Location: ACME Inc. HQ</p>
+</div>
+<div class="paragraph">
+<p>Participants:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The Firebird Management</p>
+</li>
+<li>
+<p>ACME Project Team Members</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>During the ideation workshop, The Firebird and the ACME Requirements Engineering Team engaged in collaborative discussions to refine the project&#8217;s direction and identify features.</p>
+</div>
+<div class="paragraph">
+<p>The Firebird quickly agreed that their initial description of <strong>ATCO Eats</strong> was similar to systems like DoorDash or Uber Eat and, as such, might not be the product they had initially envisioned.</p>
+</div>
+<div class="paragraph">
+<p>As a result of the ideation discussion, The Firebird identified a new list of priorities for <strong>ATCO Eats</strong>, which replaces the initial ones.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Integration into Campus</strong>: <strong>ATCO Eats</strong> must leverage that The Firebird is located at the heart of McMaster&#8217;s historic campus. They are envisioning an integration between <strong>ATCO Eats</strong> and system like <em>Mosaic</em> to allow McMaster&#8217;s staff to order food for events directly through their internal information system and automatically support billing (instead of staff paying with their credit card and then submitting an expense report).</p>
+</li>
+<li>
+<p><strong>Integration with Campus life</strong>: <strong>ATCO Eats</strong> needs to reflect the campus life, <em>i.e.</em>, support students when they need it the most (e.g., exam periods) or during their daily routine (e.g., short lunch break). The Firebird envisions a pick-up mechanism where students can order meal boxes in advance and pick them up quickly at the restaurant.</p>
+</li>
+<li>
+<p><strong>Attracting new customers</strong>: <strong>ATCO Eats</strong> is also a way to expand their patron&#8217;s pool. A loyalty card can bring people on campus and enjoy the patio, especially during summer times. The Firebird envisions a loyalty card with points that can be accumulated and used to get some appetizers.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>During the meeting, The Firebird management team mentioned several times that University by-laws regulate campus life and that <strong>ATCO Eats</strong> will have to be compliant with these by-laws.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Version 2<br>
+Last updated 2023-09-01 17:14:07 -0400
+</div>
+</div>
+</body>
+</html>
