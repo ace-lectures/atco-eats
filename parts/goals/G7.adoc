@@ -66,11 +66,18 @@ Dylan (Line Cook)::
 
 ==== (G.7.3) Requirements Sources
 
-* **Liquor Licence and Control Act, 2019**: This act regulates the sell of alcoholic products in the Province of Ontario. As The FireBird is located in Ontario, *{project-title}* must be compliant with this Act
-** https://www.ontario.ca/laws/statute/19l15b
+* **Account Payable Policies** needs to be respected to support internal invoicing. In particular, AP-01 states that catering expenses must be supported by an _"official itemized invoice marked paid or official itemized receipt, and list of attendees (where applicable). Indicate the nature of the event and description of how the business reception, meeting or University event facilitates University business."_
+** https://financial-affairs.mcmaster.ca/services/accounts-payable-reimbursements/accounts-payable-policies-procedures/
 
 * **Campus Food & Beverage Policy**: This by-law regulates how food is served on campus. It makes a distinction between food services operated on exempted locations (The FireBird building is such an exempted location) and food services operated elsewhere in the university (_e.g._, catering). As operating on McMaster's grounds, *{project-title}* must be compliant with this policy.
 ** https://vpof.mcmaster.ca/app/uploads/2023/05/Campus-Food-Beverage-Policy88.pdf
+
+* **Liquor Licence and Control Act, 2019**: This act regulates the sell of alcoholic products in the Province of Ontario. As The FireBird is located in Ontario, *{project-title}* must be compliant with this Act
+** https://www.ontario.ca/laws/statute/19l15b
+
+* **Mobile & Web Accessibility Checklists** needs to be validated to ensure the app is accessible for users and staff.
+** https://developer.mozilla.org/en-US/docs/Web/Accessibility/Mobile_accessibility_checklist
+** https://www.w3.org/TR/WCAG/ 
 
 * **Mosaic Technical Documentation**: Despite not being publicly acessible, we assume that UTS can provide technical documentation so that *{project-title}* will be eventually integrated into <<mosaic>>.
 

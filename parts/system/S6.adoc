@@ -5,4 +5,14 @@ ifdef::env-draft[]
 TIP: _Specification of the conditions under which an implementation will be deemed satisfactory. Here, "verification" as shorthand for what is more explicitly called "Verification & Validation" (V&V), covering several levels of testing — module testing, integration testing, system testing, user acceptance testing — as well as other techniques such as static analysis and, when applicable, program proving._  <<BM22>>
 endif::[]
 
-{emptysec}
+For the **functional requirements**, the validation will be done during development through acceptance testing. Acceptance testing will complement unit testing by providing a way to express and automate feature validation using the Gherkin Language. Early validation will be supported by the definition of mock-ups and their validation by relevant stakholders (see <<s3>> for an example with the Line Cook stakeholder). As part of the release process of *{project-title}* (see <<p3>> for release milestones), we will organize pre-deployment acceptance workshop(s) involving key personel from The Firebird, as well as representative instances of our other patrons-related personas.
+
+For the **non-functional** requirements:
+
+  - *User Privacy* (refs?): We will take measure when designing and developing *{project-title}* to integrate a _privacy by design_ approach, leveraging visibility and encryption at the code level. This effort will be validated by an internal audit as part of the release process.
+
+  - *Encrypted Communications* (refs): Communications with <<mosaic>> as well as payment gateways (see <<e2>>) needs to ensure secured payment. The implementation will follow good practices in the field (evaluated by internal code reviews), and an internal audit will be conducted as part of the release process.
+
+  - *Accessibility* (refs): Developers will validate when delivering user interface related features that they are compliant with the accessibility checklists identified in <<g7>>. Such audit will be part of the pull request that integrates the new feature into the product. 
+
+  - *Respect of accounting rules* (refs): as we don't have an accountant (direct) stakeholder, we will rely on information available in the Account Payable policies and the knowledge of our Admin Assistant (<<logan>>) to create a formal checklist of mandatory elements to be transmitted to Mosaic as part of the payment process. This will be automatically validated by dedicated unit tests.
