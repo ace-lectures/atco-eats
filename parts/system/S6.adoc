@@ -9,10 +9,10 @@ For the **functional requirements**, the validation will be done during developm
 
 For the **non-functional** requirements:
 
-  - *User Privacy* (refs?): We will take measure when designing and developing *{project-title}* to integrate a _privacy by design_ approach, leveraging visibility and encryption at the code level. This effort will be validated by an internal audit as part of the release process.
+  - *User Privacy* (refs?): We will take measures when designing and developing *{project-title}* to integrate a _privacy by design_ approach, leveraging visibility and encryption at the code level. This effort will be validated by an internal audit as part of the release process.
 
   - *Encrypted Communications* (refs): Communications with <<mosaic>> as well as payment gateways (see <<e2>>) needs to ensure secured payment. The implementation will follow good practices in the field (evaluated by internal code reviews), and an internal audit will be conducted as part of the release process.
 
-  - *Accessibility* (refs): Developers will validate when delivering user interface related features that they are compliant with the accessibility checklists identified in <<g7>>. Such audit will be part of the pull request that integrates the new feature into the product. 
+  - *Accessibility* (refs): Developers will validate when delivering user interface related features that they are compliant with the accessibility checklists identified in <<g7>>. This audit will be part of the pull request that integrates the new feature into the product. 
 
   - *Respect of accounting rules* (refs): as we don't have an accountant (direct) stakeholder, we will rely on information available in the Account Payable policies and the knowledge of our Admin Assistant (<<logan>>) to create a formal checklist of mandatory elements to be transmitted to Mosaic as part of the payment process. This will be automatically validated by dedicated unit tests.
