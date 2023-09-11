@@ -5,6 +5,8 @@ ifdef::env-draft[]
 TIP: _Any a priori choices binding the project to specific tools, hardware, languages or other technical parameters. Not all technical choices in projects derive from a pure technical analysis; some result from company policies. While some project members may dislike non-strictly-technical decisions, they are a fact of project life and must be documented, in particular for the benefit of one of the quality factors for requirements: "requirements must be justified"._  <<BM22>>
 endif::[]
 
-{draft}
+- Multiplatform (mobile/web) for client application. This may lead to the decision to develop the application in Flutter
 
-- Multiplatform (mobile/web) for client application
+- Back end of the application will use SQL.
+
+- In order to save cost, all developers will use Microsoft laptops because they are cheaper than Apple. They are also already owned by ACME
