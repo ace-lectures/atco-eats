@@ -5,4 +5,17 @@ ifdef::env-draft[]
 TIP: _List of tasks to be carried out and their scheduling. It defines the project's key dates._  <<BM22>>
 endif::[]
 
-{emptysec}
+This project can be broken down into the following epics, each with their own sprints:
+
+. Priority requirements/Basic functionality
+.. Menu Provider and Order Manager
+
+.. Patron Manager and Billing
+
+. Polish and finish/Non-functional requirements
+.. Menu Polish and Order Manager integration with Mosaic troubleshooting and testing
+
+.. Patron Manager stakeholder testing, Billing integration with Mosaic troubleshooting and testing, and tying up any remaining backlog items
+
+The order goes 1-a -> 2-a -> 1-b -> 2-b in terms of scheduling. 1-a is critical as this will be the MVP that we can show our stakeholders to get their input on the direction of development. These two components are the ones that will likely have the most user interaction and therefore will be the starting point of the project in order to make sure that it has the appropriate time spent for faithful implementation. The main goal is to have the basic functionality of customer facing side of the app completed to demonstrate how we expect users to interact with the various aspects of the app to order food for pickup. It will also show how the kitchen may use the app as well so that the Firebird can anticipate how to use the app along with their existing processes (out of scope for us but still helpful for our stakeholders to be able to anticipate the changes). As this will be the first demonstration of the app, getting approval on this first sprint will set the tone for the rest of the development therefore getting it right to impress the stakeholders is critical for generating faith from the stakeholders onto the development team.
+
