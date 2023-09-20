@@ -6,3 +6,66 @@ TIP: _Classification of the behaviors, interfaces and scenarios (<<s2>>, <<s3>> 
 endif::[]
 
 {emptysec}
+=== Priority Table for Patron Manager 
+|===
+
+|Requirement ID | Requirement name | Priority Level | Reasoning 
+
+| <<F211>> | Sign-up service | Medium | We want users to be able to sign-up to use the app to get access to loyalty points, but secondary to the actual implementation of loyalty system.
+| <<F212>> | Log-in/out service | Low | Usually users will remain logged into the app once they sign-up.
+| <<F213>> | Check loyalty status | High | Critical feature of the app.
+| <<F214>> | Password Recovery | Medium | Once they sign-up they are unlikely to log out. If they do forget password because of that though important for there to be a recovery system.
+| <<NF211>> | Password Encryption | Medium | Critical for the security of the app during login/sign-up, though frequency of use is expected to be low
+| <<NF212>> | Personal Data Privacy | High | Critical for the security of the app. Critical to protect personal data of users, payment information of users.
+
+|===
+
+=== Priority Table for Menu Provider 
+|===
+
+|Requirement ID | Requirement name | Priority Level | Reasoning 
+
+| <<F221>> | Provide menu | High | Critical functionality to provide a menu interface for the app.
+
+| <<F222>> | Search through menu | Low | A search function is a nice to have for the app. Users will still be able to browse manually.
+
+| <<F223>> | Update menu provider | High | Critical functionality for the restaurant to be able to update menu items.
+
+| <<F224>> | Select menu item | High | Critical functionality to be able to select menu items for purchase.
+
+| <<NF221>> | Accessibility | Medium | Helpful for inclusivity and reaching a wider customer base.
+
+| <<NF222>> | Pictures of food | Low | Does not impact functionality of app but may influence purchasing decisions of customers
+
+|===
+
+=== Priority Table for Order Manager 
+|===
+
+|Requirement ID | Requirement name | Priority Level | Reasoning 
+| <<F231>> | Complete food order (Process Order) | High | Critical functionality for the ability to purchase food
+| <<F232>> | Receive food order | High | Critical functionality for the restaurant to be able to prepare food properly.
+| <<F233>> | Food order complete | Medium | Good for organizational purposes to be able to keep track of what food needs to be prepared next.
+| <<F234>> | Food order complete notification | Low | Customers can show up at any time and completely ignore the notification. But it is still nice to have for those who care.
+| <<F235>> | Catering order (Process Order) | High | Critical functionality for the ability to cater to events on campus
+| <<NF231>> | Push notifications | Low | Should be fairly simple to adopt whatever default settings already exist on the device
+| <<NF232>> | Device operating system security compliant | High | Critical feature to make sure that the app is compliant with security settings present on the user device.
+
+|===
+
+=== Priority Table for Billing
+|===
+
+|Requirement ID | Requirement name | Priority Level | Reasoning 
+| <<F241>> | Order payment (Process Payment) | High | Critical functionality for customer ability to complete payment for food.
+| <<F242>> | Order payment (Pending Invoices) | High | Critical functionality for staff ability to invoice food for catering
+| <<F243>> | Sales reports | Low | Helpful for manager to keep track of sales numbers and inventory in the app itself
+| <<F244>> | Use loyalty points | High | Critical functionality to implement a method to use the points that users gather
+| <<NF241>> | Secured Communication | High | Critical feature to ensure that customer payment information is protected from malicious actors.
+| <<NF242>> | Tax and accounting compliant | High | Critical feature to ensure that all tax laws and regulations are obeyed while using the app.
+
+|===
+
+Prioritization of requirements were performed based on two key metrics; security and usability. All requirements that could affect the security of the app, the privacy of the users, or compliance with legal or standardized policies were determined to be high priority requirements. All requirements directly affected the goals of the application were also determined to be high priority. All requirements that had some affect on the goals of the application, but did not equate to the goal failing were determined as medium requirements. All requirements that had little to no affect on the goals of the application and were deemed as 'nice to have' features were determined to be low priority requirements.
+
+Security and privacy had a high impact in how we determined our requirements as we wanted to make sure that our users were safe while using the app. Since there is a lot of highly sensitive information that can be held from this app (credit card information, student account information) it can be a prime target for malicious actors to attempt to gain access to user information. Therefore in order to ensure that all customers are safe we made all security requirements high priority requirements such that the design will also reflect this philosophy.
